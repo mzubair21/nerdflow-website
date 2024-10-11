@@ -2,7 +2,7 @@ import Image from 'next/image';
 import clientImage from '../../assets/images/clientImage.png'; // Sample client image
 import star from '../../assets/svgs/star.svg'; // Star image for ratings
 
-const ClientTestimonials = () => {
+const ClientTestimonials = ({ bg = true }) => {
   const testimonials = [
     {
       image: clientImage,
@@ -11,39 +11,40 @@ const ClientTestimonials = () => {
       rating: 5, 
     },
     {
-        image: clientImage,
-        name: 'Mr Smith',
-        feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
-        rating: 5, 
-      },
+      image: clientImage,
+      name: 'Mr Smith',
+      feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
+      rating: 5, 
+    },
     {
-        image: clientImage,
-        name: 'Mr Smith',
-        feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
-        rating: 5, 
-      },
-      {
-        image: clientImage,
-        name: 'Mr Smith',
-        feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
-        rating: 5, 
-      },
-      {
-        image: clientImage,
-        name: 'Mr Smith',
-        feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
-        rating: 5, 
-      },
-      {
-        image: clientImage,
-        name: 'Mr Smith',
-        feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
-        rating: 5, 
-      },
+      image: clientImage,
+      name: 'Mr Smith',
+      feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
+      rating: 5, 
+    },
+    {
+      image: clientImage,
+      name: 'Mr Smith',
+      feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
+      rating: 5, 
+    },
+    {
+      image: clientImage,
+      name: 'Mr Smith',
+      feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
+      rating: 5, 
+    },
+    {
+      image: clientImage,
+      name: 'Mr Smith',
+      feedback: 'RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.',
+      rating: 5, 
+    },
+   
   ];
 
   return (
-    <div className="font-poppins bg-[rgba(13,36,29,0.61)] backdrop-blur-sm py-16 w-full">
+    <div className={`font-poppins py-16 w-full ${bg ? 'bg-[rgba(13,36,29,0.61)] backdrop-blur-sm' : ''}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-white text-[2.5rem] font-semibold">Client Testimonials</h1>

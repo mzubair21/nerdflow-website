@@ -18,7 +18,7 @@ export default function Home(){
       <Portfolio/>
       <Clients/>
       <AboutUs/>
-      <ClientTestimonials/>
+      <ClientTestimonials bg={true} />
       <Blogs/>
       <Footer/>
     </div>

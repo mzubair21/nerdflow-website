@@ -3,7 +3,7 @@ import PricingImage from '../../assets/images/pricingLeft.png';
 
 const Pricing = () => {
     return (
-        <div className="relative font-poppins h-[25rem]">
+        <div className="relative font-poppins h-[25rem] container">
             {/* Image on the left */}
             <Image
                 src={PricingImage}
@@ -17,8 +17,8 @@ const Pricing = () => {
                 <p className="text-white text-[1.25rem]">Have a project in mind? Let’s collaborate and bring your vision to life!</p>
                 
                 <div className="mt-6 flex flex-row space-x-6 justify-center font-bold text-[1.25rem]">
-                    <button className="bg-tealgradient hover:bg-teal p-6 w-[13rem] rounded-lg">See Pricing</button>
-                    <button className="bg-tealgradient hover:bg-teal p-6 w-[13rem] rounded-lg">Contact Us</button>
+                    <button className="bg-tealgradient hover:bg-teal p-4 w-[13rem] rounded-lg" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>See Pricing</button>
+                    <button className="bg-tealgradient hover:bg-teal p-4 w-[13rem] rounded-lg"style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>Contact Us</button>
                 </div>
             </div>
         </div>

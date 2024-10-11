@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import FAQBg from '../../assets/images/FAQBg.png';
 import crossIcon from '../../assets/svgs/crossIcon.svg';
 import plusIcon from '../../assets/svgs/plusIcon.svg';
 
@@ -41,7 +42,7 @@ const FAQ = () => {
 
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center flex relative flex-col ">
         <h1 className="text-white font-semibold text-[2.5rem]">
           Frequently Asked Questions
         </h1>
@@ -49,9 +50,15 @@ const FAQ = () => {
           See what we have to offer to our customers
         </p>
       </div>
-
+      <div className="w-full lg:w-[25rem] absolute left-[71%] 2xl:left-[78%]">
+          <Image
+            src={FAQBg}
+            alt="Hero Section Background"
+            className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
+          />
+        </div>
       {/* FAQ Section */}
-      <div className="mt-10 w-full">
+      <div className="mt-10 w-full container">
         {faqs.map((faq, index: number) => (
           <div
             key={`${faq.question}-${index}`} // Generate unique key

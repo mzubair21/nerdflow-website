@@ -3,9 +3,11 @@ import projectImage1 from "../../assets/images/projectImage1.png";
 import projectImage2 from "../../assets/images/projectImage2.png";
 import projectImage3 from "../../assets/images/projectImage3.png";
 import projectImage4 from "../../assets/images/projectImage4.png";
+import ProjectBg from '../../assets/images/ProjectsBg.png';
+
 
 const Projects = () => {
-  // Define an array of projects
+  
   const projects = [
     {
       title: "Raasta Web Application",
@@ -30,7 +32,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="font-poppins">
+    <div className="font-poppins flex relative flex-col">
       <div className="text-center">
         <h1 className="text-white text-[2.5rem] font-semibold">
           See More <span className="text-teal">Projects</span>
@@ -40,7 +42,13 @@ const Projects = () => {
           cutting-edge solutions
         </p>
       </div>
-
+      <div className="w-full lg:w-[25rem] absolute top-[30%]">
+          <Image
+            src={ProjectBg}
+            alt="Hero Section Background"
+            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
+          />
+        </div>
       {/* Projects Section */}
       <div className="container mx-auto mt-10">
         {projects.map((project, index) => (

@@ -46,7 +46,7 @@ const Service = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] px-14 bg-custom-gradient2">
-          <div>
+          <div className="container">
             <h1 className="text-white font-semibold text-[2.5rem]">
               Our <span className="text-teal">Services</span>
             </h1>
@@ -58,7 +58,7 @@ const Service = () => {
       </div>
 
       {/* Filter Buttons Section */}
-      <div className="flex justify-center space-x-2 my-8">
+      <div className="flex pl-2 space-x-2 my-8 container">
         {[
           "All",
           "Web Development",
@@ -96,7 +96,7 @@ const Service = () => {
                     <Image
                       src={item.leftImage}
                       alt={`${item.title} Background`}
-                      className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
+                      className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
                       style={{ top: "-150%", left: "14%" }}
                     />
                   )}
