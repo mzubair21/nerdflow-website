@@ -5,15 +5,15 @@ import HeroSectionbg from '../../assets/svgs/HeroSectionBg.svg';
 
 const HeroSection = () => {
   return (
-    <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-10 lg:py-10 container mx-auto px-4 lg:px-8 relative">
+    <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-10 lg:py-10 container mx-auto px-4 relative">
       {/* Text Section with Background */}
       <div className="w-full lg:w-[55%] relative mb-10 lg:mb-0">
         {/* Background Image using Image component */}
         <Image 
           src={HeroSectionbg} 
           alt="Hero Section Background" 
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-          style={{ top: '-25%', left: '-15%' }} 
+          className="absolute inset-0 w-full h-full object-cover -z-10 hidden lg:block"
+          style={{ top: '-30%', left: '-15%' }} 
         />
         <h1 className="text-[2rem] lg:text-[2.813rem] font-bold text-white relative z-10">
           Empowering your businesses with innovative <br />
@@ -36,7 +36,7 @@ const HeroSection = () => {
         <Image 
           src={HeroImage} 
           alt="Hero Image" 
-          className="w-[18rem] h-[10rem] lg:w-[30.6rem] lg:h-[14rem]" 
+          className="w-[18rem] h-[10rem] lg:w-[25rem] lg:h-[15rem]" 
         />
       </div>
     </section>

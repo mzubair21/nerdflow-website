@@ -66,7 +66,7 @@ const Footer = () => {
              
               <ul className="flex flex-wrap space-x-8 mb-6 font-bold">
               <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
-                <li><a href="#" className="hover:underline ml-6">Home</a></li>
+                <li><a href="#" className="hover:underline ml-5">Home</a></li>
                 <li><a href="#" className="hover:underline">Services</a></li>
                 <li><a href="#" className="hover:underline">Portfolio</a></li>
                 <li><a href="#" className="hover:underline">About</a></li>
@@ -80,7 +80,7 @@ const Footer = () => {
              
               <ul className="flex flex-wrap space-x-8 font-bold">
               <h2 className="text-lg font-bold text-grey">Follow Us</h2>
-                <li><a href="#" className="hover:underline ml-6">Facebook</a></li>
+                <li><a href="#" className="hover:underline ml-16">Facebook</a></li>
                 <li><a href="#" className="hover:underline">Insta</a></li>
                 <li><a href="#" className="hover:underline">LinkedIn</a></li>
                 <li><a href="#" className="hover:underline">Medium</a></li>

@@ -9,8 +9,8 @@ import WizzRight from "../../assets/images/WizzRight.png";
 
 const Portfolio = () => {
   return (
-    <div className="font-poppins px-6 sm:px-14 container mx-auto pt-8">
-      <div className="mb-8">
+    <div className="font-poppins mx-auto">
+      <div className="mb-8 container">
         <h1 className="text-white text-2xl sm:text-4xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
         </h1>
@@ -22,7 +22,7 @@ const Portfolio = () => {
       </div>
 
       {/* Daily Bazar */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative">
+      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto relative">
         {/* Text Section with Background */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
           <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
@@ -42,12 +42,16 @@ const Portfolio = () => {
 
         {/* Image Section */}
         <div className="w-full lg:w-[35.8rem] h-auto">
-          <Image src={DailyBazar} alt="Daily Bazar Image" className="w-full h-auto" />
+          <Image
+            src={DailyBazar}
+            alt="Daily Bazar Image"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
       {/* Wizz */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative">
+      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto  relative">
         {/* Image Section */}
         <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0">
           <Image src={Wizz} alt="Wizz Image" className="w-full h-auto" />
@@ -58,14 +62,15 @@ const Portfolio = () => {
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
-            style={{ top: "-150%", left: "24%" }}
+            className="absolute inset-0 w-auto h-auto lg:hidden xl:block -z-10 left-[12%] 2xl:left-[25%]"
+            style={{ top: "-150%" }} 
           />
+
           <Image
             src={WizzLeft}
             alt="Portfolio Background"
-            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
-            style={{ top: "-150%", left: "-150%" }}
+            className="absolute inset-0 w-auto h-auto lg:hidden xl:block  -z-10"
+            style={{ top: "-150%", left: "-180%" }}
           />
 
           <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
@@ -85,7 +90,7 @@ const Portfolio = () => {
       </section>
 
       {/* VTK */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative">
+      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto  relative">
         {/* Text Section */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
           <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
@@ -110,10 +115,14 @@ const Portfolio = () => {
       </section>
 
       {/* Clear Eats */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative">
+      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto  relative">
         {/* Image Section */}
         <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0">
-          <Image src={ClearEats} alt="Clear Eats Image" className="w-full h-auto" />
+          <Image
+            src={ClearEats}
+            alt="Clear Eats Image"
+            className="w-full h-auto"
+          />
         </div>
 
         {/* Text Section */}
