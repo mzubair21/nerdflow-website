@@ -20,6 +20,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         white: "var(--white, #FFF)", //custom white color
+        purewhite:"#FFFFFF",
         teal: "#34E0A1", // teal color
         tealgradient:"#18372C",
         green:'#122F26',
