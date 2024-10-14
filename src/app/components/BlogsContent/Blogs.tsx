@@ -33,7 +33,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="text-left px-16 pt-8 mb-4">
+      <div className="text-left  pt-12 pb-12 mb-4 container">
         <h1 className="text-white font-semibold text-[2.125rem]">
           Elevate Your CRM Strategy with Laravel
         </h1>
@@ -56,20 +56,20 @@ const Blog = () => {
         </div>
 
         {/* Vector and Quote Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center p-8">
+        <div className="relative z-10 flex flex-col items-center justify-center p-8 container">
           {/* Vector */}
           <div>
             <Image src={Vector} alt="vector" className="w-16 h-16" />
           </div>
 
           {/* Quote */}
-          <blockquote className="mt-4 text-xl font-semibold text-center text-white px-80">
+          <blockquote className="mt-4 text-xl font-semibold text-center text-white lg:px-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.
           </blockquote>
         </div>
       </div>
 
-      <div className="p-12">
+      <div className="p-12 container">
         <h1 className="font-semibold text-[2.125rem]">Why Laravel for CRM?</h1>
         <p>
           Laravel brings a host of advantages to CRM development. Its expressive
@@ -79,7 +79,7 @@ const Blog = () => {
           development while ensuring a secure foundation
         </p>
       </div>
-      <div className="p-12 relative">
+      <div className="p-12 relative container">
         <div className="w-full lg:w-[25rem] absolute -top-[40%] left-[71%] hidden xl:block">
           <Image
             src={laravelRight}

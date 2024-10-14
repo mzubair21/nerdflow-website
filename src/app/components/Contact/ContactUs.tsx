@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ContactBg from "../../assets/images/Contact.png";
 import ContactLeft from '../../assets/images/ContactLeft.png';
+import ContactBg from "../../assets/images/ContactUsBg.png";
 
 const ContactUs = () => {
   return (
@@ -49,7 +49,7 @@ const ContactUs = () => {
                 id="lastName"
                 name="lastName"
                 required
-                className="mt-1 block w-full bg-lightblack text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-2"
+                className="mt-1 block bg-white-transparent w-full text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 shadow-sm focus:ring focus:ring-teal focus:border-teal p-4"  style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)',}}
                 placeholder="Last Name"
               />
             </div>
@@ -60,7 +60,7 @@ const ContactUs = () => {
                 id="firstName"
                 name="firstName"
                 required
-                className="mt-1 block w-full bg-lightblack text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-2"
+                className="mt-1 block w-full bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4"  style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
                 placeholder="First Name"
               />
             </div>
@@ -74,7 +74,7 @@ const ContactUs = () => {
               id="email"
               name="email"
               required
-              className="mt-1 block w-full max-w-[54rem] mx-auto bg-lightblack text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-2"
+              className="mt-1 block w-full max-w-[54rem] mx-auto bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
               placeholder="Email"
             />
           </div>
@@ -87,7 +87,7 @@ const ContactUs = () => {
               id="phone"
               name="phone"
               required
-              className="mt-1 block w-full max-w-[54rem] mx-auto bg-lightblack text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-2"
+              className="mt-1 block w-full max-w-[54rem] mx-auto bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
               placeholder="Phone Number"
             />
           </div>
@@ -99,7 +99,7 @@ const ContactUs = () => {
               id="message"
               name="message"
               required
-              className="mt-1 block w-full max-w-[54rem] mx-auto bg-lightblack text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-2"
+              className="mt-1 block w-full max-w-[54rem] mx-auto bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
               placeholder="Message"
             ></textarea>
           </div>

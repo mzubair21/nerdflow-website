@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import CaseStudyBg from "../../assets/images/CaseStudyBg.png";
 import CaseStudyLeft from "../../assets/images/CaseStudyLeft.png";
-import main from "../../assets/images/main.png";
+import main from "../../assets/images/laptop.png";
 import medical from "../../assets/images/medical.png";
 import user from "../../assets/images/usercentric.png";
 import leftArrow from "../../assets/svgs/leftArrow.svg";
@@ -64,10 +64,10 @@ const casestudy = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[18rem] md:h-[28rem] px-6 md:px-14 bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[18rem] md:h-[28rem]  md:px-14 bg-custom-gradient2">
           <div className="container">
             <h1 className="text-white font-semibold text-[1.8rem] md:text-[2.5rem]">
-              <span className="text-teal">BRT</span>Centers
+              <span className="text-teal">BRT</span> Centers
             </h1>
             <p className="text-white text-[1rem] md:text-[1.5rem]">
               Explore Technological Horizons: Insights, Trends, and Innovations
@@ -76,22 +76,22 @@ const casestudy = () => {
         </div>
       </div>
 
-      {/* Main Content Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-14 py-10 relative container">
-        {/* Left Side: Text Content */}
-        <div className="w-full lg:w-[25rem] absolute -top-[50%] -left-[10%] hidden xl:block">
-          <Image
-            src={CaseStudyLeft}
-            alt="Plan Left Background"
-            className="absolute inset-0 w-auto h-auto -z-10"
-          />
-        </div>
-        <div className="pr-8 w-full md:w-[55%]">
-          <h1 className="text-xl md:text-2xl font-bold mb-4">Introduction</h1>
-          <p className="text-base md:text-lg">
-            Introducing our innovative CRM solution, designed to elevate the efficiency and effectiveness of BRT Centers, a distinguished healthcare institution. With a strong commitment to improving operational workflows and enhancing patient care, our CRM serves as a tailored platform that streamlines checkups, simplifies documentation tasks, and expedites the process of report generation.
-          </p>
-        </div>
+     {/* Main Content Section */}
+<div className="flex flex-col md:flex-row items-center justify-between  py-10 relative container">
+  {/* Left Side: Text Content */}
+  <div className="w-full lg:w-[25rem] absolute -top-[50%] -left-[10%] hidden xl:block">
+    <Image
+      src={CaseStudyLeft}
+      alt="Plan Left Background"
+      className="absolute inset-0 w-auto h-auto -z-10"
+    />
+  </div>
+  <div className="w-full md:w-[55%] pt-8 md:pb-12">
+    <h1 className="text-[2.125rem] md:text-2xl font-bold mb-4">Introduction</h1>
+    <p className="text-base md:text-lg">
+      Introducing our innovative CRM solution, designed to elevate the efficiency and effectiveness of BRT Centers, a distinguished healthcare institution. With a strong commitment to improving operational workflows and enhancing patient care, our CRM serves as a tailored platform that streamlines checkups, simplifies documentation tasks, and expedites the process of report generation.
+    </p>
+  </div>
 
         {/* Right Side: Image */}
         <div className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[20rem] mt-6 md:mt-0">
@@ -100,11 +100,11 @@ const casestudy = () => {
       </div>
 
       {/* Main Image and Description */}
-      <div className="pt-4 container">
-        <div className="w-[18rem] md:w-[38.6rem] h-[12rem] md:h-[23.6rem] mx-auto mb-8 md:mb-12">
+      <div className="pt-6 container">
+        <div className="w-[18rem] md:w-[38.6rem] h-[12rem] md:h-[23.6rem] mx-auto mb-2 md:mb-12">
           <Image src={main} alt="main screen"></Image>
         </div>
-        <div className="p-4 md:p-8">
+        <div className="md:p-8">
           <p className="text-sm md:text-lg">
             Leveraging advanced technology and a deep understanding of healthcare management, our solution is poised to redefine how BRT Centers approaches daily operations, ensuring seamless processes and optimized patient experiences. By providing intuitive tools for checkup creation, secure data storage, and swift report creation, our CRM empowers BRT Centers to focus on what truly matters – delivering top-notch healthcare services while maintaining the highest standards of operational efficiency.
           </p>
@@ -126,13 +126,13 @@ const casestudy = () => {
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-[50%] md:top-[30%] lg:top-[30%] -translate-y-1/2"
+          className="absolute left-4 top-[50%] md:top-[30%] lg:top-[40%] -translate-y-1/2"
         >
           <Image src={leftArrow} alt="Previous Slide" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-[50%] md:top-[30%] lg:top-[30%]  -translate-y-1/2"
+          className="absolute right-4 top-[50%] md:top-[30%] lg:top-[40%]  -translate-y-1/2"
         >
           <Image src={rightArrow} alt="Next Slide" />
         </button>
@@ -140,12 +140,12 @@ const casestudy = () => {
         {/* Slider Content */}
         <div className="text-center">
           {/* Image */}
-          <div className="w-[20rem] sm:w-[25rem] lg:w-[50rem] md:w-[35rem] h-[10rem] md:h-[15rem] mx-auto lg:mb-6">
+          <div className="w-[20rem] sm:w-[25rem] lg:w-[60rem] md:w-[35rem] h-[10rem] md:h-[15rem] mx-auto lg:mb-6">
             <Image src={slides[currentIndex].image} alt={`Slide ${currentIndex}`} />
           </div>
 
           {/* Heading */}
-          <h2 className="text-xl md:text-[2.125rem] font-semibold">
+          <h2 className="text-xl pt-6 md:text-[2.125rem] font-semibold">
             {slides[currentIndex].heading}
           </h2>
 

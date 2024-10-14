@@ -1,8 +1,8 @@
 import Image from "next/image";
 import logo from "../../assets/images/NerdFlowLogo.png";
-import line from '../../assets/svgs/line.svg';
-import gmail from '../../assets/svgs/mailIcon.svg';
-import phone from '../../assets/svgs/phoneIcon.svg';
+import line from "../../assets/svgs/line.svg";
+import gmail from "../../assets/svgs/mailIcon.svg";
+import phone from "../../assets/svgs/phoneIcon.svg";
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
           <p className="text-sm mb-10 font-bold text-grey">
             Get the latest updates and keep in touch with technology.
           </p>
-           
+
           <div className="mb-12">
             <Image src={line} alt="Line" />
           </div>
@@ -56,35 +56,104 @@ const Footer = () => {
               placeholder="Enter your email......"
               className="w-full px-4 py-4 text-black rounded-l font-bold"
             />
-            <button className="bg-tealgradient text-white px-4 py-4 rounded-r font-bold">Subscribe</button>
+            <button className="bg-tealgradient text-white px-4 py-4 rounded-r font-bold">
+              Subscribe
+            </button>
           </div>
 
           {/* Links - Pages and Socials */}
           <div className="flex flex-col">
             {/* Pages Links */}
             <div>
-             
               <ul className="flex flex-wrap space-x-8 mb-6 font-bold">
-              <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
-                <li><a href="#" className="hover:underline ml-5">Home</a></li>
-                <li><a href="#" className="hover:underline">Services</a></li>
-                <li><a href="#" className="hover:underline">Portfolio</a></li>
-                <li><a href="#" className="hover:underline">About</a></li>
-                <li><a href="#" className="hover:underline">Pricing</a></li>
-                <li><a href="#" className="hover:underline">Blogs</a></li>
+                <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
+                <li>
+                  <a href="" className="hover:underline ml-5">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/services" className="hover:underline">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#portfolio" className="hover:underline">
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className="hover:underline">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/pricing" className="hover:underline">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="/blogs" className="hover:underline">
+                    Blogs
+                  </a>
+                </li>
               </ul>
             </div>
 
             {/* Social Follow Links */}
             <div>
-             
               <ul className="flex flex-wrap space-x-8 font-bold">
-              <h2 className="text-lg font-bold text-grey">Follow Us</h2>
-                <li><a href="#" className="hover:underline ml-16">Facebook</a></li>
-                <li><a href="#" className="hover:underline">Insta</a></li>
-                <li><a href="#" className="hover:underline">LinkedIn</a></li>
-                <li><a href="#" className="hover:underline">Medium</a></li>
-                <li><a href="#" className="hover:underline">Fiverr</a></li>
+                <h2 className="text-lg font-bold text-grey">Follow Us</h2>
+                <li>
+                  <a
+                    href="https://www.facebook.com/nerdflow.tech?mibextid=ZbWKwL"
+                    className="hover:underline ml-16"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/nerdflowltd?igsh=MXI5NG52enc2NGJiaw=="
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Insta
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/nerd-flow/"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Medium
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Fiverr
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

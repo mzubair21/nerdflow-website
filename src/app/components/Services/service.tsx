@@ -58,7 +58,7 @@ const Service = () => {
       </div>
 
       {/* Filter Buttons Section */}
-      <div className="flex pl-2 space-x-2 my-8 container">
+      <div className="flex flex-wrap gap-2 my-8 container">
         {[
           "All",
           "Web Development",
@@ -71,7 +71,7 @@ const Service = () => {
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-4 py-2 rounded ${
+            className={`px-4 py-2 sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-lg whitespace-nowrap ${
               activeFilter === filter
                 ? "bg-tealgradient text-white"
                 : "bg-foundation-grey-darker text-white"
@@ -83,7 +83,7 @@ const Service = () => {
       </div>
 
       {/* Display Filtered Items */}
-      <div className="flex flex-col items-center space-y-4">
+      <div className="flex flex-col items-center space-y-4 container">
         {filteredItems.map((item) => (
           <section key={item.id} className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative">
             {item.reverse ? (
@@ -97,7 +97,7 @@ const Service = () => {
                       src={item.leftImage}
                       alt={`${item.title} Background`}
                       className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
-                      style={{ top: "-150%", left: "14%" }}
+                      style={{ top: "-150%", left: "19%" }}
                     />
                   )}
                   <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">

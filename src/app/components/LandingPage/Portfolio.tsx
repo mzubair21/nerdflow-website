@@ -9,7 +9,7 @@ import WizzRight from "../../assets/images/WizzRight.png";
 
 const Portfolio = () => {
   return (
-    <div className="font-poppins mx-auto">
+    <div className="font-poppins mx-auto" id="portfolio">
       <div className="mb-8 container">
         <h1 className="text-white text-2xl sm:text-4xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
@@ -62,14 +62,14 @@ const Portfolio = () => {
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto lg:hidden xl:block -z-10 left-[12%] 2xl:left-[25%]"
+            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[14%] 2xl:left-[18%]"
             style={{ top: "-150%" }} 
           />
 
           <Image
             src={WizzLeft}
             alt="Portfolio Background"
-            className="absolute inset-0 w-auto h-auto lg:hidden xl:block  -z-10"
+            className="absolute inset-0 w-auto h-auto lg:hidden xl:block -z-10"
             style={{ top: "-150%", left: "-180%" }}
           />
 

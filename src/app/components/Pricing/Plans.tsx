@@ -7,6 +7,7 @@ const Plans = () => {
     {
       name: "LUMP SUM",
       price: "$3800",
+      additional: "+$25/mo Hosting",
       features: [
         "Design And Development",
         "$25/mo Hosting",
@@ -20,6 +21,7 @@ const Plans = () => {
     {
       name: "MONTHLY",
       price: "$175",
+      additional: "Per month",
       features: [
         "Design And Development",
         "Includes Hosting",
@@ -33,6 +35,7 @@ const Plans = () => {
     {
       name: "ECOMMERCE",
       price: "$8K",
+      additional: "starting",
       features: [
         "Custom Shopify Store",
         "Configure Any And All Apps",
@@ -79,8 +82,11 @@ const Plans = () => {
           <div
             key={index}
             className={`relative overflow-hidden text-center rounded-lg shadow-lg p-6 
-              ${index === 1 ? 'lg:h-[37rem] lg:w-[24rem] -mt-7' : 'lg:w-[24rem] lg:h-[34rem]'} 
-                border border-[rgba(250, 250, 250, 0.29)] hover:border-teal`}
+              ${index === 1 ? 'lg:h-[37rem] lg:w-[24rem] -mt-7' : 'lg:w-[24rem] lg:h-[34rem]'}`}
+            style={{
+              border: index === 1 ? '3px solid #00FFC8' : '1.276px solid #5E5E5E', 
+              backdropFilter: 'blur(2.55px)',
+            }}
           >
             <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold text-white text-left mb-4">
               {plan.name}
@@ -94,11 +100,16 @@ const Plans = () => {
               ))}
             </ul>
             <p
-              className={`text-white text-[2.25rem] sm:text-[3rem] font-semibold mb-2 text-left ${
+              className={`text-white text-[2.25rem] sm:text-[3rem] font-semibold mb-2 text-left flex items-center ${
                 index === 1 ? 'pt-24' : 'pt-16'
               }`}
             >
               {plan.price}
+              {plan.additional && (
+                <span className="text-grey text-[1rem] ml-2 mt-4 font-medium opacity-0.8">
+                  {plan.additional}
+                </span>
+              )}
             </p>
             {/* Move button to the left */}
             <div className="flex justify-start">

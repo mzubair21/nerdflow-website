@@ -29,7 +29,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="font-poppins py-16 px-4 md:px-10 lg:px-20 container mx-auto">
+    <div className="font-poppins py-16 px-2 md:px-10 lg:px-20 container mx-auto">
       <div className="text-center mb-12">
         <h1 className="text-white text-[2.5rem] font-semibold">
           Our <span className="text-teal">Blogs</span>
@@ -63,7 +63,7 @@ const Blogs = () => {
             <p className="text-white text-[0.875rem] text-left font-bold">
               {blog.description}{' '}
               <a
-                href="#"
+                href="/casestudy"
                 className="text-teal hover:underline"
               >
                 {blog.link}

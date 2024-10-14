@@ -50,7 +50,7 @@ const FAQ = () => {
           See what we have to offer to our customers
         </p>
       </div>
-      <div className="w-full lg:w-[25rem] absolute left-[71%] 2xl:left-[78%]">
+      <div className="w-full lg:w-[25rem] absolute left-[71%] 2xl:left-[74%]">
           <Image
             src={FAQBg}
             alt="Hero Section Background"

@@ -10,14 +10,7 @@ import WizzLogo from "../../assets/images/wizz-logistics.png";
 const Clients = () => {
   return (
     <div className="font-poppins flex flex-col bg-[rgba(13,36,29,0.61)] backdrop-blur-sm h-auto py-10 sm:py-12 w-full relative">
-      {/* Outer container for background */}
-      <div className="w-full lg:w-[15rem] absolute -top-[50%]">
-          <Image
-            src={AboutBg}
-            alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
-          />
-        </div>
+     
 
       <div className="text-center mb-10 ">
         <h1 className="text-white text-[2.25rem] font-semibold">
@@ -26,15 +19,23 @@ const Clients = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center container mx-auto px-4">
+         {/* Outer container for background */}
+      <div className="w-full lg:w-[15rem] absolute -top-[50%] left-0">
+          <Image
+            src={AboutBg}
+            alt="Hero Section Background"
+            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
+          />
+        </div>
         <div className="w-[7rem] h-auto sm:w-[9.8rem]">
           <Image src={VTKLogo} alt="VTK Logo" />
         </div>
 
-        <div className="w-[8rem] h-auto sm:w-[11.8rem]">
+        <div className="w-[7rem] h-auto sm:w-[11.8rem]">
           <Image src={KP} alt="KP Logo" />
         </div>
 
-        <div className="w-[6.5rem] h-auto sm:w-[8.1rem]">
+        <div className="w-[4rem] h-auto sm:w-[8.1rem]">
           <Image src={BRT} alt="BRT Logo" />
         </div>
 

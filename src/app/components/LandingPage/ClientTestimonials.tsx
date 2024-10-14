@@ -59,7 +59,7 @@ const ClientTestimonials = ({ bg = true }) => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="flex p-6 items-start w-[100%] gap-2 border border-green bg-[rgba(0,0,0,0.27)] h-auto flex-col justify-between"
+              className="flex p-6 items-start w-[100%] gap-4 border border-green bg-[rgba(0,0,0,0.27)] h-auto flex-col justify-between"
             >
               {/* Image and Name Inline */}
               <div className="flex items-center">

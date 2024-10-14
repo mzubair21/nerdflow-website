@@ -26,6 +26,7 @@ const config: Config = {
         green:'#122F26',
         lightgreen:"#060A0B",
         grey:"#BCCACA",
+        'white-transparent': 'rgba(255, 255, 255, 0.05)', // Custom color
         lightblack:"#0E1412",
         'foundation-grey-darker': '#222', 
       },
@@ -38,7 +39,7 @@ const config: Config = {
           DEFAULT: "1rem",
           sm: "2rem",
           lg: "4rem",
-          xl: "0.3rem",
+          xl: "2rem",
           "2xl": "6rem",
         },
       },

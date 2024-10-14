@@ -109,7 +109,7 @@ const BlogPage = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-20 bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[28rem] text-left bg-custom-gradient2">
           <div className="container">
             <h1 className="text-white font-semibold text-[2.5rem]">
               Our <span className="text-teal">Blogs</span>
@@ -121,8 +121,9 @@ const BlogPage = () => {
         </div>
       </div>
 
+     
       {/* Filter Buttons Section */}
-      <div className="flex flex-wrap justify-center gap-2 my-8 container">
+      <div className="flex flex-wrap gap-2 my-8 container">
         {[
           "All",
           "Web Development",
@@ -135,7 +136,7 @@ const BlogPage = () => {
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-4 py-2 rounded text-sm sm:text-base ${
+            className={`px-4 py-2 sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-lg whitespace-nowrap ${
               activeFilter === filter
                 ? "bg-tealgradient text-white"
                 : "bg-foundation-grey-darker text-white"
@@ -145,6 +146,7 @@ const BlogPage = () => {
           </button>
         ))}
       </div>
+
 
       {/* Blogs Section */}
       <Blogs />
