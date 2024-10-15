@@ -1,11 +1,29 @@
+"use client"
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import LaravelBg from "../../assets/images/laravel.png";
 import laravelRight from "../../assets/images/laravelRight.png";
 import quoteBg from "../../assets/images/quoteBg.png";
 import Vector from '../../assets/images/Vector.png';
 
+const quotes = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare.",
+  "Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
+  "Consectetur adipiscing elit. Velit nascetur Consequat faucibus porttitor enim et. Lorem ipsum dolor sit amet."
+];
 
 const Blog = () => {
+  const [currentQuote, setCurrentQuote] = useState(0);
+
+  // Timer for auto-changing quotes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentQuote((prev) => (prev + 1) % quotes.length);
+    }, 3000); // Change quote every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <div className="relative h-[28rem]">
@@ -45,6 +63,8 @@ const Blog = () => {
           development while ensuring a secure foundation
         </p>
       </div>
+
+      {/* Quote Section */}
       <div className="relative w-full h-[27.5rem]">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -64,8 +84,23 @@ const Blog = () => {
 
           {/* Quote */}
           <blockquote className="mt-4 text-xl font-semibold text-center text-white lg:px-80">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.
+            {quotes[currentQuote]}
           </blockquote>
+
+          {/* Line below the quote */}
+          <div className="mt-10 w-40 h-[4px] bg-white"></div>
+
+          {/* Dots as quote indicators */}
+          <div className="flex space-x-2 mt-4">
+            {quotes.map((_, index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full ${
+                  index === currentQuote ? "bg-white" : "bg-gray-400"
+                }`}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -79,8 +114,8 @@ const Blog = () => {
           development while ensuring a secure foundation
         </p>
       </div>
-      <div className="p-12 relative container">
-        <div className="w-full lg:w-[25rem] absolute -top-[40%] left-[71%] hidden xl:block">
+      <div className="relative container">
+        <div className="w-full lg:w-[25rem] absolute -top-[40%] xl:left-[72%] hidden xl:block">
           <Image
             src={laravelRight}
             alt="Plan Left Background"

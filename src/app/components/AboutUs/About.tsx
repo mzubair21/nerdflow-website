@@ -88,7 +88,7 @@ const About = () => {
       </div>
 
       <div className="text-left pl-8 font-medium relative container">
-        <h1 className="text-[2.125rem]"><span className="text-teal">Technologies</span>We Work On</h1>
+        <h1 className="text-[2.125rem]"><span className="text-teal">Technologies</span> We Work On</h1>
         <p className="text-white text-[1rem]">Leveraging cutting-edge technologies to drive innovation!</p>
 
         </div>
