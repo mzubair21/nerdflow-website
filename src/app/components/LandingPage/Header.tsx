@@ -3,11 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger and close icons
+import { FaBars, FaTimes } from "react-icons/fa";
 import NerdFlowLogo from "../../assets/images/NerdFlowLogo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState<string>(""); // Explicitly type as string
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,15 +25,23 @@ const Header = () => {
     } else {
       document.body.style.overflow = "auto";
     }
+
+    // Set the current path from window location
+    setCurrentPath(window.location.pathname);
   }, [isMenuOpen]);
 
+  // Add types to the function
+  const isActiveLink = (path: string): string => {
+    return currentPath === path ? "border-t-[0.25rem]  border-white" : "";
+  };
+
   return (
-    <header className="py-4 bg-gradient-to-b from-black to-transparent font-poppins ">
+    <header className="py-4 bg-gradient-to-b from-black to-transparent font-poppins fixed top-0 left-0 w-full z-30">
       {/* Container for centering content */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo Section */}
-          <div className="flex items-center -ml-6"> 
+          <div className="flex items-center">
             <Image
               src={NerdFlowLogo}
               alt="Logo"
@@ -48,37 +57,42 @@ const Header = () => {
           </div>
 
           {/* Navigation Links for Medium and Large Screens (Hidden on smaller screens) */}
-          <nav className="hidden md:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem] ">
-            <ul className="flex space-x-10 sm:space-x-12 md:space-x-6"> {/* Add more space between the links */}
-              <li>
+          <nav className="hidden md:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem]">
+            <ul className="flex space-x-10 sm:space-x-12 md:space-x-6 lg:space-x-8">
+              <li className={`${isActiveLink("/")}`}>
                 <Link href="/" className="hover:text-teal">
                   Home
                 </Link>
               </li>
-              <li>
+              <li className={`${isActiveLink("/services")}`}>
                 <Link href="/services" className="hover:text-teal">
                   Services
                 </Link>
               </li>
-              <li>
+              <li className={`${isActiveLink("#portfolio")}`}>
                 <Link href="#portfolio" className="hover:text-teal">
                   Portfolio
                 </Link>
               </li>
-              <li>
+              <li className={`${isActiveLink("/about")}`}>
                 <Link href="/about" className="hover:text-teal">
                   About
                 </Link>
               </li>
-              <li>
+              <li className={`${isActiveLink("/pricing")}`}>
+                <Link href="/pricing" className="hover:text-teal">
+                  Pricing
+                </Link>
+              </li>
+              <li className={`${isActiveLink("/blogs")}`}>
                 <Link href="/blogs" className="hover:text-teal">
                   Blogs
                 </Link>
               </li>
-              <li>
+              <li className={`${isActiveLink("/contact")}`}>
                 <Link
                   href="/contact"
-                  className="hover:text-teal bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
+                  className="hover:text-black hover:bg-grey shadow-custom-shadow-small bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
                 >
                   Contact Us
                 </Link>
@@ -106,6 +120,9 @@ const Header = () => {
             </Link>
             <Link href="/about" className="text-lg font-medium">
               About
+            </Link>
+            <Link href="/pricing" className="text-lg font-medium">
+              Pricing
             </Link>
             <Link href="/blogs" className="text-lg font-medium">
               Blogs

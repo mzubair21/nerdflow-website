@@ -51,22 +51,22 @@ const FAQ = () => {
         </p>
       </div>
       <div className="w-full lg:w-[25rem] absolute left-[71%] 2xl:left-[74%]">
-          <Image
-            src={FAQBg}
-            alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
-          />
-        </div>
+        <Image
+          src={FAQBg}
+          alt="Hero Section Background"
+          className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
+        />
+      </div>
       {/* FAQ Section */}
       <div className="mt-10 w-full container">
         {faqs.map((faq, index: number) => (
           <div
-            key={`${faq.question}-${index}`} // Generate unique key
-            className="text-white p-12 mb-8 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack hover:border hover:border-lightblack"
-            onClick={() => toggleFAQ(index)} // Toggle when clicked
+            key={`${faq.question}-${index}`} 
+            className="text-white p-12 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack border-t border-b border-grey" // Updated border classes
+            onClick={() => toggleFAQ(index)} 
           >
             {/* Numbering */}
-            <div className="mr-4 text-white text-[2rem] font-bold">
+            <div className="mr-10 text-white text-[2rem] font-bold">
               {index < 9 ? `0${index + 1}` : index + 1}
             </div>
 

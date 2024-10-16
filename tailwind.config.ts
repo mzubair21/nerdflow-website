@@ -11,6 +11,14 @@ const config: Config = {
     {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'], 
+      },
+      boxShadow: {
+        'custom-shadow': '0px 0px 27.993px 0px rgba(52, 224, 161, 0.18), 0px 0px 38.76px 0px rgba(52, 224, 161, 0.15), 0px 0px 53.115px 0px rgba(52, 224, 161, 0.14)',
+        'custom-shadow-small': '0px 0px 4px 0px rgba(0, 0, 0, 0.25)', 
+      },
+      textColor: {
+        'custom-text': '#18372C',
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.80) 21.11%, rgba(0, 0, 0, 0.00) 100%)',
@@ -28,6 +36,7 @@ const config: Config = {
         grey:"#BCCACA",
         'white-transparent': 'rgba(255, 255, 255, 0.05)', // Custom color
         lightblack:"#0E1412",
+        greenhover:"rgba(97, 255, 158, 0.86)",
         'foundation-grey-darker': '#222', 
       },
       gap: {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PlanLeft from '../../assets/images/PlanLeft.png';
 import PlanRight from '../../assets/images/PlanRight.png';
 
@@ -49,7 +50,7 @@ const Plans = () => {
   ];
 
   return (
-    <div className="font-poppins py-10 relative">
+    <div className="font-poppins py-28 relative">
       {/* Background images for large screens */}
       <div className="w-full lg:w-[25rem] absolute top-[20%] hidden xl:block">
         <Image
@@ -81,7 +82,7 @@ const Plans = () => {
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
-            className={`relative overflow-hidden text-center rounded-lg shadow-lg p-6 
+            className={`relative overflow-hidden text-center rounded-2xl shadow-lg p-6 
               ${index === 1 ? 'lg:h-[37rem] lg:w-[24rem] -mt-7' : 'lg:w-[24rem] lg:h-[34rem]'}`}
             style={{
               border: index === 1 ? '3px solid #00FFC8' : '1.276px solid #5E5E5E', 
@@ -106,16 +107,21 @@ const Plans = () => {
             >
               {plan.price}
               {plan.additional && (
-                <span className="text-grey text-[1rem] ml-2 mt-4 font-medium opacity-0.8">
+                <span className="text-grey text-[1rem] ml-2 mt-6 font-medium opacity-0.8">
                   {plan.additional}
                 </span>
               )}
             </p>
             {/* Move button to the left */}
             <div className="flex justify-start">
-              <button className="bg-tealgradient text-white py-2 lg:py-3 px-5 lg:px-6 rounded-lg hover:bg-teal-600 text-[0.875rem] lg:text-[1rem] font-bold">
-                Get Started
-              </button>
+            <Link
+                    href="/contact"
+                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+                   hover:text-custom-text"
+                  >
+                   Get Started
+                  </Link>
             </div>
           </div>
         ))}

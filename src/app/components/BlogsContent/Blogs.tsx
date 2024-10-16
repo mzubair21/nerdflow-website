@@ -83,7 +83,7 @@ const Blog = () => {
           </div>
 
           {/* Quote */}
-          <blockquote className="mt-4 text-xl font-semibold text-center text-white lg:px-80">
+          <blockquote className="mt-4 text-xl font-semibold text-center text-white lg:px-80 py-6 font-inter">
             {quotes[currentQuote]}
           </blockquote>
 
@@ -104,9 +104,9 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="p-12 container">
-        <h1 className="font-semibold text-[2.125rem]">Why Laravel for CRM?</h1>
-        <p>
+      <div className="container pt-16">
+        <h1 className="font-semibold text-[2.125rem] ">Why Laravel for CRM?</h1>
+        <p className="font-inter">
           Laravel brings a host of advantages to CRM development. Its expressive
           syntax, modular architecture, and extensive ecosystem make it ideal
           for crafting tailored CRM solutions. With features like ORM
@@ -114,7 +114,7 @@ const Blog = () => {
           development while ensuring a secure foundation
         </p>
       </div>
-      <div className="relative container">
+      <div className="relative container ">
         <div className="w-full lg:w-[25rem] absolute -top-[40%] xl:left-[72%] hidden xl:block">
           <Image
             src={laravelRight}
@@ -122,8 +122,8 @@ const Blog = () => {
             className="absolute inset-0 w-auto h-auto -z-10"
           />
         </div>
-        <h1 className="font-semibold text-[2.125rem]">Why Laravel for CRM?</h1>
-        <p className="mb-8">
+        <h1 className="font-semibold text-[2.125rem] pt-16">Why Laravel for CRM?</h1>
+        <p className="mb-8 font-inter">
           Laravel brings a host of advantages to CRM development. Its expressive
           syntax, modular architecture, and extensive ecosystem make it ideal
           for crafting tailored CRM solutions. With features like ORM

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import projectImage1 from "../../assets/images/projectImage1.png";
 import projectImage2 from "../../assets/images/projectImage2.png";
 import projectImage3 from "../../assets/images/projectImage3.png";
@@ -54,16 +55,22 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index} // Unique key for each project
-            className="flex flex-col lg:flex-row items-center justify-between bg-lightblack pt-6 px-6 pb-0 rounded-lg my-8"
+            className="flex flex-col lg:flex-row items-center justify-center bg-lightblack  rounded-lg my-8 px-6 pl-12"
           >
             <div className="lg:w-1/2">
-              <h2 className="text-xl font-semibold text-white mb-2">
+              <h2 className="text-xl font-semibold text-white mb-2 border-grey">
                 {project.title}
               </h2>
-              <p className="text-white mb-4">{project.description}</p>
-              <button className="bg-tealgradient text-white py-2 px-4 rounded-lg hover:bg-teal-600">
-                See Case Study
-              </button>
+              <p className="text-white mb-9 font-normal">{project.description}</p>
+               <Link
+                    href="/case-study"
+                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+                    hover:text-custom-text"
+                  >
+                    See Case Study
+                  </Link>
+            
             </div>
             <div className="lg:w-1/2 mt-4 lg:mt-0">
               <Image

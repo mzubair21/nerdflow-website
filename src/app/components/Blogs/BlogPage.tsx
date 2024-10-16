@@ -121,30 +121,31 @@ const BlogPage = () => {
         </div>
       </div>
 
-     
-      {/* Filter Buttons Section */}
-      <div className="flex flex-wrap gap-2 my-8 container">
-        {[
-          "All",
-          "Web Development",
-          "CRM&ERP Development",
-          "Mobile Development",
-          "SEO Optimization",
-          "Social Media Marketing",
-          "UI/UX Designing",
-        ].map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={`px-4 py-2 sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-lg whitespace-nowrap ${
-              activeFilter === filter
-                ? "bg-tealgradient text-white"
-                : "bg-foundation-grey-darker text-white"
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
+      {/* Filter Buttons Section with Black Background */}
+      <div className="py-4">
+        <div className="flex overflow-x-auto space-x-2 my-4 container">
+          {[
+            "All",
+            "Web Development",
+            "CRM&ERP Development",
+            "Mobile Development",
+            "SEO Optimization",
+            "Social Media Marketing",
+            "UI/UX Designing",
+          ].map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                activeFilter === filter
+                  ? "bg-tealgradient text-white"
+                  : "bg-foundation-grey-darker text-white"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
       </div>
 
 

@@ -76,22 +76,29 @@ const casestudy = () => {
         </div>
       </div>
 
-     {/* Main Content Section */}
-<div className="flex flex-col md:flex-row items-center justify-between  py-10 relative container">
-  {/* Left Side: Text Content */}
-  <div className="w-full lg:w-[25rem] absolute -top-[50%] -left-[10%] hidden xl:block">
-    <Image
-      src={CaseStudyLeft}
-      alt="Plan Left Background"
-      className="absolute inset-0 w-auto h-auto -z-10"
-    />
-  </div>
-  <div className="w-full md:w-[55%] pt-8 md:pb-12">
-    <h1 className="text-[2.125rem] md:text-2xl font-bold mb-4">Introduction</h1>
-    <p className="text-base md:text-lg">
-      Introducing our innovative CRM solution, designed to elevate the efficiency and effectiveness of BRT Centers, a distinguished healthcare institution. With a strong commitment to improving operational workflows and enhancing patient care, our CRM serves as a tailored platform that streamlines checkups, simplifies documentation tasks, and expedites the process of report generation.
-    </p>
-  </div>
+      {/* Main Content Section */}
+      <div className="flex flex-col md:flex-row items-center justify-between  py-10 relative container">
+        {/* Left Side: Text Content */}
+        <div className="w-full lg:w-[25rem] absolute -top-[50%] -left-[10%] hidden xl:block">
+          <Image
+            src={CaseStudyLeft}
+            alt="Plan Left Background"
+            className="absolute inset-0 w-auto h-auto -z-10"
+          />
+        </div>
+        <div className="w-full md:w-[55%] pt-8 md:pb-12">
+          <h1 className="text-[2.125rem] md:text-2xl font-bold mb-4">
+            Introduction
+          </h1>
+          <p className="text-base md:text-lg">
+            Introducing our innovative CRM solution, designed to elevate the
+            efficiency and effectiveness of BRT Centers, a distinguished
+            healthcare institution. With a strong commitment to improving
+            operational workflows and enhancing patient care, our CRM serves as
+            a tailored platform that streamlines checkups, simplifies
+            documentation tasks, and expedites the process of report generation.
+          </p>
+        </div>
 
         {/* Right Side: Image */}
         <div className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[20rem] mt-6 md:mt-0">
@@ -104,9 +111,16 @@ const casestudy = () => {
         <div className="w-[18rem] md:w-[38.6rem] h-[12rem] md:h-[23.6rem] mx-auto mb-2 md:mb-12">
           <Image src={main} alt="main screen"></Image>
         </div>
-        <div className="md:p-8">
+        <div>
           <p className="text-sm md:text-lg">
-            Leveraging advanced technology and a deep understanding of healthcare management, our solution is poised to redefine how BRT Centers approaches daily operations, ensuring seamless processes and optimized patient experiences. By providing intuitive tools for checkup creation, secure data storage, and swift report creation, our CRM empowers BRT Centers to focus on what truly matters – delivering top-notch healthcare services while maintaining the highest standards of operational efficiency.
+            Leveraging advanced technology and a deep understanding of
+            healthcare management, our solution is poised to redefine how BRT
+            Centers approaches daily operations, ensuring seamless processes and
+            optimized patient experiences. By providing intuitive tools for
+            checkup creation, secure data storage, and swift report creation,
+            our CRM empowers BRT Centers to focus on what truly matters –
+            delivering top-notch healthcare services while maintaining the
+            highest standards of operational efficiency.
           </p>
         </div>
       </div>
@@ -117,7 +131,11 @@ const casestudy = () => {
           BRT <span className="text-teal">Modules</span>
         </h1>
         <p className="text-sm md:text-lg">
-          Laravel brings a host of advantages to CRM development. Its expressive syntax, modular architecture, and extensive ecosystem make it ideal for crafting tailored CRM solutions. With features like ORM (Eloquent), routing, caching, and security, Laravel accelerates development while ensuring a secure foundation.
+          Laravel brings a host of advantages to CRM development. Its expressive
+          syntax, modular architecture, and extensive ecosystem make it ideal
+          for crafting tailored CRM solutions. With features like ORM
+          (Eloquent), routing, caching, and security, Laravel accelerates
+          development while ensuring a secure foundation.
         </p>
       </div>
 
@@ -141,7 +159,10 @@ const casestudy = () => {
         <div className="text-center">
           {/* Image */}
           <div className="w-[20rem] sm:w-[25rem] lg:w-[60rem] md:w-[35rem] h-[10rem] md:h-[15rem] mx-auto lg:mb-6">
-            <Image src={slides[currentIndex].image} alt={`Slide ${currentIndex}`} />
+            <Image
+              src={slides[currentIndex].image}
+              alt={`Slide ${currentIndex}`}
+            />
           </div>
 
           {/* Heading */}
@@ -150,12 +171,12 @@ const casestudy = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-sm md:text-md mt-2 px-4 md:px-12">
+          <p className="text-sm md:text-md mt-4 px-4 md:px-12">
             {slides[currentIndex].description}
           </p>
 
           {/* Dots */}
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-8">
             {slides.map((_, index) => (
               <span
                 key={index}

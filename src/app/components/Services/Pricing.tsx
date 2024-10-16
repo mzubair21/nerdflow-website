@@ -8,7 +8,7 @@ const Pricing = () => {
             <Image
                 src={PricingImage}
                 alt="Descriptive Alt Text"
-                className="absolute left-0 top-0 h-full object-cover w-[30%] z-0"
+                className="absolute -left-[5%] top-0 h-full object-cover w-[30%] z-0"
             />
             
             {/* Content */}
@@ -17,8 +17,8 @@ const Pricing = () => {
                 <p className="text-white text-[1.25rem]">Have a project in mind? Let’s collaborate and bring your vision to life!</p>
                 
                 <div className="mt-6 flex flex-row space-x-6 justify-center font-bold text-[1.25rem]">
-                    <button className="bg-tealgradient hover:bg-teal p-4 w-[13rem] rounded-lg" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>See Pricing</button>
-                    <button className="bg-tealgradient hover:bg-teal p-4 w-[13rem] rounded-lg"style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>Contact Us</button>
+                    <button className="bg-tealgradient hover:bg-green shadow-custom-shadow-small p-4 w-[13rem] rounded-[1.25rem]" style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>See Pricing</button>
+                    <button className="bg-tealgradient hover:bg-green shadow-custom-shadow-small p-4 w-[13rem] rounded-[1.25rem]"style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}>Contact Us</button>
                 </div>
             </div>
         </div>

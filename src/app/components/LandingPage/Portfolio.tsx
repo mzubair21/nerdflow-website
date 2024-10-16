@@ -34,7 +34,10 @@ const Portfolio = () => {
           </p>
           <Link
             href="/contact"
-            className="bg-tealgradient text-white py-3 px-6 rounded-lg hover:bg-teal-600 text-sm sm:text-base font-bold"
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+    hover:text-custom-text
+  "
           >
             See Case Study
           </Link>
@@ -63,7 +66,7 @@ const Portfolio = () => {
             src={WizzRight}
             alt="Hero Section Background"
             className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[14%] 2xl:left-[18%]"
-            style={{ top: "-150%" }} 
+            style={{ top: "-150%" }}
           />
 
           <Image
@@ -82,7 +85,10 @@ const Portfolio = () => {
           </p>
           <Link
             href="/contact"
-            className="bg-tealgradient text-white py-3 px-6 rounded-lg hover:bg-teal-600 text-sm sm:text-base font-bold"
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+    hover:text-custom-text
+  "
           >
             See Case Study
           </Link>
@@ -102,7 +108,10 @@ const Portfolio = () => {
           </p>
           <Link
             href="/contact"
-            className="bg-tealgradient text-white py-3 px-6 rounded-lg hover:bg-teal-600 text-sm sm:text-base font-bold"
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+    hover:text-custom-text
+  "
           >
             See Case Study
           </Link>
@@ -136,7 +145,10 @@ const Portfolio = () => {
           </p>
           <Link
             href="/contact"
-            className="bg-tealgradient text-white py-3 px-6 rounded-lg hover:bg-teal-600 text-sm sm:text-base font-bold"
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+    hover:text-custom-text
+  "
           >
             See Case Study
           </Link>

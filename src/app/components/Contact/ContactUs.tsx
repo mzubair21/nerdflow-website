@@ -42,6 +42,17 @@ const ContactUs = () => {
         <form className="space-y-4">
           {/* First and Last Name */}
           <div className="flex flex-col lg:flex-row gap-2 justify-center ">
+          <div className="w-full lg:w-[26.8rem]">
+              <label htmlFor="firstName" className="sr-only">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                className="mt-1 block w-full bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4"  style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
+                placeholder="First Name"
+              />
+            </div>
             <div className="w-full lg:w-[26.8rem]">
               <label htmlFor="lastName" className="sr-only">Last Name</label>
               <input
@@ -53,17 +64,7 @@ const ContactUs = () => {
                 placeholder="Last Name"
               />
             </div>
-            <div className="w-full lg:w-[26.8rem]">
-              <label htmlFor="firstName" className="sr-only">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                required
-                className="mt-1 block w-full bg-whitetransparent text-purewhite rounded-[6.141px] border-[1.228px] border-white/20 bg-[rgba(255,255,255,0.05)] shadow-sm focus:ring focus:ring-teal focus:border-teal p-4"  style={{border: '1.276px solid #5E5E5E',   backdropFilter: 'blur(2.55px)'}}
-                placeholder="First Name"
-              />
-            </div>
+           
           </div>
 
           {/* Email */}

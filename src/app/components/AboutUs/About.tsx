@@ -41,9 +41,9 @@ const About = () => {
       </div>
      
      <div className="p-8 container">
-        <h1 className="text-white text-[2.125rem] font-semibold"> <span className="text-teal">
+        <h1 className="text-white text-[2.125rem] font-semibold leading-normal"> <span className="text-teal">
         Empowering </span> Excellence: Our Technological Arsenal</h1>
-        <p className="text-[1.125rem]">At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.</p>
+        <p className="text-[1.125rem] pt-5">At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.</p>
      </div>
      
      <div className="text-left pl-8 font-medium relative container">
