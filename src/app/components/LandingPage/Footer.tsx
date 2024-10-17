@@ -6,7 +6,7 @@ import phone from "../../assets/svgs/phoneIcon.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-lightgreen text-white py-16 px-4 sm:px-5 lg:px-5 font-poppins container mx-auto">
+    <footer className="bg-black text-white py-16 px-4 sm:px-5 lg:px-5 font-poppins container mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-start">
         {/* Left Div - Logo, Heading, Contact Details */}
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0">

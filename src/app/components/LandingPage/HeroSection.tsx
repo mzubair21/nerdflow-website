@@ -5,7 +5,7 @@ import HeroSectionbg from "../../assets/svgs/HeroSectionBg.svg";
 
 const HeroSection = () => {
   return (
-    <section className="font-poppins flex flex-col lg:flex-row items-center justify-between mt-32 lg:py-10 container mx-auto px-2 xl:px-16 relative">
+    <section className="font-poppins mt-28 flex flex-col lg:flex-row items-center justify-between lg:py-10 container mx-auto relative">
       {/* Text Section with Background */}
       <div className="w-full lg:w-[55%] relative mb-8 lg:mb-0">
         {/* Background Image using Image component */}

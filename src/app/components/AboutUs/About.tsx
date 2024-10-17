@@ -32,21 +32,21 @@ const About = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-14 bg-custom-gradient2">
-          <div className="container">
+        <div className="relative z-10 flex items-end h-[28rem] px-10 bg-custom-gradient2 container">
+          <div>
             <h1 className="text-white font-semibold text-[2.5rem]">About Us</h1>
             <p className="text-white text-[1.5rem]">Feel free to contact us for inquiries or support!</p>
           </div>
         </div>
       </div>
      
-     <div className="p-8 container">
+     <div className="py-8 px-10 container">
         <h1 className="text-white text-[2.125rem] font-semibold leading-normal"> <span className="text-teal">
         Empowering </span> Excellence: Our Technological Arsenal</h1>
         <p className="text-[1.125rem] pt-5">At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.</p>
      </div>
      
-     <div className="text-left pl-8 font-medium relative container">
+     <div className="text-left px-10 font-medium relative container">
         <h1 className="text-[2.125rem]">Meet Our <span className="text-teal">Team</span></h1>
         <p className="text-white text-[1rem]">Together, we steer the course of technology and design, dedicated to crafting exceptional digital experiences that exceed expectations.</p>
     </div>
@@ -87,13 +87,13 @@ const About = () => {
         </div>   
       </div>
 
-      <div className="text-left pl-8 font-medium relative container">
+      <div className="text-left px-10 font-medium relative container">
         <h1 className="text-[2.125rem]"><span className="text-teal">Technologies</span> We Work On</h1>
         <p className="text-white text-[1rem]">Leveraging cutting-edge technologies to drive innovation!</p>
 
         </div>
         {/**Logos */}
-        <div className="p-6 flex flex-wrap gap-2 container" >
+        <div className="p-8 flex flex-wrap gap-2 container" >
             <div className="w-[9rem] h-[9rem]">
             <Image src={indesign} alt="indesign" ></Image>
             </div>

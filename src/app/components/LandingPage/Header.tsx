@@ -8,7 +8,7 @@ import NerdFlowLogo from "../../assets/images/NerdFlowLogo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState<string>(""); // Explicitly type as string
+  const [activePath, setActivePath] = useState(""); // State to track the active route
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,23 +25,24 @@ const Header = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-
-    // Set the current path from window location
-    setCurrentPath(window.location.pathname);
   }, [isMenuOpen]);
 
-  // Add types to the function
-  const isActiveLink = (path: string): string => {
-    return currentPath === path ? "border-t-[0.25rem]  border-white" : "";
-  };
+  useEffect(() => {
+    // Check if we are on the client (browser) before accessing the window object
+    if (typeof window !== "undefined") {
+      // Update active path based on current URL
+      setActivePath(window.location.pathname);
+    }
+  }, []);
+
+  const isActive = (path: string) => activePath === path;
 
   return (
-    <header className="py-4 bg-gradient-to-b from-black to-transparent font-poppins fixed top-0 left-0 w-full z-30">
-      {/* Container for centering content */}
-      <div className="container mx-auto px-4">
+    <header className="fixed top-0 left-0 w-full z-50 py-4 bg-gradient-to-b from-black to-transparent font-poppins">
+      <div className="container mx-auto px-4 relative">
         <div className="flex items-center justify-between py-4">
           {/* Logo Section */}
-          <div className="flex items-center">
+          <div className="flex items-center -ml-6">
             <Image
               src={NerdFlowLogo}
               alt="Logo"
@@ -49,50 +50,70 @@ const Header = () => {
             />
           </div>
 
-          {/* Burger Menu Icon for Small Screens (Visible below md) */}
+          {/* Burger Menu Icon for Small Screens */}
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
               {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
 
-          {/* Navigation Links for Medium and Large Screens (Hidden on smaller screens) */}
-          <nav className="hidden md:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem]">
-            <ul className="flex space-x-10 sm:space-x-12 md:space-x-6 lg:space-x-8">
-              <li className={`${isActiveLink("/")}`}>
+          {/* Navigation Links for Medium and Large Screens */}
+          <nav className="hidden md:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem] ">
+            <ul className="flex space-x-10 sm:space-x-12 md:space-x-6 relative">
+              <li className="relative">
                 <Link href="/" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("/") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
                   Home
                 </Link>
               </li>
-              <li className={`${isActiveLink("/services")}`}>
+              <li className="relative">
                 <Link href="/services" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("/services") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
                   Services
                 </Link>
               </li>
-              <li className={`${isActiveLink("#portfolio")}`}>
+              <li className="relative">
                 <Link href="#portfolio" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("#portfolio") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
                   Portfolio
                 </Link>
               </li>
-              <li className={`${isActiveLink("/about")}`}>
+              <li className="relative">
                 <Link href="/about" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("/about") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
                   About
                 </Link>
               </li>
-              <li className={`${isActiveLink("/pricing")}`}>
-                <Link href="/pricing" className="hover:text-teal">
-                  Pricing
-                </Link>
-              </li>
-              <li className={`${isActiveLink("/blogs")}`}>
+              <li className="relative">
                 <Link href="/blogs" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("/blogs") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
                   Blogs
                 </Link>
               </li>
-              <li className={`${isActiveLink("/contact")}`}>
+              <li className="relative">
                 <Link
                   href="/contact"
-                  className="hover:text-black hover:bg-grey shadow-custom-shadow-small bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
+                  className="hover:bg-grey  bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
                 >
                   Contact Us
                 </Link>
@@ -102,13 +123,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Only Visible on Small Screens) */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden overflow-x-hidden fixed inset-0 top-[4rem] left-0 bg-teal bg-opacity-90 text-white z-20">
-          <nav
-            className="flex flex-col items-center space-y-6 py-6"
-            onClick={closeMenu}
-          >
+          <nav className="flex flex-col items-center space-y-6 py-6" onClick={closeMenu}>
             <Link href="/" className="text-lg font-medium">
               Home
             </Link>
@@ -120,9 +138,6 @@ const Header = () => {
             </Link>
             <Link href="/about" className="text-lg font-medium">
               About
-            </Link>
-            <Link href="/pricing" className="text-lg font-medium">
-              Pricing
             </Link>
             <Link href="/blogs" className="text-lg font-medium">
               Blogs

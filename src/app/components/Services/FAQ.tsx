@@ -62,7 +62,7 @@ const FAQ = () => {
         {faqs.map((faq, index: number) => (
           <div
             key={`${faq.question}-${index}`} 
-            className="text-white p-12 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack border-t border-b border-grey" // Updated border classes
+            className="text-white p-12 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack border-t border-grey" // Updated border classes
             onClick={() => toggleFAQ(index)} 
           >
             {/* Numbering */}

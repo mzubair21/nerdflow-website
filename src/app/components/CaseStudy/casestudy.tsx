@@ -64,7 +64,7 @@ const casestudy = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[18rem] md:h-[28rem]  md:px-14 bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[18rem] md:h-[28rem] bg-custom-gradient2">
           <div className="container">
             <h1 className="text-white font-semibold text-[1.8rem] md:text-[2.5rem]">
               <span className="text-teal">BRT</span> Centers
