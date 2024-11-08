@@ -65,7 +65,7 @@ const Portfolio = () => {
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[5%] 2xl:left-[14%]"
+            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[7%] 2xl:left-[14%]"
             style={{ top: "-150%" }}
           />
 
