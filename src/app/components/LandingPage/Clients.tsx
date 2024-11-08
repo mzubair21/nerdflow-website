@@ -27,16 +27,21 @@ const Clients = () => {
           navigation={true} // Show navigation arrows
           modules={[Navigation]} // Use navigation module
           breakpoints={{
+            0: {
+              slidesPerView: 2, // 1 slide on screens smaller than 640px
+            },
             640: {
-              slidesPerView: 1, // 1 slide on smaller screens
+              slidesPerView: 3, // 1 slide on smaller screens
             },
             768: {
-              slidesPerView: 2, // 2 slides on medium screens
+              slidesPerView: 3, // 2 slides on medium screens
             },
             1024: {
               slidesPerView: 5, // 5 slides on larger screens
             },
+            
           }}
+          
         >
           {/* Slide 1 */}
           <SwiperSlide>

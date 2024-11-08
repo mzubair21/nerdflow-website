@@ -25,6 +25,9 @@ const AboutUs = () => {
           navigation={true} // Show navigation arrows
           modules={[Navigation]} // Use navigation module
           breakpoints={{
+            0: {
+              slidesPerView: 1, // 1 slide on screens smaller than 640px
+            },
             640: {
               slidesPerView: 1, // 1 slide on smaller screens
             },

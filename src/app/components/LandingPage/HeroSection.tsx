@@ -21,7 +21,7 @@ const HeroSection = () => {
             Software solutions
           </span>
         </h1>
-        <p className="text-base lg:text-lg mb-6 lg:mb-8 font-bold relative z-10 ">
+        <p className="text-base text-white lg:text-lg mb-6 lg:mb-8 font-bold relative z-10 ">
           Discover how we have transformed businesses across various industries
           through our innovative solutions.
         </p>
