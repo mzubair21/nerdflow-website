@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="flex flex-col">
             {/* Pages Links */}
             <div>
-              <ul className="flex flex-wrap space-x-8 mb-6 font-bold">
+              <ul className="flex flex-wrap space-x-6 mb-6 font-bold">
                 <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
                 <li>
                   <a href="" className="hover:underline ml-5">
@@ -102,7 +102,7 @@ const Footer = () => {
 
             {/* Social Follow Links */}
             <div>
-              <ul className="flex flex-wrap space-x-8 font-bold">
+              <ul className="flex flex-wrap space-x-6 font-bold">
                 <h2 className="text-lg font-bold text-grey">Follow Us</h2>
                 <li>
                   <a
