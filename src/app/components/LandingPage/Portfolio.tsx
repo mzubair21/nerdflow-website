@@ -33,7 +33,7 @@ const Portfolio = () => {
             a seamless, user-friendly interface.
           </p>
           <Link
-            href="/contact"
+            href="/case-study"
             className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
@@ -61,11 +61,11 @@ const Portfolio = () => {
         </div>
 
         {/* Text Section with Background */}
-        <div className="w-full lg:w-[34rem] relative">
+        <div className="w-full lg:w-[40rem] relative">
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[14%] 2xl:left-[18%]"
+            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[5%] 2xl:left-[14%]"
             style={{ top: "-150%" }}
           />
 
@@ -84,7 +84,7 @@ const Portfolio = () => {
             inventory management and order processing.
           </p>
           <Link
-            href="/contact"
+            href="/case-study"
             className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
@@ -107,7 +107,7 @@ const Portfolio = () => {
             management, compliance, and documentation.
           </p>
           <Link
-            href="/contact"
+            href="/case-study"
             className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
@@ -144,7 +144,7 @@ const Portfolio = () => {
             app screenshots.
           </p>
           <Link
-            href="/contact"
+            href="/case-study"
             className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text

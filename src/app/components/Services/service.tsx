@@ -100,7 +100,7 @@ const Service = () => {
 
       {/* Filter Buttons Section with Black Background */}
       <div className="py-4">
-        <div className="flex overflow-x-auto space-x-2 my-4 container">
+        <div className="flex overflow-auto space-x-2 my-4 container">
           {[
             "All",
             "Web Development",

@@ -1,4 +1,8 @@
+"use client";
 import Image from "next/image";
+import "swiper/css"; // Import Swiper styles
+import { Navigation } from "swiper/modules"; // Import required modules
+import { Swiper, SwiperSlide } from "swiper/react";
 import Hadi from '../../assets/images/Hadi.png';
 import Muqeet from '../../assets/images/Muqeet.png';
 import Tayyab from '../../assets/images/Tayyab.png';
@@ -13,41 +17,93 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Section with 3 divs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 py-[3rem] md:px-8 ">
-        {/* First Box */}
-        <div className="text-center w-full">
-          <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>
+      {/* Swiper Section for Team Members */}
+      <div className="py-[3rem] md:px-8 cursor-pointer">
+        <Swiper
+          spaceBetween={60} // Space between slides
+          slidesPerView={3} // Show 3 team members per slide
+          navigation={true} // Show navigation arrows
+          modules={[Navigation]} // Use navigation module
+          breakpoints={{
+            640: {
+              slidesPerView: 1, // 1 slide on smaller screens
+            },
+            768: {
+              slidesPerView: 2, // 2 slides on medium screens
+            },
+            1024: {
+              slidesPerView: 3, // 3 slides on larger screens
+            },
+          }}
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
 
-        {/* Second Box */}
-        <div className="text-center w-full">
-          <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
 
-        {/* Third Box */}
-        <div className="text-center w-full">
-          <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>
-        
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
 
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
 
-        
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-[0.875rem]">
+                We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
+              </p>
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
       </div>
     </div>
-   
   );
 };
 

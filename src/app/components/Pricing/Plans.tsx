@@ -85,7 +85,7 @@ const Plans = () => {
             className={`relative overflow-hidden text-center rounded-2xl shadow-lg p-6 
               ${index === 1 ? 'lg:h-[37rem] lg:w-[24rem] -mt-7' : 'lg:w-[24rem] lg:h-[34rem]'}`}
             style={{
-              border: index === 1 ? '3px solid #00FFC8' : '1.276px solid #5E5E5E', 
+              border: index === 1 ? '4px solid #34E0A1' : '1.276px solid #5E5E5E', 
               backdropFilter: 'blur(2.55px)',
             }}
           >

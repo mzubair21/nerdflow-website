@@ -9,21 +9,21 @@ const Blogs = () => {
       image: blogImage1,
       title: 'Ready to revolutionize your web development journey?',
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
       link: 'Read more...',
     },
     {
       image: blogImage2,
-      title: 'Embrace Laravel\'s elegance, efficiency, and power',
+      title: "Embrace Laravel's elegance, efficiency, and power",
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
       link: 'Read more...',
     },
     {
       image: blogImage3,
       title: 'A robust Customer Relationship Management (CRM) possibility',
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
       link: 'Read more...',
     },
   ];
@@ -45,14 +45,16 @@ const Blogs = () => {
         {blogs.map((blog, index) => (
           <div
             key={index}
-            className="flex flex-col items-center  p-4 rounded-lg shadow-lg"
+            className="flex flex-col items-center p-4 rounded-lg shadow-lg"
           >
-            {/* Blog Image */}
-            <Image
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-[15rem] object-cover mb-4 rounded-t-lg"
-            />
+            {/* Blog Image with hover effect */}
+            <div className="w-full h-[15rem] mb-4 overflow-hidden rounded-t-lg">
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-full object-cover hover:cursor-pointer"
+              />
+            </div>
 
             {/* Blog Title */}
             <h2 className="text-white text-[1.25rem] font-semibold mb-2 text-left">
@@ -63,7 +65,7 @@ const Blogs = () => {
             <p className="text-white text-[0.875rem] text-left font-bold">
               {blog.description}{' '}
               <a
-                href="/casestudy"
+                href="/blogs-content"
                 className="text-teal hover:underline"
               >
                 {blog.link}

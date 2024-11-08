@@ -8,7 +8,8 @@ import NerdFlowLogo from "../../assets/images/NerdFlowLogo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activePath, setActivePath] = useState(""); // State to track the active route
+  const [activePath, setActivePath] = useState(""); 
+  const [isScrolled, setIsScrolled] = useState(false); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,21 +29,29 @@ const Header = () => {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    // Check if we are on the client (browser) before accessing the window object
     if (typeof window !== "undefined") {
-      // Update active path based on current URL
       setActivePath(window.location.pathname);
+
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50); 
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
-  const isActive = (path: string) => activePath === path;
+  const isActive = (path:String) => activePath === path;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-4 bg-gradient-to-b from-black to-transparent font-poppins">
-      <div className="container mx-auto px-4 relative">
-        <div className="flex items-center justify-between py-4">
-          {/* Logo Section */}
-          <div className="flex items-center -ml-6">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
+        isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
+      }`}
+    >
+      <div className="container mx-auto relative">
+        <div className="flex items-center justify-between py-4 -ml-4">
+          <div className="flex items-center">
             <Image
               src={NerdFlowLogo}
               alt="Logo"
@@ -50,16 +59,16 @@ const Header = () => {
             />
           </div>
 
-          {/* Burger Menu Icon for Small Screens */}
-          <div className="md:hidden flex items-center">
+          {/* Burger Menu Icon for Medium and Small Screens */}
+          <div className="md:flex lg:hidden items-center">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
               {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
 
-          {/* Navigation Links for Medium and Large Screens */}
-          <nav className="hidden md:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem] ">
-            <ul className="flex space-x-10 sm:space-x-12 md:space-x-6 relative">
+          {/* Navigation Links for Large Screens */}
+          <nav className="hidden lg:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem]">
+            <ul className="flex space-x-8 sm:space-x-12 md:space-x-2 lg:space-x-8 relative">
               <li className="relative">
                 <Link href="/" className="hover:text-teal">
                   <span
@@ -101,6 +110,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="relative">
+                <Link href="/pricing" className="hover:text-teal">
+                  <span
+                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                      isActive("/pricing") ? "w-full" : "w-0"
+                    }`}
+                  ></span>
+                  Pricing
+                </Link>
+              </li>
+              <li className="relative">
                 <Link href="/blogs" className="hover:text-teal">
                   <span
                     className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
@@ -113,7 +132,7 @@ const Header = () => {
               <li className="relative">
                 <Link
                   href="/contact"
-                  className="hover:bg-grey  bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
+                  className="hover:bg-grey bg-white rounded-full py-[0.75rem] px-[0.875rem] text-black"
                 >
                   Contact Us
                 </Link>
@@ -123,10 +142,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu for Small and Medium Screens */}
       {isMenuOpen && (
-        <div className="md:hidden overflow-x-hidden fixed inset-0 top-[4rem] left-0 bg-teal bg-opacity-90 text-white z-20">
-          <nav className="flex flex-col items-center space-y-6 py-6" onClick={closeMenu}>
+        <div className="lg:hidden overflow-x-hidden fixed inset-0 top-[4rem] left-0 bg-teal bg-opacity-90 text-white z-20">
+          <nav className="flex flex-col items-center space-y-4 py-4" onClick={closeMenu}>
             <Link href="/" className="text-lg font-medium">
               Home
             </Link>
@@ -138,6 +157,9 @@ const Header = () => {
             </Link>
             <Link href="/about" className="text-lg font-medium">
               About
+            </Link>
+            <Link href="/pricing" className="text-lg font-medium">
+              Pricing
             </Link>
             <Link href="/blogs" className="text-lg font-medium">
               Blogs

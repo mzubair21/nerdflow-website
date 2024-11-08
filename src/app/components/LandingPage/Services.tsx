@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="font-poppins  sm:px-10 py-12 sm:py-24 mx-auto">
+    <div className="font-poppins  sm:px-10 py-12 sm:py-24 mx-auto ">
       <div className="text-left mb-8 mt-10 container">
         <h1 className="text-2xl sm:text-4xl font-semibold text-white mb-4">
           Our <span className="text-teal">Services</span>
