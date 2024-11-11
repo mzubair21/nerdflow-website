@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
-import AboutRight from '../../assets/images/AboutRight.png';
+import "swiper/css"; // Import Swiper styles
+import { Navigation } from "swiper/modules"; // Import required modules
+import { Swiper, SwiperSlide } from "swiper/react";
 import AboutBg from "../../assets/images/AboutUsBg.png";
 import Hadi from '../../assets/images/Hadi.png';
 import Muqeet from '../../assets/images/Muqeet.png';
@@ -32,119 +35,165 @@ const About = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-10 bg-custom-gradient2 container">
-          <div>
+        <div className="relative z-10 flex items-end h-[28rem] px-10 bg-custom-gradient2">
+          <div className="container">
             <h1 className="text-white font-semibold text-[2.5rem]">About Us</h1>
             <p className="text-white text-[1.5rem]">Feel free to contact us for inquiries or support!</p>
           </div>
         </div>
       </div>
-     
-     <div className="py-8 px-10 container">
-        <h1 className="text-white text-[2.125rem] font-semibold leading-normal"> <span className="text-teal">
-        Empowering </span> Excellence: Our Technological Arsenal</h1>
-        <p className="text-[1.125rem] pt-5">At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.</p>
-     </div>
-     
-     <div className="text-left px-10 font-medium relative container">
-        <h1 className="text-[2.125rem]">Meet Our <span className="text-teal">Team</span></h1>
-        <p className="text-white text-[1rem]">Together, we steer the course of technology and design, dedicated to crafting exceptional digital experiences that exceed expectations.</p>
-    </div>
-    <div className="w-full lg:w-[20rem] absolute left-[77%] top-[50%] hidden xl:block">
-        <Image
-          src={AboutRight}
-          alt="Plan Right Background"
-          className="absolute inset-0 w-auto h-auto -z-10"
-        />
-      </div>
-        {/* Section with 3 divs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 py-[3rem] md:px-8 container">
-        {/* First Box */}
-        <div className="text-center w-full">
-          <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>
 
-        {/* Second Box */}
-        <div className="text-center w-full">
-          <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>
-
-        {/* Third Box */}
-        <div className="text-center w-full">
-          <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
-          <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
-          <p className="text-grey text-[0.875rem]">
-            We are always one step ahead; we challenge convention and push the boundaries of what can be achieved.
-          </p>
-        </div>   
+      <div className="py-8 container">
+        <h1 className="text-white text-[2.125rem] font-semibold leading-normal">
+          <span className="text-teal">Empowering </span> Excellence: Our Technological Arsenal
+        </h1>
+        <p className="text-[1.125rem] pt-5 text-white">
+          At Nerd Flow, we pride ourselves on our advanced technological toolkit...
+        </p>
       </div>
 
+      {/* Swiper Section for Team Members */}
+      <div className="py-[3rem] md:px-8 cursor-pointer container">
+        <Swiper
+          spaceBetween={60} // Space between slides
+          slidesPerView={3} // Show 3 team members per slide
+          navigation={true} // Show navigation arrows
+          modules={[Navigation]} // Use navigation module
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+            {/* Slide 1 */}
+            <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div className="text-center w-full">
+              <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
+              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-[0.875rem]">
+              We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
+              </p>
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+      </div>
+
+      {/* Additional content for technologies */}
       <div className="text-left px-10 font-medium relative container">
-        <h1 className="text-[2.125rem]"><span className="text-teal">Technologies</span> We Work On</h1>
+        <h1 className="text-[2.125rem] text-white"><span className="text-teal">Technologies</span> We Work On</h1>
         <p className="text-white text-[1rem]">Leveraging cutting-edge technologies to drive innovation!</p>
+      </div>
 
-        </div>
-        {/**Logos */}
-        <div className="p-8 flex flex-wrap gap-2 container" >
-            <div className="w-[9rem] h-[9rem]">
+      {/* Technologies Logo Section */}
+      <div className=" flex flex-wrap gap-2 container mt-2">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={indesign} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={csharp} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={photoshop} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={premiere} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={cplus} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={blender} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={illustrator} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={incopy} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={premiere} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={cplus} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={blender} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={illustrator} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={incopy} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={lightroom} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={android} alt="indesign" ></Image>
             </div>
-            <div className="w-[9rem] h-[9rem]">
+            <div className="w-[8rem] h-[8rem]">
             <Image src={git} alt="indesign" ></Image>
             </div>
         </div>
-   
-    </div>
+      </div>
+ 
   );
 };
 

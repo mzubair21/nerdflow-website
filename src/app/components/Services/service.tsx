@@ -19,7 +19,7 @@ const Service = () => {
       title: "Daily Bazaar Web Application",
       category: "Web",
       image: DailyBazar,
-      leftImage: DailyLeft,
+      leftImage: DailyLeft,  // Left image for Daily Bazaar
       alt: "Daily Bazar Image",
       description:
         "An extensive eCommerce application with a vast array of products and a seamless, user-friendly interface.",
@@ -30,7 +30,7 @@ const Service = () => {
       title: "Wizz Logistics",
       category: "CRM",
       image: Wizz,
-      leftImage: WizzRight,
+      rightImage: WizzRight,  // Right image for Wizz
       alt: "Wizz Image",
       description:
         "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
@@ -134,22 +134,22 @@ const Service = () => {
           >
             {item.reverse ? (
               <>
-                <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0">
+                <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 relative">
+                  {item.rightImage && (
+                    <Image
+                      src={item.rightImage}
+                      alt={`${item.title} Right Background`}
+                      className="absolute inset-0 w-auto h-auto -z-10"
+                      style={{ top: "-50%", left: "120%" }}
+                    />
+                  )}
                   <Image
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="w-full lg:w-[34rem] relative">
-                  {item.leftImage && (
-                    <Image
-                      src={item.leftImage}
-                      alt={`${item.title} Background`}
-                      className="absolute inset-0 w-auto h-auto hidden xl:block -z-10"
-                      style={{ top: "-150%", left: "19%" }}
-                    />
-                  )}
+                <div className="w-full lg:w-[34rem]">
                   <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
                     {item.title}
                   </h1>
@@ -168,7 +168,15 @@ const Service = () => {
               </>
             ) : (
               <>
-                <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
+                <div className="w-full lg:w-[34rem] mb-6 lg:mb-0 relative">
+                  {item.leftImage && (
+                    <Image
+                      src={item.leftImage}
+                      alt={`${item.title} Left Background`}
+                      className="absolute inset-0 w-auto h-auto -z-10"
+                      style={{ top: "-250%", left: "-20%" }}
+                    />
+                  )}
                   <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
                     {item.title}
                   </h1>

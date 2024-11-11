@@ -6,7 +6,6 @@ import projectImage3 from "../../assets/images/projectImage3.png";
 import projectImage4 from "../../assets/images/projectImage4.png";
 import ProjectBg from '../../assets/images/ProjectsBg.png';
 
-
 const Projects = () => {
   
   const projects = [
@@ -27,7 +26,7 @@ const Projects = () => {
     },
     {
       title: "BRT Centers",
-      description: "Transforming health clinic procedures with a custom CRM, optimizing checkups, subscriptions and invoicing.",
+      description: "Transforming health clinic procedures with a custom CRM, optimizing checkups, subscriptions, and invoicing.",
       imageSrc: projectImage4,
     },
   ];
@@ -44,35 +43,34 @@ const Projects = () => {
         </p>
       </div>
       <div className="w-full lg:w-[25rem] absolute top-[30%]">
-          <Image
-            src={ProjectBg}
-            alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
-          />
-        </div>
+        <Image
+          src={ProjectBg}
+          alt="Hero Section Background"
+          className="absolute inset-0 w-auto h-auto hidden lg:block -z-10"
+        />
+      </div>
       {/* Projects Section */}
       <div className="container mx-auto mt-10">
         {projects.map((project, index) => (
           <div
-            key={index} // Unique key for each project
-            className="flex flex-col lg:flex-row items-center justify-center bg-lightblack  rounded-lg my-8 px-6 pl-12"
+            key={index}
+            className="flex flex-col lg:flex-row items-start lg:items-stretch lg:justify-between bg-lightblack rounded-lg my-8"
           >
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 p-12">
               <h2 className="text-xl font-semibold text-white mb-2 border-grey">
                 {project.title}
               </h2>
-              <p className="text-white mb-9 font-normal">{project.description}</p>
-               <Link
-                    href="/case-study"
-                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
-                     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
-                    hover:text-custom-text"
-                  >
-                    See Case Study
-                  </Link>
-            
+              <p className="text-white mb-9 font-normal w-[80%]">{project.description}</p>
+              <Link
+                href="/case-study"
+                className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                  hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+                  hover:text-custom-text "
+              >
+                See Case Study
+              </Link>
             </div>
-            <div className="lg:w-1/2 mt-4 lg:mt-0">
+            <div className="lg:w-1/2 mt-4 lg:mt-0 flex items-end">
               <Image
                 src={project.imageSrc}
                 alt={project.title}

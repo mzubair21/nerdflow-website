@@ -68,7 +68,7 @@ const Footer = () => {
               <ul className="flex flex-wrap space-x-6 mb-6 font-bold">
                 <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
                 <li>
-                  <a href="" className="hover:underline ml-5">
+                  <a href="" className="hover:underline ml-12">
                     Home
                   </a>
                 </li>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://www.facebook.com/nerdflow.tech?mibextid=ZbWKwL"
-                    className="hover:underline ml-16"
+                    className="hover:underline ml-20"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
