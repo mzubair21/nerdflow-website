@@ -18,7 +18,7 @@ const slides = [
   },
   {
     image: user,
-    heading: "User  Centric Authentication",
+    heading: "Data  Centric Authentication",
     description:
       "Laravel brings a host of advantages to CRM development. Its expressive syntax, modular architecture, and extensive ecosystem make it ideal for crafting tailored CRM solutions. With features like ORM (Eloquent), routing, caching, and security, Laravel accelerates development while ensuring a secure foundation.",
   },
@@ -86,7 +86,7 @@ const casestudy = () => {
             className="absolute inset-0 w-auto h-auto -z-10"
           />
         </div>
-        <div className="w-full md:w-[55%] pt-8 md:pb-12">
+        <div className="w-full md:w-[55%] pt-8 md:pb-12 text-white">
           <h1 className="text-[2.125rem] md:text-2xl font-bold mb-4">
             Introduction
           </h1>
@@ -112,7 +112,7 @@ const casestudy = () => {
           <Image src={main} alt="main screen"></Image>
         </div>
         <div>
-          <p className="text-sm md:text-lg">
+          <p className="text-sm md:text-lg text-white">
             Leveraging advanced technology and a deep understanding of
             healthcare management, our solution is poised to redefine how BRT
             Centers approaches daily operations, ensuring seamless processes and
@@ -126,7 +126,7 @@ const casestudy = () => {
       </div>
 
       {/* BRT Modules */}
-      <div className="p-4 md:p-8 container">
+      <div className="mt-8 container text-white">
         <h1 className="text-[1.8rem] md:text-[2.125rem] font-semibold">
           BRT <span className="text-teal">Modules</span>
         </h1>
@@ -140,7 +140,7 @@ const casestudy = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-12">
+      <div className=" text-white relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-12">
         {/* Arrows */}
         <button
           onClick={prevSlide}

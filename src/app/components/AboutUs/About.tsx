@@ -53,7 +53,7 @@ const About = () => {
       </div>
 
       {/* Swiper Section for Team Members */}
-      <div className="py-[3rem] md:px-8 cursor-pointer container">
+      <div className="py-[3rem] md:px-20 cursor-pointer container">
         <Swiper
           spaceBetween={60} // Space between slides
           slidesPerView={3} // Show 3 team members per slide
@@ -136,13 +136,13 @@ const About = () => {
       </div>
 
       {/* Additional content for technologies */}
-      <div className="text-left px-10 font-medium relative container">
+      <div className="text-left font-medium relative container">
         <h1 className="text-[2.125rem] text-white"><span className="text-teal">Technologies</span> We Work On</h1>
         <p className="text-white text-[1rem]">Leveraging cutting-edge technologies to drive innovation!</p>
       </div>
 
       {/* Technologies Logo Section */}
-      <div className=" flex flex-wrap gap-2 container mt-2">
+      <div className=" flex flex-wrap gap-2 container mt-2 mb-6">
             <div className="w-[8rem] h-[8rem]">
             <Image src={indesign} alt="indesign" ></Image>
             </div>

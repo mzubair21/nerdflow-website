@@ -33,7 +33,7 @@ const ContactUs = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 py-10 text-center">
+      <div className="container mx-auto px-4 py-10 text-center text-white">
         <h1 className="text-[2.125rem] font-semibold mb-4">Get in Touch</h1>
         <p className="mb-6 text-[1.125rem] lg:px-48">
           Kindly complete the form located below, and one of our representatives will reach out to you within the next 24 hours. We appreciate your cooperation!

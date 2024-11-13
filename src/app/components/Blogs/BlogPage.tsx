@@ -1,63 +1,29 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import BlogsBg from "../../assets/images/BlogsBg.png";
 import blogImage1 from '../../assets/images/blogImage1.png';
 import blogImage2 from '../../assets/images/blogImage2.png';
 import blogImage3 from '../../assets/images/blogImage3.png';
 
-const Blogs = () => {
-  const blogs = [
-    {
-      image: blogImage1,
-      title: 'Ready to revolutionize your web development journey?',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-    {
-      image: blogImage2,
-      title: 'Embrace Laravel\'s elegance, efficiency, and power',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-    {
-      image: blogImage3,
-      title: 'A robust Customer Relationship Management (CRM) possibility',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-    {
-      image: blogImage1,
-      title: 'Ready to revolutionize your web development journey?',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-    {
-      image: blogImage2,
-      title: 'Embrace Laravel\'s elegance, efficiency, and power',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-    {
-      image: blogImage3,
-      title: 'A robust Customer Relationship Management (CRM) possibility',
-      description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      link: 'Read more...',
-    },
-  ];
+// Define a Blog type
+interface Blog {
+  image: string | StaticImageData;
+  title: string;
+  description: string;
+  category: string;
+}
 
+interface BlogsProps {
+  filteredBlogs: Blog[];
+}
+
+const Blogs = ({ filteredBlogs }: BlogsProps) => {
   return (
-    <div className="font-poppins py-16 px-4 md:px-10 lg:px-20 container mx-auto">
-
+    <div className="font-poppins py-16 px-4 mx-auto">
       {/* Blogs Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogs.map((blog, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
+        {filteredBlogs.map((blog, index) => (
           <div
             key={index}
             className="flex flex-col items-center p-4 rounded-lg shadow-lg"
@@ -78,10 +44,10 @@ const Blogs = () => {
             <p className="text-white text-[0.875rem] text-left font-bold">
               {blog.description}{' '}
               <a
-                href="#"
-                className="text-teal hover:underline"
+                href="/blogs-content"
+                className="text-teal hover:underline cursor-pointer"
               >
-                {blog.link}
+                Read more...
               </a>
             </p>
           </div>
@@ -93,6 +59,56 @@ const Blogs = () => {
 
 const BlogPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+
+  const blogs: Blog[] = [
+    {
+      image: blogImage1,
+      title: 'Ready to revolutionize your web development journey?',
+      description:
+        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+      category: 'Web Development',
+    },
+    {
+      image: blogImage2,
+      title: 'Embrace Laravel\'s elegance, efficiency, and power',
+      description:
+        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+      category: 'Web Development',
+    },
+    {
+      image: blogImage3,
+      title: 'A robust Customer Relationship Management (CRM) possibility',
+      description:
+        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
+      category: 'CRM&ERP Development',
+    },
+    {
+      image: blogImage1,
+      title: 'SEO Optimization Techniques',
+      description:
+        'Learn effective strategies for optimizing your content and improving search rankings.',
+      category: 'SEO Optimization',
+    },
+    {
+      image: blogImage2,
+      title: 'The Power of Social Media Marketing',
+      description:
+        'Utilize social media platforms to reach and engage with your audience effectively.',
+      category: 'Social Media Marketing',
+    },
+    {
+      image: blogImage3,
+      title: 'UI/UX Designing Essentials',
+      description:
+        'Understand the basics of UI/UX design to create user-friendly applications.',
+      category: 'UI/UX Designing',
+    },
+  ];
+
+  // Filter blogs based on the active filter
+  const filteredBlogs = activeFilter === "All"
+    ? blogs
+    : blogs.filter(blog => blog.category === activeFilter);
 
   return (
     <div>
@@ -121,7 +137,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      {/* Filter Buttons Section with Black Background */}
+      {/* Filter Buttons Section */}
       <div className="py-4">
         <div className="flex overflow-x-auto space-x-2 my-4 container">
           {[
@@ -148,9 +164,8 @@ const BlogPage = () => {
         </div>
       </div>
 
-
-      {/* Blogs Section */}
-      <Blogs />
+      {/* Display Filtered Blogs */}
+      <Blogs filteredBlogs={filteredBlogs} />
     </div>
   );
 };

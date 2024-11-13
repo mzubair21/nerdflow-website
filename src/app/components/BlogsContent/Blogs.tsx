@@ -55,7 +55,7 @@ const Blog = () => {
         <h1 className="text-white font-semibold text-[2.125rem]">
           Elevate Your CRM Strategy with Laravel
         </h1>
-        <p>
+        <p className="text-white">
           Laravel brings a host of advantages to CRM development. Its expressive
           syntax, modular architecture, and extensive ecosystem make it ideal
           for crafting tailored CRM solutions. With features like ORM
@@ -71,7 +71,7 @@ const Blog = () => {
           <Image
             src={quoteBg}
             alt="quote background"
-            className="w-full h-full object-cover"
+            className="w-full h-[25rem] object-cover"
           />
         </div>
 
@@ -104,7 +104,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="container pt-16">
+      <div className="container pt-16 text-white">
         <h1 className="font-semibold text-[2.125rem] ">Why Laravel for CRM?</h1>
         <p className="font-inter">
           Laravel brings a host of advantages to CRM development. Its expressive
@@ -114,7 +114,7 @@ const Blog = () => {
           development while ensuring a secure foundation
         </p>
       </div>
-      <div className="relative container ">
+      <div className="relative container text-white ">
         <div className="w-full lg:w-[25rem] absolute -top-[40%] xl:left-[72%] hidden xl:block">
           <Image
             src={laravelRight}
