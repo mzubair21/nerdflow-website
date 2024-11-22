@@ -146,7 +146,7 @@ const Service = () => {
                     <Image
                       src={item.rightImage}
                       alt={`${item.title} Right Background`}
-                      className="absolute inset-0 w-auto h-auto -z-10  left-[150%]  "
+                      className="absolute inset-0 w-auto h-auto -z-10  hidden xl:block xl:left-[170%] "
                       style={{ top: "-50%" }}
                     />
                   )}

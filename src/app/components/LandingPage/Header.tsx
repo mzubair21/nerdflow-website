@@ -45,11 +45,11 @@ const Header = () => {
 
   return (
     <header
-      className={`container fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
+      className={` fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
         isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       }`}
     >
-      <div className=" mx-auto relative">
+      <div className="container mx-auto relative">
         <div className="flex items-center justify-between py-2">
           <div className="flex items-center">
             <Image
