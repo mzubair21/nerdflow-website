@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <header
-      className={` fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
         isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       }`}
     >

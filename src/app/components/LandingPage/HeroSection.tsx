@@ -15,12 +15,12 @@ const HeroSection = () => {
       />
 
       {/* Text Section */}
-      <div className="w-full lg:w-[40rem] relative mb-8 lg:mb-0 flex-1">
-        <h1 className="text-3xl font-bold text-white relative mb-4 leading-normal">
+      <div className="w-full relative lg:mb-0 flex-1 container">
+        <h1 className="text-3xl font-bold text-white  mb-4 leading-normal">
           Empowering your businesses <br /> with innovative <br />
           <span className="text-teal text-4xl">Software solutions</span>
         </h1>
-        <p className="text-base text-white mb-6 lg:mb-8 font-bold relative">
+        <p className="text-base text-white mb-6 lg:mb-8 font-bold ">
           Discover how we have transformed businesses across various industries
           <br />
           through our innovative solutions.
