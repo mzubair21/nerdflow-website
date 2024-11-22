@@ -18,7 +18,7 @@ const ContactUs = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-14 bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
           <div className="container">
             <h1 className="text-white font-semibold text-[2.5rem]">Contact Us</h1>
             <p className="text-white text-[1.5rem]">Feel free to contact us for inquiries or support!</p>

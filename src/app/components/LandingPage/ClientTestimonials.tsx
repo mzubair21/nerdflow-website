@@ -47,8 +47,8 @@ const ClientTestimonials = ({ bg = true }) => {
     <div className={`font-poppins py-16 w-full ${bg ? 'bg-[rgba(13,36,29,0.61)] backdrop-blur-sm' : ''}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-white text-[2.5rem] font-semibold">Client Testimonials</h1>
-          <p className="text-white text-[1rem] font-bold">
+          <h1 className="text-white text-3xl mb-4 font-semibold">Client Testimonials</h1>
+          <p className="text-white text-base font-bold font-inter">
             See what our clients have to say about us. Embrace a new level of convenience
             with efficient services through our innovative solutions.
           </p>
@@ -68,7 +68,7 @@ const ClientTestimonials = ({ bg = true }) => {
               </div>
 
               {/* Client Feedback */}
-              <p className="text-white text-[0.875rem] font-bold">{testimonial.feedback}</p>
+              <p className="text-white text-sm font-inter text-justify font-bold">{testimonial.feedback}</p>
 
               {/* Ratings */}
               <div className="flex">

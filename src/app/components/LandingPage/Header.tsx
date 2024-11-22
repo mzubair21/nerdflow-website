@@ -45,17 +45,17 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
+      className={`container fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
         isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       }`}
     >
-      <div className="container mx-auto relative">
-        <div className="flex items-center justify-between py-4 -ml-4">
+      <div className=" mx-auto relative">
+        <div className="flex items-center justify-between py-2">
           <div className="flex items-center">
             <Image
               src={NerdFlowLogo}
               alt="Logo"
-              className="w-[10rem] sm:w-[12rem] md:w-[15rem]"
+              className="w-[10rem] sm:w-[14rem] md:w-[15rem]"
             />
           </div>
 
@@ -72,7 +72,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="/" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("/") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -82,7 +82,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="/services" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("/services") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -92,7 +92,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="#portfolio" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("#portfolio") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -102,7 +102,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="/about" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("/about") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -112,7 +112,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="/pricing" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("/pricing") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -122,7 +122,7 @@ const Header = () => {
               <li className="relative">
                 <Link href="/blogs" className="hover:text-teal">
                   <span
-                    className={`absolute -top-9 left-0 right-0 h-[3px] bg-white transition-all ${
+                    className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
                       isActive("/blogs") ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -145,28 +145,28 @@ const Header = () => {
       {/* Mobile Menu for Small and Medium Screens */}
       {isMenuOpen && (
         <div className="lg:hidden overflow-x-hidden fixed inset-0 top-[4rem] left-0 bg-teal bg-opacity-90 text-white z-20">
-          <nav className="flex flex-col items-center space-y-4 py-4" onClick={closeMenu}>
+          <nav className="flex flex-col items-center py-2" onClick={closeMenu}>
             <Link href="/" className="text-lg font-medium">
               Home
             </Link>
-            <Link href="/services" className="text-lg font-medium">
+            <Link href="/services" className="text-base font-medium">
               Services
             </Link>
-            <Link href="#portfolio" className="text-lg font-medium">
+            <Link href="#portfolio" className="text-base font-medium">
               Portfolio
             </Link>
-            <Link href="/about" className="text-lg font-medium">
+            <Link href="/about" className="text-base font-medium">
               About
             </Link>
-            <Link href="/pricing" className="text-lg font-medium">
+            <Link href="/pricing" className="text-base font-medium">
               Pricing
             </Link>
-            <Link href="/blogs" className="text-lg font-medium">
+            <Link href="/blogs" className="text-base font-medium">
               Blogs
             </Link>
             <Link
               href="/contact"
-              className="text-lg font-medium bg-white rounded-full py-[0.75rem] px-[1.5rem] text-black"
+              className="text-base font-medium bg-white rounded-full py-[0.75rem] px-[1.5rem] text-black"
             >
               Contact
             </Link>

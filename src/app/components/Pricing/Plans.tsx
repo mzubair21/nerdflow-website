@@ -69,10 +69,10 @@ const Plans = () => {
 
       {/* Heading and intro text */}
       <div className="text-center mb-10 px-4 md:px-0 mt-6">
-        <h1 className="text-white text-[2rem] sm:text-[2.5rem] font-semibold">
+        <h1 className="text-white text-3xl font-semibold">
           Our <span className="text-teal">Plans</span> and Pricing
         </h1>
-        <p className="text-white text-[1.25rem] sm:text-[1.5rem] mt-4">
+        <p className="text-white text-lg mt-4">
           Choose the perfect plan tailored to your needs, with flexible options.
         </p>
       </div>

@@ -1,11 +1,13 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { Swiper, SwiperSlide } from "swiper/react";
 import BlogsBg from "../../assets/images/BlogsBg.png";
 import blogImage1 from '../../assets/images/blogImage1.png';
 import blogImage2 from '../../assets/images/blogImage2.png';
 import blogImage3 from '../../assets/images/blogImage3.png';
-
 // Define a Blog type
 interface Blog {
   image: string | StaticImageData;
@@ -137,9 +139,9 @@ const BlogPage = () => {
         </div>
       </div>
 
-      {/* Filter Buttons Section */}
-      <div className="py-4">
-        <div className="flex overflow-x-auto space-x-2 my-4 container">
+     {/* Filter Buttons Section */}
+     <div className="py-4 bg-black container">
+        <Swiper slidesPerView="auto" >
           {[
             "All",
             "Web Development",
@@ -149,20 +151,25 @@ const BlogPage = () => {
             "Social Media Marketing",
             "UI/UX Designing",
           ].map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
-                activeFilter === filter
-                  ? "bg-tealgradient text-white"
-                  : "bg-foundation-grey-darker text-white"
-              }`}
-            >
-              {filter}
-            </button>
+            <SwiperSlide key={filter} className="!w-auto">
+              <div className="px-1">
+                {/* Add padding for spacing */}
+                <button
+                  onClick={() => setActiveFilter(filter)}
+                  className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                    activeFilter === filter
+                      ? "bg-tealgradient text-white"
+                      : "bg-foundation-grey-darker text-white"
+                  }`}
+                >
+                  {filter}
+                </button>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
+
 
       {/* Display Filtered Blogs */}
       <Blogs filteredBlogs={filteredBlogs} />

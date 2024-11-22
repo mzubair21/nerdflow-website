@@ -9,12 +9,12 @@ import WizzRight from "../../assets/images/WizzRight.png";
 
 const Portfolio = () => {
   return (
-    <div className="font-poppins mx-auto" id="portfolio">
+    <div className="font-poppins mx-auto container mt-16" id="portfolio">
       <div className="mb-8 container">
-        <h1 className="text-white text-2xl sm:text-4xl font-semibold mb-4">
+        <h1 className="text-white text-3xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
         </h1>
-        <p className="text-[1rem] font-bold sm:text-base w-full sm:w-3/5 text-gray-300">
+        <p className="text-lg font-inter font-bold sm:text-base w-full sm:w-3/5 text-white">
           Dive into a collection of our finest projects, exemplifying our
           prowess in delivering exceptional websites, applications, and digital
           solutions.
@@ -25,7 +25,7 @@ const Portfolio = () => {
       <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto relative">
         {/* Text Section with Background */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+          <h1 className="text-xl font-semibold text-white mb-4">
             Daily Bazaar Web Application
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -65,18 +65,18 @@ const Portfolio = () => {
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto hidden 2xl:block xl:block -z-10 left-[7%] 2xl:left-[14%]"
+            className="absolute inset-0 w-auto h-auto  2xl:block xl:block -z-10 left-0"
             style={{ top: "-150%" }}
           />
 
           <Image
             src={WizzLeft}
             alt="Portfolio Background"
-            className="absolute inset-0 w-auto h-auto lg:hidden xl:block -z-10"
-            style={{ top: "-150%", left: "-180%" }}
+            className="absolute inset-0 w-auto h-auto 2xl:block xl:block -z-10 left-[-150%] 2xl:left-[-180%]"
+            style={{ top: "-170%" }}
           />
 
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+          <h1 className="text-xl  font-semibold text-white mb-4">
             Wizz Logistics
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -99,7 +99,7 @@ const Portfolio = () => {
       <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto  relative">
         {/* Text Section */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+          <h1 className="text-xl  font-semibold text-white mb-4">
             VTK Legal Solution
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -136,7 +136,7 @@ const Portfolio = () => {
 
         {/* Text Section */}
         <div className="w-full lg:w-[34rem]">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+          <h1 className="text-xl  font-semibold text-white mb-4">
             Clear Eats Web Application
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">

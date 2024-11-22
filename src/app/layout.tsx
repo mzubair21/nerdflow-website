@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <body className="font-poppins">{children}</body>
     </html>
   );
 }

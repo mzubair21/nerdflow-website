@@ -35,9 +35,9 @@ const About = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-10 bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[28rem]  bg-custom-gradient2">
           <div className="container">
-            <h1 className="text-white font-semibold text-[2.5rem]">About Us</h1>
+            <h1 className="text-white font-semibold text-3xl">About Us</h1>
             <p className="text-white text-[1.5rem]">Feel free to contact us for inquiries or support!</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const About = () => {
           <span className="text-teal">Empowering </span> Excellence: Our Technological Arsenal
         </h1>
         <p className="text-[1.125rem] pt-5 text-white">
-          At Nerd Flow, we pride ourselves on our advanced technological toolkit...
+        At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.
         </p>
       </div>
 
@@ -70,8 +70,8 @@ const About = () => {
           <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>
@@ -81,8 +81,8 @@ const About = () => {
           <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>
@@ -92,19 +92,19 @@ const About = () => {
           <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>
           </SwiperSlide>
 
-            {/* Slide 1 */}
-            <SwiperSlide>
+           {/* Slide 1 */}
+          <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Muqeet} alt="Muqeet" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">KHAWAJA MUQEET</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">KHAWAJA MUQEET</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>
@@ -114,8 +114,8 @@ const About = () => {
           <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">HADI BUTT</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">HADI BUTT</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>
@@ -125,8 +125,8 @@ const About = () => {
           <SwiperSlide>
             <div className="text-center w-full">
               <Image src={Tayyab} alt="Tayyab" className="mx-auto h-24 w-24 mb-4" />
-              <h1 className="text-white text-[1.7rem] font-semibold mb-2">MUHAMMAD TAYYAB</h1>
-              <p className="text-grey text-[0.875rem]">
+              <h1 className="text-white text-xl font-poppins font-semibold mb-2">MUHAMMAD TAYYAB</h1>
+              <p className="text-grey text-base font-inter font-semibold">
               We are always one step ahead; we challenge convention and push the boundaries of what can be achieved
               </p>
             </div>

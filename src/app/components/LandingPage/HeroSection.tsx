@@ -5,24 +5,24 @@ import HeroSectionbg from "../../assets/svgs/HeroSectionBg.svg";
 
 const HeroSection = () => {
   return (
-    <section className="font-poppins mt-28 flex flex-col lg:flex-row items-center justify-between lg:py-10 container relative ">
+    <section className=" mt-44 mb-20 flex flex-col lg:flex-row items-center container relative ">
       {/* Text Section with Background */}
-      <div className="w-full lg:w-[55%] relative mb-8 lg:mb-0">
+      <div className="w-full lg:w-[40%] relative mb-8 lg:mb-0 flex-1 container">
         {/* Background Image using Image component */}
         <Image
           src={HeroSectionbg}
           alt="Hero Section Background"
           className="absolute inset-0 w-full h-full object-cover -z-10 hidden lg:block"
-          style={{ top: "-30%", left: "-20%" }}
+          style={{ top: "-60%", left: "-10%" }}
         />
-        <h1 className="text-[2rem] lg:text-[2.813rem] font-bold text-white relative z-10">
-          Empowering your businesses with innovative <br />
-          <span className="text-teal text-[2.5rem] lg:text-[4rem]">
+        <h1 className="text-3xl font-bold text-white relative z-10 mb-4 leading-normal">
+          Empowering your businesses <br /> with innovative <br />
+          <span className="text-teal text-4xl z-10">
             Software solutions
           </span>
         </h1>
-        <p className="text-base text-white lg:text-lg mb-6 lg:mb-8 font-bold relative z-10 ">
-          Discover how we have transformed businesses across various industries
+        <p className="text-base text-white  mb-6 lg:mb-8 font-bold relative z-10 ">
+          Discover how we have transformed businesses across various industries <br/>
           through our innovative solutions.
         </p>
         <Link

@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { Swiper, SwiperSlide } from "swiper/react";
 import ClearEats from "../../assets/images/ClearEats.png";
 import DailyLeft from "../../assets/images/DailyBazar Left.png";
 import DailyBazar from "../../assets/images/DailyBazar.png";
@@ -19,7 +22,7 @@ const Service = () => {
       title: "Daily Bazaar Web Application",
       category: "Web",
       image: DailyBazar,
-      leftImage: DailyLeft,  // Left image for Daily Bazaar
+      leftImage: DailyLeft,
       alt: "Daily Bazar Image",
       description:
         "An extensive eCommerce application with a vast array of products and a seamless, user-friendly interface.",
@@ -30,7 +33,7 @@ const Service = () => {
       title: "Wizz Logistics",
       category: "CRM",
       image: Wizz,
-      rightImage: WizzRight,  // Right image for Wizz
+      rightImage: WizzRight,
       alt: "Wizz Image",
       description:
         "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
@@ -86,21 +89,21 @@ const Service = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] px-14 bg-custom-gradient2">
-          <div className="container">
-            <h1 className="text-white font-semibold text-[2.5rem]">
+        <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2 container">
+          <div >
+            <h1 className="text-white font-semibold text-3xl">
               Our <span className="text-teal">Services</span>
             </h1>
-            <p className="text-white text-[1.5rem]">
+            <p className="text-white text-xl">
               Elevating Business Solutions: Discover Our Comprehensive Services.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Filter Buttons Section with Black Background */}
-      <div className="py-4">
-        <div className="flex overflow-auto space-x-2 my-4 container">
+      {/* Filter Buttons Section */}
+      <div className="py-4 bg-black container">
+        <Swiper slidesPerView="auto" >
           {[
             "All",
             "Web Development",
@@ -110,19 +113,23 @@ const Service = () => {
             "Social Media Marketing",
             "UI/UX Designing",
           ].map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
-                activeFilter === filter
-                  ? "bg-tealgradient text-white"
-                  : "bg-foundation-grey-darker text-white"
-              }`}
-            >
-              {filter}
-            </button>
+            <SwiperSlide key={filter} className="!w-auto">
+              <div className="px-1">
+                {/* Add padding for spacing */}
+                <button
+                  onClick={() => setActiveFilter(filter)}
+                  className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                    activeFilter === filter
+                      ? "bg-tealgradient text-white"
+                      : "bg-foundation-grey-darker text-white"
+                  }`}
+                >
+                  {filter}
+                </button>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
 
       {/* Display Filtered Items */}
@@ -139,8 +146,8 @@ const Service = () => {
                     <Image
                       src={item.rightImage}
                       alt={`${item.title} Right Background`}
-                      className="absolute inset-0 w-auto h-auto -z-10"
-                      style={{ top: "-50%", left: "120%" }}
+                      className="absolute inset-0 w-auto h-auto -z-10  left-[150%]  "
+                      style={{ top: "-50%" }}
                     />
                   )}
                   <Image
@@ -150,10 +157,10 @@ const Service = () => {
                   />
                 </div>
                 <div className="w-full lg:w-[34rem]">
-                  <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+                  <h1 className="text-2xl  font-semibold text-white mb-4">
                     {item.title}
                   </h1>
-                  <p className="text-sm sm:text-base mb-8 font-bold text-gray-300">
+                  <p className="text-sm sm:text-base mb-8 font-bold text-white">
                     {item.description}
                   </p>
                   <Link
@@ -174,13 +181,13 @@ const Service = () => {
                       src={item.leftImage}
                       alt={`${item.title} Left Background`}
                       className="absolute inset-0 w-auto h-auto -z-10"
-                      style={{ top: "-250%", left: "-20%" }}
+                      style={{ top: "-250%", left: "-50%" }}
                     />
                   )}
-                  <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-white mb-4">
+                  <h1 className="text-2xl font-semibold text-white mb-4">
                     {item.title}
                   </h1>
-                  <p className="text-sm sm:text-base mb-8 font-bold text-gray-300">
+                  <p className="text-sm sm:text-base mb-8 font-bold text-white">
                     {item.description}
                   </p>
                   <Link
