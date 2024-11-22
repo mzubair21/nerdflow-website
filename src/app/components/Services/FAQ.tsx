@@ -43,10 +43,10 @@ const FAQ = () => {
   return (
     <div>
       <div className="text-center flex relative flex-col ">
-        <h1 className="text-white font-semibold text-[2.5rem]">
+        <h1 className="text-white font-semibold text-3xl">
           Frequently Asked Questions
         </h1>
-        <p className="text-white">
+        <p className="text-white text-lg">
           See what we have to offer to our customers
         </p>
       </div>
@@ -73,7 +73,7 @@ const FAQ = () => {
             {/* FAQ Content */}
             <div className="flex-1">
               <div className="flex justify-between items-center ">
-                <h2 className="text-[1.5rem] font-semibold">{faq.question}</h2>
+                <h2 className="text-xl font-semibold">{faq.question}</h2>
                 {openFAQ === index ? (
                   <Image src={crossIcon} alt="Cross Icon" />
                 ) : (
@@ -82,7 +82,7 @@ const FAQ = () => {
               </div>
 
               {openFAQ === index && (
-                <p className="mt-2 text-white text-[1.25rem]">{faq.answer}</p>
+                <p className="mt-2 text-white text-lg">{faq.answer}</p>
               )}
             </div>
           </div>

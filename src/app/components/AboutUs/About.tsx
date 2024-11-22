@@ -38,16 +38,16 @@ const About = () => {
         <div className="relative z-10 flex items-end h-[28rem]  bg-custom-gradient2">
           <div className="container">
             <h1 className="text-white font-semibold text-3xl">About Us</h1>
-            <p className="text-white text-[1.5rem]">Feel free to contact us for inquiries or support!</p>
+            <p className="text-white text-lg">Feel free to contact us for inquiries or support!</p>
           </div>
         </div>
       </div>
 
       <div className="py-8 container">
-        <h1 className="text-white text-[2.125rem] font-semibold leading-normal">
+        <h1 className="text-white text-3xl font-semibold leading-normal">
           <span className="text-teal">Empowering </span> Excellence: Our Technological Arsenal
         </h1>
-        <p className="text-[1.125rem] pt-5 text-white">
+        <p className="text-lg pt-5 text-white">
         At Nerd Flow, we pride ourselves on our advanced technological toolkit that fuels our creativity and innovation. From cutting-edge programming languages and frameworks to state-of-the-art design tools, we harness a diverse range of technologies to bring your digital aspirations to life. Discover how our expertise in the latest tech trends enables us to craft seamless, impactful solutions for every project.
         </p>
       </div>
@@ -137,8 +137,8 @@ const About = () => {
 
       {/* Additional content for technologies */}
       <div className="text-left font-medium relative container">
-        <h1 className="text-[2.125rem] text-white"><span className="text-teal">Technologies</span> We Work On</h1>
-        <p className="text-white text-[1rem]">Leveraging cutting-edge technologies to drive innovation!</p>
+        <h1 className="text-3xl text-white"><span className="text-teal">Technologies</span> We Work On</h1>
+        <p className="text-white text-lg">Leveraging cutting-edge technologies to drive innovation!</p>
       </div>
 
       {/* Technologies Logo Section */}

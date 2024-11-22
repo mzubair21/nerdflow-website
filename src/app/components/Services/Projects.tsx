@@ -34,10 +34,10 @@ const Projects = () => {
   return (
     <div className="font-poppins flex relative flex-col">
       <div className="text-center">
-        <h1 className="text-white text-[2.5rem] font-semibold">
+        <h1 className="text-white text-3xl font-semibold">
           See More <span className="text-teal">Projects</span>
         </h1>
-        <p className="text-white text-[1.25rem] font-normal">
+        <p className="text-white text-lg font-normal">
           Explore our full range of innovative projects and discover more
           cutting-edge solutions
         </p>

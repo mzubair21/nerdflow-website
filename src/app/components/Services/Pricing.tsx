@@ -25,15 +25,15 @@ const Pricing = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full justify-center items-center text-center p-8">
-        <h1 className="text-white text-[2.5rem] font-semibold">
+        <h1 className="text-white text-3xl font-semibold">
           See Our Plans and Pricing
         </h1>
-        <p className="text-white text-[1.25rem]">
+        <p className="text-white text-lg mt-4">
           Have a project in mind? Let’s collaborate and bring your vision to
           life!
         </p>
 
-        <div className="mt-6 flex flex-row space-x-6 justify-center font-bold text-[1.25rem]">
+        <div className="mt-6 flex flex-row lg:space-x-6 space-x-2 justify-center font-bold text-[1.25rem]">
           <button
             onClick={navigateToPricing}
             className=" text-white p-4 w-[13rem] rounded-[1.25rem] transition-all duration-300 ease-in-out" // Add transition for smooth effect
