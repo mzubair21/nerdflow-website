@@ -145,7 +145,7 @@ const Header = () => {
       {/* Mobile Menu for Small and Medium Screens */}
       {isMenuOpen && (
         <div className="lg:hidden overflow-x-hidden fixed inset-0 top-[4rem] left-0 bg-teal bg-opacity-90 text-white z-20">
-          <nav className="flex flex-col items-center py-2" onClick={closeMenu}>
+          <nav className="flex flex-col items-center py-8 space-y-4" onClick={closeMenu}>
             <Link href="/" className="text-lg font-medium">
               Home
             </Link>
