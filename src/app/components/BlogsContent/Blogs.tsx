@@ -41,10 +41,10 @@ const Blog = () => {
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem]  bg-custom-gradient2">
           <div className="container">
-            <h1 className="text-white font-semibold text-[2.5rem]">
+            <h1 className="text-white font-semibold text-3xl">
               Laravel’s Journey
             </h1>
-            <p className="text-white text-[1.5rem]">
+            <p className="text-white text-lg">
               Explore Technological Horizons: Insights, Trends, and Innovations
             </p>
           </div>

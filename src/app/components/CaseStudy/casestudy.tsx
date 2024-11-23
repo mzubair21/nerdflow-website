@@ -51,7 +51,7 @@ const casestudy = () => {
 
   return (
     <div>
-      <div className="relative h-[18rem] md:h-[28rem]">
+      <div className="relative h-[28rem]">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-[-1]"
@@ -64,12 +64,12 @@ const casestudy = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[18rem] md:h-[28rem] bg-custom-gradient2">
+        <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
           <div className="container">
-            <h1 className="text-white font-semibold text-[1.8rem] md:text-[2.5rem]">
+            <h1 className="text-white font-semibold text-3xl">
               <span className="text-teal">BRT</span> Centers
             </h1>
-            <p className="text-white text-[1rem] md:text-[1.5rem]">
+            <p className="text-white text-lg">
               Explore Technological Horizons: Insights, Trends, and Innovations
             </p>
           </div>

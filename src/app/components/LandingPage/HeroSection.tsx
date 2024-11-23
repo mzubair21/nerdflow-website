@@ -5,7 +5,7 @@ import HeroSectionbg from "../../assets/images/heroleft.png";
 
 const HeroSection = () => {
   return (
-    <section className="mt-44 mb-20 flex flex-col lg:flex-row items-center container relative">
+    <section className="mt-44 mb-20 gap-8 flex flex-col lg:flex-row items-center container relative">
       {/* Background Image */}
       <Image
         src={HeroSectionbg}

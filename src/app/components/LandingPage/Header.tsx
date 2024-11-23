@@ -89,7 +89,8 @@ const Header = () => {
                   Services
                 </Link>
               </li>
-              <li className="relative">
+              {/** 
+               * <li className="relative">
                 <Link href="#portfolio" className="hover:text-teal">
                   <span
                     className={`absolute -top-7 left-0 right-0 h-[3px] bg-white transition-all ${
@@ -99,6 +100,8 @@ const Header = () => {
                   Portfolio
                 </Link>
               </li>
+              */}
+              
               <li className="relative">
                 <Link href="/about" className="hover:text-teal">
                   <span
@@ -152,9 +155,12 @@ const Header = () => {
             <Link href="/services" className="text-base font-medium">
               Services
             </Link>
-            <Link href="#portfolio" className="text-base font-medium">
+            {/** 
+             *  <Link href="#portfolio" className="text-base font-medium">
               Portfolio
             </Link>
+            */}
+           
             <Link href="/about" className="text-base font-medium">
               About
             </Link>

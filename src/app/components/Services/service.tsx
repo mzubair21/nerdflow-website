@@ -89,12 +89,12 @@ const Service = () => {
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2 container">
-          <div >
+        <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
+          <div className="container">
             <h1 className="text-white font-semibold text-3xl">
               Our <span className="text-teal">Services</span>
             </h1>
-            <p className="text-white text-xl">
+            <p className="text-white text-lg">
               Elevating Business Solutions: Discover Our Comprehensive Services.
             </p>
           </div>
