@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 py-4 font-poppins transition-colors duration-300 ${
-        isScrolled ? "bg-teal" : "bg-gradient-to-b from-black to-transparent"
+        isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       }`}
     >
       <div className="container mx-auto relative px-4">
