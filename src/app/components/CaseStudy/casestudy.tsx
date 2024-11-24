@@ -140,7 +140,7 @@ const casestudy = () => {
       </div>
 
       {/* Slider Section */}
-      <div className=" text-white relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-12">
+      <div className=" text-white relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-64">
         {/* Arrows */}
         <button
           onClick={prevSlide}
@@ -156,7 +156,7 @@ const casestudy = () => {
         </button>
 
         {/* Slider Content */}
-        <div className="text-center">
+        <div className="text-center ">
           {/* Image */}
           <div className="w-[20rem] sm:w-[25rem] lg:w-[60rem] md:w-[35rem] h-[10rem] md:h-[15rem] mx-auto lg:mb-6">
             <Image
@@ -166,12 +166,12 @@ const casestudy = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-xl pt-6 md:text-[2.125rem] font-semibold">
+          <h2 className="text-xl pt-6  font-semibold">
             {slides[currentIndex].heading}
           </h2>
 
           {/* Description */}
-          <p className="text-sm md:text-md mt-4 px-4 md:px-12">
+          <p className="text-sm mt-4 px-4 md:px-12">
             {slides[currentIndex].description}
           </p>
 
