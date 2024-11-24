@@ -12,7 +12,7 @@ import WizzLogo from "../../assets/images/wizz-logistics.png";
 
 const Clients = () => {
   return (
-    <div className="font-poppins flex flex-col bg-[rgba(13,36,29,0.61)] backdrop-blur-sm h-auto py-10 sm:py-12 w-full relative">
+    <div className="font-poppins flex flex-col bg-[rgba(13,36,29,0.61)] backdrop-blur-sm h-auto py-16 w-full relative">
       <div className="text-center mb-10 ">
         <h1 className="text-white text-3xl font-semibold">
           Who Love To Work With Us

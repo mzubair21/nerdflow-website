@@ -34,7 +34,7 @@ const Blogs = () => {
         <h1 className="text-white text-3xl mb-4 font-semibold">
           Our <span className="text-teal">Blogs</span>
         </h1>
-        <p className="text-white text-[1rem] font-bold font-inter">
+        <p className="text-white text-base font-bold font-inter">
           See what our clients have to say about us. Embrace a new level of
           convenience as you access efficient services through this innovative solution.
         </p>

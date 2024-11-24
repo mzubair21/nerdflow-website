@@ -10,11 +10,11 @@ import WizzRight from "../../assets/images/WizzRight.png";
 const Portfolio = () => {
   return (
     <div className="font-poppins mx-auto container mt-16" id="portfolio">
-      <div className="mb-8 container">
+      <div className="mb-8">
         <h1 className="text-white text-3xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
         </h1>
-        <p className="text-lg font-inter font-bold sm:text-base w-full sm:w-3/5 text-white">
+        <p className="text-base font-inter font-bold sm:text-base w-full sm:w-3/5 text-white">
           Dive into a collection of our finest projects, exemplifying our
           prowess in delivering exceptional websites, applications, and digital
           solutions.
@@ -72,7 +72,7 @@ const Portfolio = () => {
           <Image
             src={WizzLeft}
             alt="Portfolio Background"
-            className="absolute inset-0 w-auto h-auto 2xl:block xl:block -z-10 left-[-150%] 2xl:left-[-180%]"
+            className="absolute inset-0 w-auto h-auto 2xl:block xl:block -z-10 left-[-150%] 2xl:left-[-230%]"
             style={{ top: "-170%" }}
           />
 

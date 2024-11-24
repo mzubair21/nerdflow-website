@@ -76,7 +76,7 @@ const Service = () => {
 
   return (
     <div>
-      <div className="relative h-[28rem]">
+     <div className="relative h-[28rem]">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-[-1]"
@@ -91,12 +91,8 @@ const Service = () => {
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
           <div className="container">
-            <h1 className="text-white font-semibold text-3xl">
-              Our <span className="text-teal">Services</span>
-            </h1>
-            <p className="text-white text-lg">
-              Elevating Business Solutions: Discover Our Comprehensive Services.
-            </p>
+            <h1 className="text-white font-semibold text-3xl">Our <span className="text-teal">Services</span></h1>
+            <p className="text-white text-lg">Elevating Business Solutions: Discover Our Comprehensive Services.</p>
           </div>
         </div>
       </div>
@@ -148,7 +144,7 @@ const Service = () => {
                     <Image
                       src={item.rightImage}
                       alt={`${item.title} Right Background`}
-                      className="absolute inset-0 w-auto h-auto -z-10  hidden xl:block xl:left-[170%] "
+                      className="absolute inset-0 w-auto h-auto -z-10  hidden xl:block xl:left-[150%] 2xl:hidden"
                       style={{ top: "-50%" }}
                     />
                   )}
@@ -166,7 +162,7 @@ const Service = () => {
                     {item.description}
                   </p>
                   <Link
-                    href="/contact"
+                    href="/case-study"
                     className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                    hover:text-custom-text"
@@ -193,7 +189,7 @@ const Service = () => {
                     {item.description}
                   </p>
                   <Link
-                    href="/contact"
+                    href="/case-study"
                     className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                      hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                     hover:text-custom-text"

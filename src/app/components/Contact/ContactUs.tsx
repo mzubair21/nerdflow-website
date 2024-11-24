@@ -80,8 +80,8 @@ const ContactUs = () => {
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           {/* First and Last Name */}
-          <div className="flex flex-col lg:flex-row gap-2 justify-center ">
-            <div className="w-full lg:w-[26.8rem]">
+          <div className="flex flex-col md:flex-row gap-2 justify-center md:justify-center">
+            <div className="w-full md:w-[26.8rem] lg:w-[26.8rem] max-w-[54rem]">
               <label htmlFor="firstName" className="sr-only">
                 First Name
               </label>
@@ -100,7 +100,7 @@ const ContactUs = () => {
                 placeholder="First Name"
               />
             </div>
-            <div className="w-full lg:w-[26.8rem]">
+            <div className="w-full md:w-[26.8rem] lg:w-[26.8rem] max-w-[54rem]">
               <label htmlFor="lastName" className="sr-only">
                 Last Name
               </label>

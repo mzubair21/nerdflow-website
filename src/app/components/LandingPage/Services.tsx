@@ -38,14 +38,14 @@ const Services = () => {
 
   return (
     <div className=" container mt-48 mx-auto text-white">
-      <div className="text-left mb-8  container">
+      <div className="text-left mb-8 ">
         <h1 className="text-3xl  font-semibold text-white mb-4">
           Our <span className="text-teal">Services</span>
         </h1>
-        <p className="text-grey mb-2 text-lg font-bold font-inter">
+        <p className="text-grey mb-2 text-base font-bold font-inter">
           From web development to innovative app solutions, we deliver excellence across every digital dimension.
         </p>
-        <p className='text-grey font-bold mb-6 text-lg font-inter'>Elevating Business Solutions: Discover Our Comprehensive Services</p>
+        <p className='text-grey font-bold mb-6 text-base font-inter'>Elevating Business Solutions: Discover Our Comprehensive Services</p>
       </div>
 
       {/* Cards Section */}

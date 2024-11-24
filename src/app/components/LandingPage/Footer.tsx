@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="flex flex-col">
             {/* Pages Links */}
             <div>
-              <ul className="flex flex-wrap xs:justify-around mb-6 font-bold">
+              <ul className="flex flex-wrap xs:justify-between mb-6 font-bold">
                 <h2 className="text-lg font-bold text-grey ">Pages</h2>
                 <div className="flex flex-row sm:space-x-12 space-x-2">
                 <li>
@@ -101,7 +101,7 @@ const Footer = () => {
 
             {/* Social Follow Links */}
             <div >
-              <ul className=" flex flex-wrap xs:justify-around font-bold">
+              <ul className=" flex flex-wrap xs:justify-between font-bold">
                 <h2 className="text-lg font-bold text-grey">Follows</h2>
                 <div className="sm:space-x-10 space-x-2 flex flex-row">
                 <li>

@@ -59,7 +59,7 @@ const Plans = () => {
           className="absolute inset-0 w-auto h-auto -z-10"
         />
       </div>
-      <div className="w-full lg:w-[25rem] absolute left-[71%] top-[20%] hidden xl:block">
+      <div className="w-full lg:w-[25rem] absolute left-[71%]  top-[20%] hidden xl:block">
         <Image
           src={PlanRight}
           alt="Plan Right Background"
@@ -68,7 +68,7 @@ const Plans = () => {
       </div>
 
       {/* Heading and intro text */}
-      <div className="text-center mb-10 px-4 md:px-0 mt-6">
+      <div className="text-center mb-10 px-4 md:px-0 mt-6 container">
         <h1 className="text-white text-3xl font-semibold">
           Our <span className="text-teal">Plans</span> and Pricing
         </h1>

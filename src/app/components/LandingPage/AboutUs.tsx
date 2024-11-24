@@ -10,7 +10,7 @@ import Tayyab from '../../assets/images/Tayyab.png';
 const AboutUs = () => {
   return (
     <div className="flex flex-col container mx-auto">
-      <div className="text-center pt-8 px-4">
+      <div className="text-center py-16 px-4">
         <h1 className="text-white text-3xl font-semibold mb-4">About Us</h1>
         <p className="text-white text-base font-bold md:px-20 lg:px-20">
           Together, we steer the course of technology and design, dedicated to crafting exceptional digital experiences that exceed expectations.
