@@ -43,7 +43,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-8 container">
+      <div className="py-12 container">
         <h1 className="text-white text-3xl font-semibold leading-normal">
           <span className="text-teal">Empowering </span> Excellence: Our Technological Arsenal
         </h1>
@@ -52,6 +52,10 @@ const About = () => {
         </p>
       </div>
 
+      <div className="text-left font-medium relative container">
+        <h1 className="text-3xl text-white">Meet Our<span className="text-teal"> Team</span> </h1>
+        <p className="text-white text-lg py-3">Together, we steer the course of technology and design, dedicated to crafting exceptional digital experiences that exceed expectations.</p>
+      </div>
       {/* Swiper Section for Team Members */}
       <div className="py-[3rem] md:px-20 cursor-pointer container">
         <Swiper
@@ -138,11 +142,11 @@ const About = () => {
       {/* Additional content for technologies */}
       <div className="text-left font-medium relative container">
         <h1 className="text-3xl text-white"><span className="text-teal">Technologies</span> We Work On</h1>
-        <p className="text-white text-lg">Leveraging cutting-edge technologies to drive innovation!</p>
+        <p className="text-white text-lg py-3">Leveraging cutting-edge technologies to drive innovation!</p>
       </div>
 
       {/* Technologies Logo Section */}
-      <div className=" flex flex-wrap gap-2 container mt-2 mb-6">
+      <div className=" flex justify-center flex-wrap gap-4 container mt-6 mb-6">
             <div className="w-[8rem] h-[8rem]">
             <Image src={indesign} alt="indesign" ></Image>
             </div>
@@ -166,6 +170,18 @@ const About = () => {
             </div>
             <div className="w-[8rem] h-[8rem]">
             <Image src={incopy} alt="indesign" ></Image>
+            </div>
+            <div className="w-[8rem] h-[8rem]">
+            <Image src={incopy} alt="indesign" ></Image>
+            </div>
+            <div className="w-[8rem] h-[8rem]">
+            <Image src={lightroom} alt="indesign" ></Image>
+            </div>
+            <div className="w-[8rem] h-[8rem]">
+            <Image src={android} alt="indesign" ></Image>
+            </div>
+            <div className="w-[8rem] h-[8rem]">
+            <Image src={git} alt="indesign" ></Image>
             </div>
             <div className="w-[8rem] h-[8rem]">
             <Image src={premiere} alt="indesign" ></Image>

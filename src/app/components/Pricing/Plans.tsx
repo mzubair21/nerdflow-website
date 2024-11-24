@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PlanLeft from '../../assets/images/PlanLeft.png';
-import PlanRight from '../../assets/images/PlanRight.png';
+import PlanLeft from "../../assets/images/PlanLeft.png";
+import PlanRight from "../../assets/images/PlanRight.png";
 
 const Plans = () => {
   const pricingPlans = [
@@ -83,13 +83,17 @@ const Plans = () => {
           <div
             key={index}
             className={`relative overflow-hidden text-center rounded-2xl shadow-lg p-6 
-              ${index === 1 ? 'lg:h-[37rem] lg:w-[24rem] -mt-7' : 'lg:w-[24rem] lg:h-[34rem]'}`}
+              ${
+                index === 1
+                  ? "lg:-mt-7 lg:h-[37rem] lg:w-[24rem]"
+                  : "lg:w-[24rem] lg:h-[34rem]"
+              } sm:w-full sm:mt-0`}
             style={{
-              border: index === 1 ? '4px solid #34E0A1' : '1.276px solid #5E5E5E', 
-              backdropFilter: 'blur(2.55px)',
+              border: index === 1 ? "4px solid #34E0A1" : "1.276px solid #5E5E5E",
+              backdropFilter: "blur(2.55px)",
             }}
           >
-            <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold text-white text-left mb-4">
+            <h2 className="text-2xl font-bold text-white text-left mb-4">
               {plan.name}
             </h2>
             <ul className="text-white mb-6 text-left">
@@ -101,27 +105,27 @@ const Plans = () => {
               ))}
             </ul>
             <p
-              className={`text-white text-[2.25rem] sm:text-[3rem] font-semibold mb-2 text-left flex items-center ${
-                index === 1 ? 'pt-24' : 'pt-16'
+              className={`text-white text-3xl font-semibold mb-2 text-left flex items-center ${
+                index === 1 ? "pt-24" : "pt-16"
               }`}
             >
               {plan.price}
               {plan.additional && (
-                <span className="text-grey text-[1rem] ml-2 mt-6 font-medium opacity-0.8">
+                <span className="text-grey text-base ml-2 mt-4 font-medium opacity-0.8">
                   {plan.additional}
                 </span>
               )}
             </p>
             {/* Move button to the left */}
             <div className="flex justify-start">
-            <Link
-                    href="/contact"
-                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
-                    hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
-                   hover:text-custom-text"
-                  >
-                   Get Started
-                  </Link>
+              <Link
+                href="/contact"
+                className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
+                hover:text-custom-text"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         ))}

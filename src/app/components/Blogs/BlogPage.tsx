@@ -8,7 +8,7 @@ import BlogsBg from "../../assets/images/BlogsBg.png";
 import blogImage1 from '../../assets/images/blogImage1.png';
 import blogImage2 from '../../assets/images/blogImage2.png';
 import blogImage3 from '../../assets/images/blogImage3.png';
-// Define a Blog type
+
 interface Blog {
   image: string | StaticImageData;
   title: string;
@@ -26,9 +26,10 @@ const Blogs = ({ filteredBlogs }: BlogsProps) => {
       {/* Blogs Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
         {filteredBlogs.map((blog, index) => (
-          <div
+          <a
             key={index}
-            className="flex flex-col items-center p-4 rounded-lg shadow-lg"
+            href="/blogs-content"  // Redirect to the blog content page
+            className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
           >
             {/* Blog Image */}
             <Image
@@ -45,14 +46,9 @@ const Blogs = ({ filteredBlogs }: BlogsProps) => {
             {/* Blog Description */}
             <p className="text-white text-[0.875rem] text-left font-bold">
               {blog.description}{' '}
-              <a
-                href="/blogs-content"
-                className="text-teal hover:underline cursor-pointer"
-              >
-                Read more...
-              </a>
+              <span className="text-teal hover:underline">Read more...</span>
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </div>
@@ -139,37 +135,37 @@ const BlogPage = () => {
         </div>
       </div>
 
-     {/* Filter Buttons Section */}
-     <div className="py-4 bg-black container">
-        <Swiper slidesPerView="auto" >
-          {[
-            "All",
-            "Web Development",
-            "CRM&ERP Development",
-            "Mobile Development",
-            "SEO Optimization",
-            "Social Media Marketing",
-            "UI/UX Designing",
-          ].map((filter) => (
-            <SwiperSlide key={filter} className="!w-auto">
-              <div className="px-1">
-                {/* Add padding for spacing */}
-                <button
-                  onClick={() => setActiveFilter(filter)}
-                  className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
-                    activeFilter === filter
-                      ? "bg-tealgradient text-white"
-                      : "bg-foundation-grey-darker text-white"
-                  }`}
-                >
-                  {filter}
-                </button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      {/* Filter Buttons Section */}
+      <div className="py-8 bg-black">
+        <div className="container flex justify-center">
+          <Swiper slidesPerView="auto" className="flex justify-center">
+            {[
+              "All",
+              "Web Development",
+              "CRM&ERP Development",
+              "Mobile Development",
+              "SEO Optimization",
+              "Social Media Marketing",
+              "UI/UX Designing",
+            ].map((filter) => (
+              <SwiperSlide key={filter} className="!w-auto">
+                <div className="px-1">
+                  <button
+                    onClick={() => setActiveFilter(filter)}
+                    className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                      activeFilter === filter
+                        ? "bg-tealgradient text-white"
+                        : "bg-foundation-grey-darker text-white"
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-
 
       {/* Display Filtered Blogs */}
       <Blogs filteredBlogs={filteredBlogs} />

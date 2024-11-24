@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="text-[1rem]">
+          <div className="text-base">
             <p className="mb-4 flex items-center">
               <Image src={phone} alt="phone Icon" />
               <span className="font-bold ml-2">+1 (123) 456-7890</span>
@@ -40,12 +40,12 @@ const Footer = () => {
         </div>
 
         {/* Right Div - Newsletter, Links */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 mt-12">
           {/* Newsletter Heading */}
           <h1 className="text-xl font-semibold mb-4">Subscribe Now</h1>
 
           {/* Newsletter Description */}
-          <p className="text-[1rem] mb-4 text-grey font-bold">
+          <p className="text-sm mb-4 text-grey font-bold">
             Get the latest updates and keep in touch with technology.
           </p>
 
@@ -65,10 +65,11 @@ const Footer = () => {
           <div className="flex flex-col">
             {/* Pages Links */}
             <div>
-              <ul className="flex flex-wrap space-x-6 mb-6 font-bold">
-                <h2 className="text-lg font-bold text-grey mb-2">Pages</h2>
+              <ul className="flex flex-wrap xs:justify-around mb-6 font-bold">
+                <h2 className="text-lg font-bold text-grey ">Pages</h2>
+                <div className="flex flex-row sm:space-x-12 space-x-2">
                 <li>
-                  <a href="" className="hover:underline ml-12">
+                  <a href="" className="hover:underline">
                     Home
                   </a>
                 </li>
@@ -77,11 +78,7 @@ const Footer = () => {
                     Services
                   </a>
                 </li>
-                <li>
-                  <a href="#portfolio" className="hover:underline">
-                    Portfolio
-                  </a>
-                </li>
+               
                 <li>
                   <a href="/about" className="hover:underline">
                     About
@@ -97,17 +94,20 @@ const Footer = () => {
                     Blogs
                   </a>
                 </li>
+                </div>
+             
               </ul>
             </div>
 
             {/* Social Follow Links */}
-            <div>
-              <ul className="flex flex-wrap space-x-6 font-bold">
-                <h2 className="text-lg font-bold text-grey">Follow Us</h2>
+            <div >
+              <ul className=" flex flex-wrap xs:justify-around font-bold">
+                <h2 className="text-lg font-bold text-grey">Follows</h2>
+                <div className="sm:space-x-10 space-x-2 flex flex-row">
                 <li>
                   <a
                     href="https://www.facebook.com/nerdflow.tech?mibextid=ZbWKwL"
-                    className="hover:underline ml-20"
+                    className="hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -154,6 +154,8 @@ const Footer = () => {
                     Fiverr
                   </a>
                 </li>
+                  </div>
+              
               </ul>
             </div>
           </div>

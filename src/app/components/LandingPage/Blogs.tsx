@@ -43,16 +43,17 @@ const Blogs = () => {
       {/* Blogs Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.map((blog, index) => (
-          <div
+          <a
             key={index}
-            className="flex flex-col items-center p-4 rounded-lg shadow-lg"
+            href="/blogs-content"
+            className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
           >
             {/* Blog Image with hover effect */}
             <div className="w-full h-[15rem] mb-4 overflow-hidden rounded-t-lg">
               <Image
                 src={blog.image}
                 alt={blog.title}
-                className="w-full h-full object-cover hover:cursor-pointer"
+                className="w-full h-full object-cover"
               />
             </div>
 
@@ -64,14 +65,9 @@ const Blogs = () => {
             {/* Blog Description */}
             <p className="text-white text-[0.875rem] text-left font-bold">
               {blog.description}{' '}
-              <a
-                href="/blogs-content"
-                className="text-teal hover:underline"
-              >
-                {blog.link}
-              </a>
+              <span className="text-teal hover:underline">{blog.link}</span>
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </div>

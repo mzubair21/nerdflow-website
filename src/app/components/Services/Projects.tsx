@@ -33,11 +33,11 @@ const Projects = () => {
 
   return (
     <div className="font-poppins flex relative flex-col">
-      <div className="text-center">
+      <div className="text-center py-5">
         <h1 className="text-white text-3xl font-semibold">
           See More <span className="text-teal">Projects</span>
         </h1>
-        <p className="text-white text-lg font-normal">
+        <p className="text-white text-lg font-normal pt-4">
           Explore our full range of innovative projects and discover more
           cutting-edge solutions
         </p>

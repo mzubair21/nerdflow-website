@@ -101,36 +101,38 @@ const Service = () => {
         </div>
       </div>
 
-      {/* Filter Buttons Section */}
-      <div className="py-4 bg-black container">
-        <Swiper slidesPerView="auto" >
-          {[
-            "All",
-            "Web Development",
-            "CRM&ERP Development",
-            "Mobile Development",
-            "SEO Optimization",
-            "Social Media Marketing",
-            "UI/UX Designing",
-          ].map((filter) => (
-            <SwiperSlide key={filter} className="!w-auto">
-              <div className="px-1">
-                {/* Add padding for spacing */}
-                <button
-                  onClick={() => setActiveFilter(filter)}
-                  className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
-                    activeFilter === filter
-                      ? "bg-tealgradient text-white"
-                      : "bg-foundation-grey-darker text-white"
-                  }`}
-                >
-                  {filter}
-                </button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+     {/* Filter Buttons Section */}
+<div className="py-8 bg-black">
+  <div className="container flex justify-center">
+    <Swiper slidesPerView="auto" className="flex justify-center">
+      {[
+        "All",
+        "Web Development",
+        "CRM&ERP Development",
+        "Mobile Development",
+        "SEO Optimization",
+        "Social Media Marketing",
+        "UI/UX Designing",
+      ].map((filter) => (
+        <SwiperSlide key={filter} className="!w-auto">
+          <div className="px-1">
+            <button
+              onClick={() => setActiveFilter(filter)}
+              className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                activeFilter === filter
+                  ? "bg-tealgradient text-white"
+                  : "bg-foundation-grey-darker text-white"
+              }`}
+            >
+              {filter}
+            </button>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+
 
       {/* Display Filtered Items */}
       <div className="flex flex-col items-center space-y-4 container ">
