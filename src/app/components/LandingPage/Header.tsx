@@ -66,7 +66,7 @@ const Header = () => {
           {/* Navigation Links for Large Screens */}
           <nav className="hidden lg:flex justify-end flex-1 text-white text-[0.875rem] font-bold pr-[1.175rem] pl-[1.175rem]">
             <ul className="flex space-x-8 sm:space-x-12 md:space-x-2 lg:space-x-8 relative">
-              {["/", "/Services", "/About", "/Pricing", "/Blogs"].map((path) => (
+              {["/", "/services", "/about", "/pricing", "/blogs"].map((path) => (
                 <li key={path} className="relative">
                   <Link href={path} className="hover:text-teal">
                     <span
@@ -74,7 +74,9 @@ const Header = () => {
                         isActive(path) ? "w-full" : "w-0"
                       }`}
                     ></span>
-                    {path.replace("/", "") || "Home"}
+                     {path === "/"
+            ? "Home" // Special case for the home route
+            : path.replace("/", "").charAt(0).toUpperCase() + path.slice(2)}
                   </Link>
                 </li>
               ))}
