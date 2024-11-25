@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <div className=" container mt-48 mx-auto text-white">
+    <div className=" container mt-5 md:mt-48  mx-auto text-white">
       <div className="text-left mb-8 ">
         <h1 className="text-3xl  font-semibold text-white mb-4">
           Our <span className="text-teal">Services</span>
