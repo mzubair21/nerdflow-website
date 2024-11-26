@@ -144,26 +144,28 @@ const casestudy = () => {
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-[50%] md:top-[30%] lg:top-[40%] -translate-y-1/2"
+          className="absolute left-4 top-[50%] -translate-y-1/2"
         >
           <Image src={leftArrow} alt="Previous Slide" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-[50%] md:top-[30%] lg:top-[40%]  -translate-y-1/2"
+          className="absolute right-4 top-[50%]   -translate-y-1/2"
         >
           <Image src={rightArrow} alt="Next Slide" />
         </button>
 
         {/* Slider Content */}
         <div className="text-center ">
-          {/* Image */}
-          <div className="w-[20rem] sm:w-[25rem] lg:w-[60rem] md:w-[35rem] h-[10rem] md:h-[15rem] mx-auto lg:mb-6">
-            <Image
-              src={slides[currentIndex].image}
-              alt={`Slide ${currentIndex}`}
-            />
-          </div>
+       {/* Image */}
+<div className="w-[clamp(2rem, 10%, 4rem)] h-[clamp(2rem, 10%, 4rem)] mx-auto lg:mb-6 transition-all duration-500 ease-in-out">
+  <Image
+    src={slides[currentIndex].image}
+    alt={`Slide ${currentIndex}`}
+    className="object-contain"
+  />
+</div>
+
 
           {/* Heading */}
           <h2 className="text-xl pt-6  font-semibold">
