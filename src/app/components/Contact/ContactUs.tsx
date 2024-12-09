@@ -1,32 +1,32 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import ContactLeft from "../../assets/images/ContactLeft.png";
-import ContactBg from "../../assets/images/ContactUsBg.png";
+"use client"
+import Image from "next/image"
+import { useState } from "react"
+import ContactLeft from "../../assets/images/ContactLeft.png"
+import ContactBg from "../../assets/images/ContactUsBg.png"
 
 const ContactUs = () => {
-  const [statusMessage, setStatusMessage] = useState(""); // State for status message
+  const [statusMessage, setStatusMessage] = useState("") // State for status message
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     message: "",
-  }); // State for form fields
+  }) // State for form fields
 
   // Handle input change
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    setStatusMessage("Submitting Response...");
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault()
+    setStatusMessage("Submitting Response...")
 
     // Simulate API call or response submission
     setTimeout(() => {
-      setStatusMessage("Response Sent Successfully!");
+      setStatusMessage("Response Sent Successfully!")
       // Clear form fields
       setFormData({
         firstName: "",
@@ -34,9 +34,9 @@ const ContactUs = () => {
         email: "",
         phone: "",
         message: "",
-      });
-    }, 1000);
-  };
+      })
+    }, 1000)
+  }
 
   return (
     <div>
@@ -54,7 +54,7 @@ const ContactUs = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
-          <div className="container">
+          <div className="container flex flex-col gap-4">
             <h1 className="text-white font-semibold text-3xl">Contact Us</h1>
             <p className="text-white text-lg">
               Feel free to contact us for inquiries or support!
@@ -70,7 +70,10 @@ const ContactUs = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 py-10 text-center text-white">
+      <div
+        data-aos="fade-up"
+        className="container mx-auto px-4 py-10 text-center text-white"
+      >
         <h1 className="text-3xl font-semibold mb-4">Get in Touch</h1>
         <p className="mb-6 text-lg lg:px-48">
           Kindly complete the form located below, and one of our representatives
@@ -200,7 +203,7 @@ const ContactUs = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactUs;
+export default ContactUs

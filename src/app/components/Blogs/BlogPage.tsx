@@ -1,23 +1,23 @@
-"use client";
-import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import { Swiper, SwiperSlide } from "swiper/react";
-import BlogsBg from "../../assets/images/BlogsBg.png";
-import blogImage1 from '../../assets/images/blogImage1.png';
-import blogImage2 from '../../assets/images/blogImage2.png';
-import blogImage3 from '../../assets/images/blogImage3.png';
+"use client"
+import Image, { StaticImageData } from "next/image"
+import { useState } from "react"
+import "swiper/css"
+import "swiper/css/free-mode"
+import { Swiper, SwiperSlide } from "swiper/react"
+import BlogsBg from "../../assets/images/BlogsBg.png"
+import blogImage1 from "../../assets/images/blogImage1.png"
+import blogImage2 from "../../assets/images/blogImage2.png"
+import blogImage3 from "../../assets/images/blogImage3.png"
 
 interface Blog {
-  image: string | StaticImageData;
-  title: string;
-  description: string;
-  category: string;
+  image: string | StaticImageData
+  title: string
+  description: string
+  category: string
 }
 
 interface BlogsProps {
-  filteredBlogs: Blog[];
+  filteredBlogs: Blog[]
 }
 
 const Blogs = ({ filteredBlogs }: BlogsProps) => {
@@ -28,7 +28,7 @@ const Blogs = ({ filteredBlogs }: BlogsProps) => {
         {filteredBlogs.map((blog, index) => (
           <a
             key={index}
-            href="/blogs-content"  // Redirect to the blog content page
+            href="/blogs-content" // Redirect to the blog content page
             className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
           >
             {/* Blog Image */}
@@ -45,71 +45,72 @@ const Blogs = ({ filteredBlogs }: BlogsProps) => {
 
             {/* Blog Description */}
             <p className="text-white text-[0.875rem] text-left font-bold">
-              {blog.description}{' '}
+              {blog.description}{" "}
               <span className="text-teal hover:underline">Read more...</span>
             </p>
           </a>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const BlogPage = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("All")
 
   const blogs: Blog[] = [
     {
       image: blogImage1,
-      title: 'Ready to revolutionize your web development journey?',
+      title: "Ready to revolutionize your web development journey?",
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      category: 'Web Development',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
+      category: "Web Development",
     },
     {
       image: blogImage2,
-      title: 'Embrace Laravel\'s elegance, efficiency, and power',
+      title: "Embrace Laravel's elegance, efficiency, and power",
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      category: 'Web Development',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
+      category: "Web Development",
     },
     {
       image: blogImage3,
-      title: 'A robust Customer Relationship Management (CRM) possibility',
+      title: "A robust Customer Relationship Management (CRM) possibility",
       description:
-        'This high percentage indicates the Metro\'s crucial role in daily commuting for women.',
-      category: 'CRM&ERP Development',
+        "This high percentage indicates the Metro's crucial role in daily commuting for women.",
+      category: "CRM&ERP Development",
     },
     {
       image: blogImage1,
-      title: 'SEO Optimization Techniques',
+      title: "SEO Optimization Techniques",
       description:
-        'Learn effective strategies for optimizing your content and improving search rankings.',
-      category: 'SEO Optimization',
+        "Learn effective strategies for optimizing your content and improving search rankings.",
+      category: "SEO Optimization",
     },
     {
       image: blogImage2,
-      title: 'The Power of Social Media Marketing',
+      title: "The Power of Social Media Marketing",
       description:
-        'Utilize social media platforms to reach and engage with your audience effectively.',
-      category: 'Social Media Marketing',
+        "Utilize social media platforms to reach and engage with your audience effectively.",
+      category: "Social Media Marketing",
     },
     {
       image: blogImage3,
-      title: 'UI/UX Designing Essentials',
+      title: "UI/UX Designing Essentials",
       description:
-        'Understand the basics of UI/UX design to create user-friendly applications.',
-      category: 'UI/UX Designing',
+        "Understand the basics of UI/UX design to create user-friendly applications.",
+      category: "UI/UX Designing",
     },
-  ];
+  ]
 
   // Filter blogs based on the active filter
-  const filteredBlogs = activeFilter === "All"
-    ? blogs
-    : blogs.filter(blog => blog.category === activeFilter);
+  const filteredBlogs =
+    activeFilter === "All"
+      ? blogs
+      : blogs.filter((blog) => blog.category === activeFilter)
 
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="relative h-[28rem]">
         {/* Background Image */}
         <div
@@ -124,7 +125,7 @@ const BlogPage = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] text-left bg-custom-gradient2">
-          <div className="container">
+          <div className="container flex flex-col gpa-4">
             <h1 className="text-white font-semibold text-3xl">
               Our <span className="text-teal">Blogs</span>
             </h1>
@@ -170,7 +171,7 @@ const BlogPage = () => {
       {/* Display Filtered Blogs */}
       <Blogs filteredBlogs={filteredBlogs} />
     </div>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage

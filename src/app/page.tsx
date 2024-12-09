@@ -1,26 +1,35 @@
-import AboutUs from "./components/LandingPage/AboutUs";
-import Blogs from "./components/LandingPage/Blogs";
-import Clients from "./components/LandingPage/Clients";
-import ClientTestimonials from "./components/LandingPage/ClientTestimonials";
-import Footer from "./components/LandingPage/Footer";
-import Header from "./components/LandingPage/Header";
-import HeroSection from "./components/LandingPage/HeroSection";
-import Portfolio from "./components/LandingPage/Portfolio";
-import Services from "./components/LandingPage/Services";
+import dynamic from "next/dynamic"
+import Loading from "./loading"
 
-export default function Home(){
-  return(
-    
+const AboutUs = dynamic(() => import("./components/LandingPage/AboutUs"))
+const AosInit = dynamic(() => import("./components/LandingPage/AosInit"))
+const Blogs = dynamic(() => import("./components/LandingPage/Blogs"))
+const Clients = dynamic(() => import("./components/LandingPage/Clients"))
+const ClientTestimonials = dynamic(
+  () => import("./components/LandingPage/ClientTestimonials")
+)
+const Footer = dynamic(() => import("./components/LandingPage/Footer"))
+const Header = dynamic(() => import("./components/LandingPage/Header"))
+const HeroSection = dynamic(
+  () => import("./components/LandingPage/HeroSection")
+)
+const Portfolio = dynamic(() => import("./components/LandingPage/Portfolio"))
+const Services = dynamic(() => import("./components/LandingPage/Services"))
+
+export default function Home() {
+  return (
     <div>
-      <Header/>
-      <HeroSection/>
-      <Services/>
-      <Portfolio/>
-      <Clients/>
-      <AboutUs/>
+      <AosInit />
+      <Header />
+      <Loading initFakeLoading={true} />
+      <HeroSection />
+      <Services />
+      <Portfolio />
+      <Clients />
+      <AboutUs />
       <ClientTestimonials bg={true} />
-      <Blogs/>
-      <Footer/>
+      <Blogs />
+      <Footer />
     </div>
   )
 }

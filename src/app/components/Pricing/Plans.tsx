@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import PlanLeft from "../../assets/images/PlanLeft.png";
-import PlanRight from "../../assets/images/PlanRight.png";
+import Image from "next/image"
+import Link from "next/link"
+import PlanLeft from "../../assets/images/PlanLeft.png"
+import PlanRight from "../../assets/images/PlanRight.png"
 
 const Plans = () => {
   const pricingPlans = [
@@ -47,10 +47,10 @@ const Plans = () => {
         "24/7 Support",
       ],
     },
-  ];
+  ]
 
   return (
-    <div className="font-poppins py-28 relative">
+    <div data-aos="fade-up" className="font-poppins py-28 relative">
       {/* Background images for large screens */}
       <div className="w-full lg:w-[25rem] absolute top-[20%] hidden xl:block">
         <Image
@@ -89,7 +89,8 @@ const Plans = () => {
                   : "lg:w-[24rem] lg:h-[34rem]"
               } sm:w-full sm:mt-0`}
             style={{
-              border: index === 1 ? "4px solid #34E0A1" : "1.276px solid #5E5E5E",
+              border:
+                index === 1 ? "4px solid #34E0A1" : "1.276px solid #5E5E5E",
               backdropFilter: "blur(2.55px)",
             }}
           >
@@ -131,7 +132,7 @@ const Plans = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Plans;
+export default Plans
