@@ -105,7 +105,7 @@ const Header = () => {
           }`}
         >
           <nav
-            className="flex flex-col justify-center items-center py-16 h-full"
+            className="flex flex-col justify-center items-center py-16 h-[calc(100%-120px)] "
             onClick={closeMenu}
           >
             <Link
@@ -140,9 +140,9 @@ const Header = () => {
             </Link>
             <Link
               href="/contact"
-              className="mt-2 w-full block text-center group p-2"
+              className="w-full block text-center group p-2"
             >
-              <span className="group-hover:bg-teal group-hover:text-white bg-white text-black text-lg  font-semibold  rounded-full p-4 py-3">
+              <span className="text-xl group-hover:bg-teal group-hover:text-white font-semibold  rounded-full p-4 py-3">
                 Contact Us
               </span>
             </Link>
