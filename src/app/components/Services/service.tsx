@@ -141,10 +141,12 @@ const Service = () => {
           >
             {item.reverse ? (
               <>
-                <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 relative">
+                <div
+                  data-aos="fade-right"
+                  className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 relative"
+                >
                   {item.rightImage && (
                     <Image
-                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                       src={item.rightImage}
                       alt={`${item.title} Right Background`}
                       className="absolute inset-0 w-auto h-auto -z-10  hidden xl:block xl:left-[150%] 2xl:hidden"
@@ -179,7 +181,6 @@ const Service = () => {
                 <div className="w-full lg:w-[34rem] mb-6 lg:mb-0 relative">
                   {item.leftImage && (
                     <Image
-                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                       src={item.leftImage}
                       alt={`${item.title} Left Background`}
                       className="absolute inset-0 w-auto h-auto -z-10"
@@ -201,7 +202,10 @@ const Service = () => {
                     See Case Study
                   </Link>
                 </div>
-                <div className="w-full lg:w-[35.8rem] h-auto">
+                <div
+                  data-aos="fade-left"
+                  className="w-full lg:w-[35.8rem] h-auto"
+                >
                   <Image
                     src={item.image}
                     alt={item.alt}

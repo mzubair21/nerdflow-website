@@ -1,16 +1,18 @@
-import Footer from "../components/LandingPage/Footer";
-import Header from "../components/LandingPage/Header";
-import Plans from "../components/Pricing/Plans";
+import AosInit from "../components/LandingPage/AosInit"
+import Footer from "../components/LandingPage/Footer"
+import Header from "../components/LandingPage/Header"
+import Plans from "../components/Pricing/Plans"
 
 const page = () => {
   return (
-    <>  
-    {/** */}
-    <Header/>
-    <Plans/>
-    <Footer/>
+    <>
+      {/** */}
+      <AosInit />
+      <Header />
+      <Plans />
+      <Footer />
     </>
-  );
-};
+  )
+}
 
-export default page;
+export default page
