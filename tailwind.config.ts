@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        monserrat: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
         "custom-shadow":
