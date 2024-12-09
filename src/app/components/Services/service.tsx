@@ -1,20 +1,20 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ClearEats from "../../assets/images/ClearEats.png";
-import DailyLeft from "../../assets/images/DailyBazar Left.png";
-import DailyBazar from "../../assets/images/DailyBazar.png";
-import serviceBg from "../../assets/images/serviceBg.png";
-import VTK from "../../assets/images/VTK.png";
-import Wizz from "../../assets/images/Wizz.png";
-import WizzRight from "../../assets/images/WizzRight.png";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import "swiper/css"
+import "swiper/css/free-mode"
+import { Swiper, SwiperSlide } from "swiper/react"
+import ClearEats from "../../assets/images/ClearEats.png"
+import DailyLeft from "../../assets/images/DailyBazar Left.png"
+import DailyBazar from "../../assets/images/DailyBazar.png"
+import serviceBg from "../../assets/images/serviceBg.png"
+import VTK from "../../assets/images/VTK.png"
+import Wizz from "../../assets/images/Wizz.png"
+import WizzRight from "../../assets/images/WizzRight.png"
 
 const Service = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("All")
 
   const items = [
     {
@@ -61,22 +61,21 @@ const Service = () => {
         "Experience the sleek, user-friendly design of Clear Eats through our app screenshots.",
       reverse: true,
     },
-  ];
+  ]
 
   const filteredItems =
     activeFilter === "All"
       ? items
       : items.filter((item) => {
-          if (activeFilter === "Web Development")
-            return item.category === "Web";
+          if (activeFilter === "Web Development") return item.category === "Web"
           if (activeFilter === "CRM&ERP Development")
-            return item.category === "CRM";
-          return false;
-        });
+            return item.category === "CRM"
+          return false
+        })
 
   return (
     <div>
-     <div className="relative h-[28rem]">
+      <div className="relative h-[28rem]">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-[-1]"
@@ -90,49 +89,52 @@ const Service = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
-          <div className="container">
-            <h1 className="text-white font-semibold text-3xl">Our <span className="text-teal">Services</span></h1>
-            <p className="text-white text-lg">Elevating Business Solutions: Discover Our Comprehensive Services.</p>
+          <div className="container flex flex-col gap-4">
+            <h1 className="text-white font-semibold text-3xl">
+              Our <span className="text-teal">Services</span>
+            </h1>
+            <p className="text-white text-lg">
+              Elevating Business Solutions: Discover Our Comprehensive Services.
+            </p>
           </div>
         </div>
       </div>
 
-     {/* Filter Buttons Section */}
-<div className="py-8 bg-black">
-  <div className="container flex justify-center">
-    <Swiper slidesPerView="auto" className="flex justify-center">
-      {[
-        "All",
-        "Web Development",
-        "CRM&ERP Development",
-        "Mobile Development",
-        "SEO Optimization",
-        "Social Media Marketing",
-        "UI/UX Designing",
-      ].map((filter) => (
-        <SwiperSlide key={filter} className="!w-auto">
-          <div className="px-1">
-            <button
-              onClick={() => setActiveFilter(filter)}
-              className={`p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
-                activeFilter === filter
-                  ? "bg-tealgradient text-white"
-                  : "bg-foundation-grey-darker text-white"
-              }`}
-            >
-              {filter}
-            </button>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</div>
-
+      {/* Filter Buttons Section */}
+      <div className="py-8 bg-black">
+        <div className="container flex justify-center">
+          <Swiper slidesPerView="auto" className="flex justify-center">
+            {[
+              "All",
+              "Web Development",
+              "CRM&ERP Development",
+              "Mobile Development",
+              "SEO Optimization",
+              "Social Media Marketing",
+              "UI/UX Designing",
+            ].map((filter) => (
+              <SwiperSlide key={filter} className="!w-auto">
+                <div className="px-1">
+                  <button
+                    onClick={() => setActiveFilter(filter)}
+                    className={`text-sm p-[0.75rem] sm:px-6 sm:py-3 lg:px-3 lg:py-4 rounded-[0.625rem] whitespace-nowrap ${
+                      activeFilter === filter
+                        ? "bg-tealgradient text-white"
+                        : "bg-foundation-grey-darker text-white"
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
 
       {/* Display Filtered Items */}
       <div className="flex flex-col items-center space-y-4 container ">
-        {filteredItems.map((item) => (
+        {filteredItems.map((item, index) => (
           <section
             key={item.id}
             className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto px-4 relative"
@@ -142,6 +144,7 @@ const Service = () => {
                 <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 relative">
                   {item.rightImage && (
                     <Image
+                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                       src={item.rightImage}
                       alt={`${item.title} Right Background`}
                       className="absolute inset-0 w-auto h-auto -z-10  hidden xl:block xl:left-[150%] 2xl:hidden"
@@ -163,7 +166,7 @@ const Service = () => {
                   </p>
                   <Link
                     href="/case-study"
-                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-400 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                    hover:text-custom-text"
                   >
@@ -176,6 +179,7 @@ const Service = () => {
                 <div className="w-full lg:w-[34rem] mb-6 lg:mb-0 relative">
                   {item.leftImage && (
                     <Image
+                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                       src={item.leftImage}
                       alt={`${item.title} Left Background`}
                       className="absolute inset-0 w-auto h-auto -z-10"
@@ -190,7 +194,7 @@ const Service = () => {
                   </p>
                   <Link
                     href="/case-study"
-                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+                    className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-400 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                      hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                     hover:text-custom-text"
                   >
@@ -210,7 +214,7 @@ const Service = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Service;
+export default Service

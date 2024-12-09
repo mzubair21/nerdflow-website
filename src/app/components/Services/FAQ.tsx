@@ -1,44 +1,49 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import FAQBg from '../../assets/images/FAQBg.png';
-import crossIcon from '../../assets/svgs/crossIcon.svg';
-import plusIcon from '../../assets/svgs/plusIcon.svg';
+"use client"
+import Image from "next/image"
+import { useState } from "react"
+import FAQBg from "../../assets/images/FAQBg.png"
+import crossIcon from "../../assets/svgs/crossIcon.svg"
+import plusIcon from "../../assets/svgs/plusIcon.svg"
 
 // Define the structure of the FAQ items
 interface FAQItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
 const FAQ = () => {
   // State to manage which FAQ is open
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null); // index will be a number or null
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null) // index will be a number or null
 
   // Toggle FAQ visibility
   const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index); // Toggle between open and closed
-  };
+    setOpenFAQ(openFAQ === index ? null : index) // Toggle between open and closed
+  }
 
   // Array of FAQ questions and answers
   const faqs: FAQItem[] = [
     {
       question: "Alright, but what exactly do you do?",
-      answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
+      answer:
+        "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
     },
     {
-      question: "I don't need a brand strategist but I need help executing an upcoming campaign. Can we still work together?",
-      answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
+      question:
+        "I don't need a brand strategist but I need help executing an upcoming campaign. Can we still work together?",
+      answer:
+        "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
     },
     {
       question: "Are your rates competitive?",
-      answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
+      answer:
+        "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
     },
     {
       question: "Why do you have a monthly project cap?",
-      answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
+      answer:
+        "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
     },
-  ];
+  ]
 
   return (
     <div>
@@ -61,19 +66,23 @@ const FAQ = () => {
       <div className="mt-10 w-full container">
         {faqs.map((faq, index: number) => (
           <div
-            key={`${faq.question}-${index}`} 
-            className="text-white p-12 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack border-t border-grey" // Updated border classes
-            onClick={() => toggleFAQ(index)} 
+            key={`${faq.question}-${index}`}
+            className={`
+              ${openFAQ === index ? "bg-lightblack" : "bg-darkblack"}
+              ${"text-white p-5 lg:p-12 w-full cursor-pointer flex items-start justify-between hover:bg-lightblack border-t border-grey"}`} // Updated border classes
+            onClick={() => toggleFAQ(index)}
           >
             {/* Numbering */}
-            <div className="mr-10 text-white text-[2rem] font-bold">
+            <div className="mr-4 lg:mr-10 text-white text-xl lg:text-2xl font-bold">
               {index < 9 ? `0${index + 1}` : index + 1}
             </div>
 
             {/* FAQ Content */}
             <div className="flex-1">
               <div className="flex justify-between items-center ">
-                <h2 className="text-xl font-semibold">{faq.question}</h2>
+                <h2 className="text-lg lg:text-xl font-semibold">
+                  {faq.question}
+                </h2>
                 {openFAQ === index ? (
                   <Image src={crossIcon} alt="Cross Icon" />
                 ) : (
@@ -82,14 +91,14 @@ const FAQ = () => {
               </div>
 
               {openFAQ === index && (
-                <p className="mt-2 text-white text-lg">{faq.answer}</p>
+                <p className="mt-2 lg:mt-5 text-white text-md">{faq.answer}</p>
               )}
             </div>
           </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
