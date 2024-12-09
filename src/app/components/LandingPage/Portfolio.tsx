@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
-import ClearEats from "../../assets/images/ClearEats.png";
-import DailyBazar from "../../assets/images/DailyBazar.png";
-import VTK from "../../assets/images/VTK.png";
-import Wizz from "../../assets/images/Wizz.png";
-import WizzLeft from "../../assets/images/WizzLeft.png";
-import WizzRight from "../../assets/images/WizzRight.png";
+import Image from "next/image"
+import Link from "next/link"
+import ClearEats from "../../assets/images/ClearEats.png"
+import DailyBazar from "../../assets/images/DailyBazar.png"
+import VTK from "../../assets/images/VTK.png"
+import Wizz from "../../assets/images/Wizz.png"
+import WizzLeft from "../../assets/images/WizzLeft.png"
+import WizzRight from "../../assets/images/WizzRight.png"
 
 const Portfolio = () => {
   return (
     <div className="font-poppins mx-auto container mt-16" id="portfolio">
-      <div className="mb-8">
+      <div data-aos="fade-up" className="mb-8">
         <h1 className="text-white text-3xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
         </h1>
@@ -22,10 +22,10 @@ const Portfolio = () => {
       </div>
 
       {/* Daily Bazar */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto relative">
+      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-4  mx-auto relative">
         {/* Text Section with Background */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
-          <h1 className="text-xl font-semibold text-white mb-4">
+          <h1 className="text-2xl font-semibold text-white mb-4">
             Daily Bazaar Web Application
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -34,7 +34,7 @@ const Portfolio = () => {
           </p>
           <Link
             href="/case-study"
-            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
   "
@@ -44,7 +44,7 @@ const Portfolio = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-[35.8rem] h-auto">
+        <div data-aos="fade-left" className="w-full lg:w-[35.8rem] h-auto">
           <Image
             src={DailyBazar}
             alt="Daily Bazar Image"
@@ -54,19 +54,26 @@ const Portfolio = () => {
       </section>
 
       {/* Wizz */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto  relative">
+      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4 mx-auto  relative">
         {/* Image Section */}
-        <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0">
+        <div
+          data-aos="fade-right"
+          className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 mt-6 md:mt-0"
+        >
           <Image src={Wizz} alt="Wizz Image" className="w-full h-auto" />
         </div>
 
         {/* Text Section with Background */}
-        <div className="w-full lg:w-[40rem] relative">
+        <div className="w-full lg:w-[40rem]">
           <Image
             src={WizzRight}
             alt="Hero Section Background"
-            className="absolute inset-0 w-auto h-auto  2xl:block xl:block -z-10 left-0"
-            style={{ top: "-150%" }}
+            className="absolute md:w-[75%] h-[200%] md:h-auto  2xl:block xl:block -z-10
+            md:object-contain
+            -top-[30%]
+            left-[20px]
+            md:-top-[100%] md:left-[32%]
+            "
           />
 
           <Image
@@ -76,7 +83,7 @@ const Portfolio = () => {
             style={{ top: "-170%" }}
           />
 
-          <h1 className="text-xl  font-semibold text-white mb-4">
+          <h1 className="text-2xl  font-semibold text-white mb-4">
             Wizz Logistics
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -85,7 +92,7 @@ const Portfolio = () => {
           </p>
           <Link
             href="/case-study"
-            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
   "
@@ -96,10 +103,20 @@ const Portfolio = () => {
       </section>
 
       {/* VTK */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-14 container mx-auto  relative">
+      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-4  mx-auto  relative">
+        <Image
+          src={WizzRight}
+          alt="Hero Section Background"
+          className="absolute md:w-[75%] h-[200%] md:h-auto md:hidden -z-10
+            md:object-contain
+            top-[30%]
+            left-[20px]
+            md:-top-[100%] md:left-[32%]
+            "
+        />
         {/* Text Section */}
         <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
-          <h1 className="text-xl  font-semibold text-white mb-4">
+          <h1 className="text-2xl  font-semibold text-white mb-4">
             VTK Legal Solution
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -108,7 +125,7 @@ const Portfolio = () => {
           </p>
           <Link
             href="/case-study"
-            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
   "
@@ -118,15 +135,18 @@ const Portfolio = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-[35.8rem] h-auto">
+        <div data-aos="fade-left" className="w-full lg:w-[35.8rem] h-auto">
           <Image src={VTK} alt="VTK Image" className="w-full h-auto" />
         </div>
       </section>
 
       {/* Clear Eats */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-14 container mx-auto  relative">
+      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4  mx-auto  relative">
         {/* Image Section */}
-        <div className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0">
+        <div
+          data-aos="fade-right"
+          className="w-full lg:w-[35.8rem] h-auto mb-6 lg:mb-0 mt-6 md:mt-0"
+        >
           <Image
             src={ClearEats}
             alt="Clear Eats Image"
@@ -136,7 +156,7 @@ const Portfolio = () => {
 
         {/* Text Section */}
         <div className="w-full lg:w-[34rem]">
-          <h1 className="text-xl  font-semibold text-white mb-4">
+          <h1 className="text-2xl  font-semibold text-white mb-4">
             Clear Eats Web Application
           </h1>
           <p className="text-sm sm:text-base mb-8 font-bold text-white">
@@ -145,7 +165,7 @@ const Portfolio = () => {
           </p>
           <Link
             href="/case-study"
-            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
   "
@@ -155,7 +175,7 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

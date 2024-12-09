@@ -15,7 +15,7 @@ const HeroSection = () => {
          top-[-80%] md:top-[-65%] left-[-44%]
         "
       />
-      <div className="h-screen flex items-center">
+      <div className="h-screen max-h-[800px] flex items-center">
         <div className="w-full grid grid-cols-12 ">
           {/* Text Section */}
           <div

@@ -17,7 +17,7 @@ const Loading = ({ initFakeLoading }: { initFakeLoading?: boolean }) => {
       {initFakeLoading ? (
         <>
           {initFakeLoading && loading ? (
-            <div className="fixed top-0 left-0 w-full h-full bg-black z-10 transition-opacity duration-500 ease-out opacity-100">
+            <div className="fixed top-0 left-0 w-full h-full bg-black z-50 transition-opacity duration-500 ease-out opacity-100">
               <div className="flex items-center justify-center h-screen">
                 <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-teal border-opacity-50"></div>
                 <span className="ml-4 text-xl font-semibold text-white">
@@ -26,7 +26,7 @@ const Loading = ({ initFakeLoading }: { initFakeLoading?: boolean }) => {
               </div>
             </div>
           ) : (
-            <div className="fixed top-0 left-0 w-full h-full bg-black z-10 transition-opacity duration-500 ease-out opacity-0 pointer-events-none"></div>
+            <div className="fixed top-0 left-0 w-full h-full bg-black z-50 transition-opacity duration-500 ease-out opacity-0 pointer-events-none"></div>
           )}
         </>
       ) : (
