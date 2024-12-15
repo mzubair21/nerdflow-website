@@ -20,41 +20,6 @@ interface BlogsProps {
   filteredBlogs: Blog[]
 }
 
-const Blogs = ({ filteredBlogs }: BlogsProps) => {
-  return (
-    <div className="font-poppins py-16 px-4 mx-auto">
-      {/* Blogs Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
-        {filteredBlogs.map((blog, index) => (
-          <a
-            key={index}
-            href="/blogs-content" // Redirect to the blog content page
-            className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
-          >
-            {/* Blog Image */}
-            <Image
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-[15rem] object-cover mb-4 rounded-t-lg"
-            />
-
-            {/* Blog Title */}
-            <h2 className="text-white text-[1.25rem] font-semibold mb-2 text-left">
-              {blog.title}
-            </h2>
-
-            {/* Blog Description */}
-            <p className="text-white text-[0.875rem] text-left font-bold">
-              {blog.description}{" "}
-              <span className="text-teal hover:underline">Read more...</span>
-            </p>
-          </a>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 const BlogPage = () => {
   const [activeFilter, setActiveFilter] = useState("All")
 
@@ -125,7 +90,7 @@ const BlogPage = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] text-left bg-custom-gradient2">
-          <div className="container flex flex-col gpa-4">
+          <div className="container flex flex-col gap-4">
             <h1 className="text-white font-semibold text-3xl">
               Our <span className="text-teal">Blogs</span>
             </h1>
@@ -170,6 +135,41 @@ const BlogPage = () => {
 
       {/* Display Filtered Blogs */}
       <Blogs filteredBlogs={filteredBlogs} />
+    </div>
+  )
+}
+
+const Blogs = ({ filteredBlogs }: BlogsProps) => {
+  return (
+    <div className="font-poppins py-16 px-4 mx-auto">
+      {/* Blogs Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
+        {filteredBlogs.map((blog, index) => (
+          <a
+            key={index}
+            href="/blogs-content/laravel" // Redirect to the blog content page
+            className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
+          >
+            {/* Blog Image */}
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              className="w-full h-[15rem] object-cover mb-4 rounded-t-lg"
+            />
+
+            {/* Blog Title */}
+            <h2 className="text-white text-[1.25rem] font-semibold mb-2 text-left">
+              {blog.title}
+            </h2>
+
+            {/* Blog Description */}
+            <p className="text-white text-[0.875rem] text-left font-bold">
+              {blog.description}{" "}
+              <span className="text-teal hover:underline">Read more...</span>
+            </p>
+          </a>
+        ))}
+      </div>
     </div>
   )
 }

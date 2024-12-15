@@ -49,7 +49,7 @@ const Blogs = () => {
         {blogs.map((blog, index) => (
           <a
             key={index}
-            href="/blogs-content"
+            href="/blogs-content/laravel"
             className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
           >
             {/* Blog Image with hover effect */}

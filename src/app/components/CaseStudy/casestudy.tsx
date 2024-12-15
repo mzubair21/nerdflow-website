@@ -1,13 +1,13 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import CaseStudyBg from "../../assets/images/CaseStudyBg.png";
-import CaseStudyLeft from "../../assets/images/CaseStudyLeft.png";
-import main from "../../assets/images/laptop.png";
-import medical from "../../assets/images/medical.png";
-import user from "../../assets/images/usercentric.png";
-import leftArrow from "../../assets/svgs/leftArrow.svg";
-import rightArrow from "../../assets/svgs/rightArrow.svg";
+"use client"
+import Image from "next/image"
+import { useState } from "react"
+import CaseStudyBg from "../../assets/images/CaseStudyBg.png"
+import CaseStudyLeft from "../../assets/images/CaseStudyLeft.png"
+import main from "../../assets/images/laptop.png"
+import medical from "../../assets/images/medical.png"
+import user from "../../assets/images/usercentric.png"
+import leftArrow from "../../assets/svgs/leftArrow.svg"
+import rightArrow from "../../assets/svgs/rightArrow.svg"
 
 const slides = [
   {
@@ -34,21 +34,9 @@ const slides = [
     description:
       "Laravel brings a host of advantages to CRM development. Its expressive syntax, modular architecture, and extensive ecosystem make it ideal for crafting tailored CRM solutions. With features like ORM (Eloquent), routing, caching, and security, Laravel accelerates development while ensuring a secure foundation.",
   },
-];
+]
 
 const casestudy = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <div>
       <div className="relative h-[28rem]">
@@ -65,7 +53,7 @@ const casestudy = () => {
 
         {/* Content Layer */}
         <div className="relative z-10 flex items-end h-[28rem] bg-custom-gradient2">
-          <div className="container">
+          <div className="container flex flex-col gap-4">
             <h1 className="text-white font-semibold text-3xl">
               <span className="text-teal">BRT</span> Centers
             </h1>
@@ -140,8 +128,8 @@ const casestudy = () => {
       </div>
 
       {/* Slider Section */}
-      <div className=" text-white relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-64">
-        {/* Arrows */}
+      {/* <div className=" text-white relative w-full h-[18rem] md:h-[30rem] px-6 md:px-14 py-10 flex flex-col items-center container mb-64">
+
         <button
           onClick={prevSlide}
           className="absolute left-4 top-[50%] -translate-y-1/2"
@@ -155,43 +143,26 @@ const casestudy = () => {
           <Image src={rightArrow} alt="Next Slide" />
         </button>
 
-        {/* Slider Content */}
+
         <div className="text-center ">
-       {/* Image */}
-<div className="w-[clamp(2rem, 10%, 4rem)] h-[clamp(2rem, 10%, 4rem)] mx-auto lg:mb-6 transition-all duration-500 ease-in-out">
-  <Image
-    src={slides[currentIndex].image}
-    alt={`Slide ${currentIndex}`}
-    className="object-contain"
-  />
-</div>
 
-
-          {/* Heading */}
+          <div className="w-[clamp(2rem, 10%, 4rem)] h-[clamp(2rem, 10%, 4rem)] mx-auto lg:mb-6 transition-all duration-500 ease-in-out">
+            <Image
+              src={slides[currentIndex].image}
+              alt={`Slide ${currentIndex}`}
+              className="object-contain"
+            />
+          </div>
           <h2 className="text-xl pt-6  font-semibold">
             {slides[currentIndex].heading}
           </h2>
-
-          {/* Description */}
           <p className="text-sm mt-4 px-4 md:px-12">
             {slides[currentIndex].description}
           </p>
-
-          {/* Dots */}
-          <div className="flex justify-center mt-8">
-            {slides.map((_, index) => (
-              <span
-                key={index}
-                className={`w-2 md:w-3 h-2 md:h-3 mx-1 rounded-full ${
-                  index === currentIndex ? "bg-teal" : "bg-gray-300"
-                }`}
-              ></span>
-            ))}
-          </div>
         </div>
-      </div>
+      </div> */}
     </div>
-  );
-};
+  )
+}
 
-export default casestudy;
+export default casestudy
