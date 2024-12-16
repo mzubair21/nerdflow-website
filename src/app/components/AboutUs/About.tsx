@@ -21,7 +21,7 @@ import git from "../../assets/logos/logos_git-icon.png"
 
 const About = () => {
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="relative h-[28rem]">
         {/* Background Image */}
         <div

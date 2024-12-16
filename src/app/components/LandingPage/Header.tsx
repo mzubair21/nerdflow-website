@@ -45,7 +45,7 @@ const Header = () => {
         isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       }`}
     >
-      <div className="container mx-auto relative px-4">
+      <div className="container relative">
         <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <div className="flex items-center">

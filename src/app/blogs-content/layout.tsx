@@ -1,19 +1,18 @@
 import dynamic from "next/dynamic"
 
-const AosInit = dynamic(() => import("../components/LandingPage/AosInit"))
+const Blog = dynamic(() => import("../components/BlogsContent/LaravelBlog"))
 const Header = dynamic(() => import("../components/LandingPage/Header"))
-const BlogPage = dynamic(() => import("../components/Blogs/BlogPage"))
+const AosInit = dynamic(() => import("../components/LandingPage/AosInit"))
 
 import Loading from "../loading"
 import Footer from "../components/LandingPage/Footer"
-
-const page = () => {
+const page = ({ children }: any) => {
   return (
     <>
       <AosInit />
       <Loading initFakeLoading={true} />
       <Header />
-      <BlogPage />
+      {children}
       <Footer />
     </>
   )

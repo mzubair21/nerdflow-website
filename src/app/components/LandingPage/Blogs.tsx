@@ -49,15 +49,19 @@ const Blogs = () => {
         {blogs.map((blog, index) => (
           <a
             key={index}
-            href="/blogs-content"
-            className="flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
+            href="/blogs-content/laravel"
+            className="group flex flex-col items-center p-4 rounded-lg shadow-lg hover:cursor-pointer"
           >
             {/* Blog Image with hover effect */}
             <div className="w-full h-[15rem] mb-4 overflow-hidden rounded-t-lg">
               <Image
                 src={blog.image}
                 alt={blog.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover
+                hover:scale-105
+                opacity-50 group-hover:opacity-100
+                transition-all duration-200 ease-in
+                "
               />
             </div>
 

@@ -21,22 +21,22 @@ const AboutUs = () => {
       {/* Swiper Section for Team Members */}
       <div className="py-[3rem] md:px-8 cursor-pointer">
         <Swiper
-          spaceBetween={60} // Space between slides
-          slidesPerView={3} // Show 3 team members per slide
-          navigation={true} // Show navigation arrows
-          modules={[Navigation]} // Use navigation module
+          spaceBetween={60}
+          slidesPerView={3}
+          modules={[Navigation]}
+          loop={true}
           breakpoints={{
             0: {
-              slidesPerView: 1, // 1 slide on screens smaller than 640px
+              slidesPerView: 1,
             },
             640: {
-              slidesPerView: 1, // 1 slide on smaller screens
+              slidesPerView: 1,
             },
             768: {
-              slidesPerView: 2, // 2 slides on medium screens
+              slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3, // 3 slides on larger screens
+              slidesPerView: 3,
             },
           }}
         >
@@ -49,56 +49,6 @@ const AboutUs = () => {
                 className="mx-auto h-24 w-24 mb-6"
               />
               <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                KHAWAJA MUQEET
-              </h1>
-              <p className="text-grey text-base font-semibold font-inter">
-                We are always one step ahead; we challenge convention and push
-                the boundaries of what can be achieved.
-              </p>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className="text-center w-full">
-              <Image src={Hadi} alt="Hadi" className="mx-auto h-24 w-24 mb-6" />
-              <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                HADI BUTT
-              </h1>
-              <p className="text-grey text-base font-semibold font-inter">
-                We are always one step ahead; we challenge convention and push
-                the boundaries of what can be achieved.
-              </p>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className="text-center w-full">
-              <Image
-                src={Tayyab}
-                alt="Tayyab"
-                className="mx-auto h-24 w-24 mb-6"
-              />
-              <h1 className="text-white  text-xl font-monserrat font-semibold mb-2">
-                MUHAMMAD TAYYAB
-              </h1>
-              <p className="text-grey text-base font-semibold font-inter">
-                We are always one step ahead; we challenge convention and push
-                the boundaries of what can be achieved.
-              </p>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <div className="text-center w-full ">
-              <Image
-                src={Muqeet}
-                alt="Muqeet"
-                className="mx-auto h-24 w-24 mb-6"
-              />
-              <h1 className="text-white text-xl font-monserrat font-semibold ptt-3 mb-2">
                 KHAWAJA MUQEET
               </h1>
               <p className="text-grey text-base font-semibold font-inter">

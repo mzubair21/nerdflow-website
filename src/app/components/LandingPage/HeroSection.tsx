@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div
             className="w-full col-span-12 md:col-span-7 relative lg:mb-0"
             data-aos="fade-right"
-            data-aos-delay="1000"
+            // data-aos-delay="1000"
           >
             <h1 className="text-3xl font-bold text-white mb-4 leading-normal">
               Empowering your businesses with innovative <br />
@@ -42,7 +42,7 @@ const HeroSection = () => {
           {/* Image Section */}
           <div
             data-aos="fade-left"
-            data-aos-delay="1000"
+            // data-aos-delay="1000"
             className="col-span-12 md:col-span-5 pt-20 md:pt-10 "
           >
             <Image

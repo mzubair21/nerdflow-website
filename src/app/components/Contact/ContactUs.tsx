@@ -39,7 +39,7 @@ const ContactUs = () => {
   }
 
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="relative h-[28rem]">
         {/* Background Image */}
         <div
