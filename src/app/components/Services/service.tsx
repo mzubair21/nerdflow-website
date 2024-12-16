@@ -167,7 +167,7 @@ const Service = () => {
                     {item.description}
                   </p>
                   <Link
-                    href="/case-study"
+                    href="/case-study/brt-centers"
                     className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-400 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                    hover:text-custom-text"
@@ -194,7 +194,7 @@ const Service = () => {
                     {item.description}
                   </p>
                   <Link
-                    href="/case-study"
+                    href="/case-study/brt-centers"
                     className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-400 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                      hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                     hover:text-custom-text"

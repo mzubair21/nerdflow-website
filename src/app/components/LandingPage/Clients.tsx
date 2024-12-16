@@ -35,26 +35,26 @@ const Clients = () => {
       {/* Swiper Section for Client Logos */}
       <div className="pt-[3rem] md:px-8 cursor-pointer">
         <Swiper
-          spaceBetween={30} // Space between slides (adjustable)
-          slidesPerView={5} // Show 5 logos per slide
-          navigation={true} // Show navigation arrows
-          modules={[Navigation, Autoplay]} // Use navigation module
+          spaceBetween={30}
+          slidesPerView={5}
+          modules={[Autoplay]}
+          loop={true}
           autoplay={{
-            delay: 2500, // Delay between slides
-            disableOnInteraction: false, // Disable autoplay on interaction
+            delay: 2500,
+            disableOnInteraction: false,
           }}
           breakpoints={{
             0: {
-              slidesPerView: 2, // 1 slide on screens smaller than 640px
+              slidesPerView: 2,
             },
             640: {
-              slidesPerView: 3, // 1 slide on smaller screens
+              slidesPerView: 3,
             },
             768: {
-              slidesPerView: 3, // 2 slides on medium screens
+              slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 5, // 5 slides on larger screens
+              slidesPerView: 5,
             },
           }}
         >
@@ -94,43 +94,6 @@ const Clients = () => {
           </SwiperSlide>
 
           {/* Slide 6 */}
-          <SwiperSlide>
-            <div className="w-[6.5rem] h-auto sm:w-[8.1rem] mx-auto mt-6">
-              <Image src={WizzLogo} alt="Wizz Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Repeated Slides for better repetition */}
-          <SwiperSlide>
-            <div className="w-[7rem] h-auto sm:w-[9.8rem] mx-auto">
-              <Image src={VTKLogo} alt="VTK Logo" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-[7rem] h-auto sm:w-[11.8rem] mx-auto">
-              <Image src={KP} alt="KP Logo" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-[4rem] h-auto sm:w-[8.1rem] mx-auto">
-              <Image src={BRT} alt="BRT Logo" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-[10rem] h-auto sm:w-[16rem] mx-auto mt-4">
-              <Image src={ClearEats} alt="ClearEats Logo" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-[6.5rem] h-auto sm:w-[8.1rem] mx-auto">
-              <Image src={Logo} alt="Logo" />
-            </div>
-          </SwiperSlide>
-
           <SwiperSlide>
             <div className="w-[6.5rem] h-auto sm:w-[8.1rem] mx-auto mt-6">
               <Image src={WizzLogo} alt="Wizz Logo" />

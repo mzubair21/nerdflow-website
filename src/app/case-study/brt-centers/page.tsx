@@ -1,8 +1,11 @@
+import dynamic from "next/dynamic"
 import React from "react"
-import CaseStudy from "../../components/CaseStudy/casestudy"
+const BrtCentersCaseStudy = dynamic(
+  () => import("@/app/components/CaseStudy/brt-centers/BrtCentersCaseStudy")
+)
 
 function page() {
-  return <CaseStudy />
+  return <BrtCentersCaseStudy />
 }
 
 export default page

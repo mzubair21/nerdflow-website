@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic"
 const LaravelBlog = dynamic(
-  () => import("../../components/BlogsContent/LaravelBlog")
+  () => import("@/app/components/BlogsContent/LaravelBlog")
 )
 
 function page() {

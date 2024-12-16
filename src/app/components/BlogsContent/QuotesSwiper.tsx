@@ -27,12 +27,13 @@ export default function QuoteSwiper({
         disableOnInteraction: false,
       }}
       loop={true}
+      grabCursor={true}
       navigation={true}
       modules={[Pagination, Autoplay, Navigation]}
       className="quotesSwiper w-full h-full"
     >
       {quotes.map((quote, currentQuote) => (
-        <SwiperSlide className="cursor-grab" key={currentQuote}>
+        <SwiperSlide className="" key={currentQuote}>
           <div className="relative z-10 flex flex-col items-center justify-center p-8 container">
             <div>
               <Image src={Vector} alt="vector" className="w-16 h-16" />
