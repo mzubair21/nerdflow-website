@@ -49,11 +49,13 @@ const Header = () => {
         <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <div className="flex items-center">
-            <Image
-              src={NerdFlowLogo}
-              alt="Logo"
-              className="w-[10rem] sm:w-[12rem] md:w-[13rem]"
-            />
+            <Link href="/">
+              <Image
+                src={NerdFlowLogo}
+                alt="Logo"
+                className="w-[10rem] sm:w-[12rem] md:w-[13rem]"
+              />
+            </Link>
           </div>
 
           {/* Burger Menu Icon for Medium and Small Screens */}
