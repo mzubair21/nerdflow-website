@@ -1,44 +1,50 @@
 import Image from "next/image"
 import Link from "next/link" // Import Link for navigation
-import service from "../../assets/svgs/servicelogo.svg"
+// import service from "../../assets/svgs/servicelogo.svg"
+import Ai from "../../assets/images/Ai.png"
+import WebDevelopment from "../../assets/images/WebDevelopment.png"
+import UiUx from "../../assets/images/UiUx.png"
+import Seo from "../../assets/images/Seo.png"
+import SocialMediaMarketing from "../../assets/images/SocialMediaMarketing.png"
+import WebDesigning from "../../assets/images/WebDesigning.png"
 
 const Services = () => {
   const services = [
     {
-      logo: service,
-      title: "Web Development",
+      logo: Ai,
+      title: "AI Development",
       description:
-        "We are always one step ahead; we challenge convention and push the boundaries of what can be achieved",
+        "Revolutionizing your business with tailored AI solutions that enhance efficiency.",
     },
     {
-      logo: service,
+      logo: WebDevelopment,
       title: "App Development",
       description:
-        "We anticipate development in the market and industry; then move quickly to adapt our ways of working",
+        "Building intuitive and scalable apps for seamless user experiences.",
     },
     {
-      logo: service,
-      title: "UI/UX Designing",
+      logo: UiUx,
+      title: "UI/UX Design",
       description:
-        "We achieve our goals and consistently deliver with confidence, determination and professionalism",
+        "Crafting engaging and user-friendly interfaces that captivate and convert.",
     },
     {
-      logo: service,
+      logo: Seo,
       title: "Search Engine Optimization",
       description:
-        "We are always one step ahead; we challenge convention and push the boundaries of what can be achieved",
+        "Boosting your online visibility with effective SEO strategies.",
     },
     {
-      logo: service,
+      logo: SocialMediaMarketing,
       title: "Social Media Marketing",
       description:
-        "We anticipate development in the market and industry; then move quickly to adapt our ways of working",
+        "Growing your brand's presence and engagement through social media.",
     },
     {
-      logo: service,
-      title: "Bubble/Workflow",
+      logo: WebDesigning,
+      title: "Website Development",
       description:
-        "We anticipate development in the market and industry; then move quickly to adapt our ways of working",
+        "Creating responsive, fast-loading, and secure websites for your business.",
     },
   ]
 
@@ -69,7 +75,7 @@ const Services = () => {
               <Image
                 src={service.logo}
                 alt={`${service.title} Logo`}
-                className="h-16 mb-4 text-left"
+                className="h-16 w-16 object-scale-down mb-4 text-left invert"
               />
               <h2 className="text-lg font-semibold text-white mb-4 text-left group-hover:text-black">
                 {service.title}

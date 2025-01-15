@@ -1,12 +1,17 @@
 "use client"
 import Image from "next/image"
 import "swiper/css" // Import Swiper styles
-import { Navigation } from "swiper/modules" // Import required modules
+import { Autoplay, Navigation } from "swiper/modules" // Import required modules
 import { Swiper, SwiperSlide } from "swiper/react"
 import AboutBg from "../../assets/images/AboutUsBg.png"
 import Hadi from "../../assets/images/Hadi.png"
 import Muqeet from "../../assets/images/Muqeet.png"
 import Tayyab from "../../assets/images/Tayyab.png"
+import Samar from "../../assets/images/Samar.png"
+import Wajeeha from "../../assets/images/Wajeeha.jpg"
+import Arisha from "../../assets/images/Arisha.jpg"
+import Qasim from "../../assets/images/Qasim.png"
+import Zubair from "../../assets/images/Zubair.png"
 import illustrator from "../../assets/logos/logos_adobe-illustrator.png"
 import incopy from "../../assets/logos/logos_adobe-incopy.png"
 import indesign from "../../assets/logos/logos_adobe-indesign.png"
@@ -20,6 +25,79 @@ import csharp from "../../assets/logos/logos_c-sharp.png"
 import git from "../../assets/logos/logos_git-icon.png"
 
 const About = () => {
+  const team = [
+    {
+      name: "Khawaja Muqeet",
+      role: "Frontend Developer",
+      image: Muqeet,
+      description:
+        "Visionary leader steering NerdFlow's growth with innovative strategies and client-centric solutions.",
+    },
+    {
+      name: "Hadi Butt",
+      role: "Backend Developer",
+      image: Hadi,
+      description:
+        "Tech mastermind driving cutting-edge innovation and overseeing the development of robust AI systems.",
+    },
+    {
+      name: "Muhammad Tayyab",
+      role: "Full Stack Developer",
+      image: Tayyab,
+      description:
+        "Ensuring operational excellence with a focus on streamlined processes and team efficiency.",
+    },
+    {
+      name: "Samar Ali",
+      role: "CSO",
+      image: Samar,
+      description:
+        "Strategist empowering NerdFlow's success with data-driven insights and business development expertise.",
+    },
+    {
+      name: "Wajeeha Usman",
+      role: "UI/UX Designer",
+      image: Wajeeha,
+      description:
+        "Passionate coder crafting seamless and engaging user interfaces for web and mobile platforms.",
+    },
+    {
+      name: "Areesha Tariq",
+      role: "Graphic Designer",
+      image: Arisha,
+      description:
+        "Building strong client relationships and identifying opportunities for impactful collaborations.",
+    },
+    {
+      name: "Qasim Afzal",
+      role: "Backend Developer",
+      image: Qasim,
+      description:
+        "Expert in Laravel, delivering scalable and secure backend solutions tailored to client needs.",
+    },
+    {
+      name: "Muhammad Zubair",
+      role: "Frontend Developer",
+      image: Zubair,
+      description:
+        "Inspiring team leader ensuring timely delivery of exceptional and innovative software solutions.",
+    },
+    {
+      name: "Nimrah Kamran",
+      role: "Frontend Developer",
+      image: Muqeet,
+      description:
+        "Innovative designer creating intuitive and visually appealing user experiences for global audiences.",
+    },
+    {
+      name: "Omar Waheed",
+      role: "Frontend Developer",
+      image: Muqeet,
+      description:
+        "Dedicated to identifying growth opportunities and fostering meaningful client partnerships.",
+    },
+  ]
+
   return (
     <div data-aos="fade-up">
       <div className="relative h-[28rem]">
@@ -76,7 +154,12 @@ const About = () => {
             spaceBetween={60} // Space between slides
             slidesPerView={3} // Show 3 team members per slide
             navigation={true} // Show navigation arrows
-            modules={[Navigation]} // Use navigation module
+            modules={[Navigation, Autoplay]} // Use navigation module
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop={true} // Loop through slides
             breakpoints={{
               0: { slidesPerView: 1 },
               640: { slidesPerView: 1 },
@@ -84,113 +167,23 @@ const About = () => {
               1024: { slidesPerView: 3 },
             }}
           >
-            {/* Slide 1 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Muqeet}
-                  alt="Muqeet"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  KHAWAJA MUQEET
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 2 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Hadi}
-                  alt="Hadi"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  HADI BUTT
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 3 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Tayyab}
-                  alt="Tayyab"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  MUHAMMAD TAYYAB
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 1 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Muqeet}
-                  alt="Muqeet"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  KHAWAJA MUQEET
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 2 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Hadi}
-                  alt="Hadi"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  HADI BUTT
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 3 */}
-            <SwiperSlide>
-              <div className="text-center w-full">
-                <Image
-                  src={Tayyab}
-                  alt="Tayyab"
-                  className="mx-auto h-24 w-24 mb-6"
-                />
-                <h1 className="text-white text-xl font-monserrat font-semibold mb-2">
-                  MUHAMMAD TAYYAB
-                </h1>
-                <p className="text-grey text-base font-inter font-semibold">
-                  We are always one step ahead; we challenge convention and push
-                  the boundaries of what can be achieved
-                </p>
-              </div>
-            </SwiperSlide>
+            {team.map((member, index) => (
+              <SwiperSlide>
+                <div className="text-center w-full">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="mx-auto h-24 w-24 mb-6 rounded-full object object-top object-cover border-white border-4"
+                  />
+                  <h1 className="text-white text-xl font-monserrat font-semibold mb-2 uppercase">
+                    {member.name}
+                  </h1>
+                  <p className="text-grey text-base font-inter font-semibold">
+                    {member.description}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>
