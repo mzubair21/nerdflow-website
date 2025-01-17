@@ -7,9 +7,16 @@ import UiUx from "../../assets/images/UiUx.png"
 import Seo from "../../assets/images/Seo.png"
 import SocialMediaMarketing from "../../assets/images/SocialMediaMarketing.png"
 import WebDesigning from "../../assets/images/WebDesigning.png"
+import DataEngineering from "../../assets/images/DataEngineering.png"
 
 const Services = () => {
   const services = [
+    {
+      logo: DataEngineering,
+      title: "CRM & ERP Development",
+      description:
+        "Automating and streamlining your business processes with custom CRM and ERP solutions.",
+    },
     {
       logo: Ai,
       title: "AI Development",
@@ -29,6 +36,18 @@ const Services = () => {
         "Crafting engaging and user-friendly interfaces that captivate and convert.",
     },
     {
+      logo: WebDesigning,
+      title: "Website Development",
+      description:
+        "Creating responsive, fast-loading, and secure websites for your business.",
+    },
+    {
+      logo: DataEngineering,
+      title: "SaaS Development",
+      description:
+        "Building scalable and secure SaaS applications that cater to your unique business needs.",
+    },
+    {
       logo: Seo,
       title: "Search Engine Optimization",
       description:
@@ -41,10 +60,10 @@ const Services = () => {
         "Growing your brand's presence and engagement through social media.",
     },
     {
-      logo: WebDesigning,
-      title: "Website Development",
+      logo: DataEngineering,
+      title: "Data Engineering",
       description:
-        "Creating responsive, fast-loading, and secure websites for your business.",
+        "Transforming raw data into actionable insights with robust engineering solutions.",
     },
   ]
 
@@ -58,11 +77,11 @@ const Services = () => {
         <h1 className="text-3xl  font-semibold text-white mb-4">
           Our <span className="text-teal">Services</span>
         </h1>
-        <p className="text-white opacity-60 mb-2 text-base font-bold font-inter">
+        <p className="text-white opacity-60 mb-2 text-base font-inter">
           From web development to innovative app solutions, we deliver
           excellence across every digital dimension.
         </p>
-        <p className="text-white opacity-60 font-bold mb-6 text-base font-inter">
+        <p className="text-white opacity-60 mb-6 text-base font-inter">
           Elevating Business Solutions: Discover Our Comprehensive Services
         </p>
       </div>
@@ -71,16 +90,16 @@ const Services = () => {
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 ">
         {services.map((service, index) => (
           <Link href="/contact" key={index} passHref>
-            <div className="h-full border-[0.799px] border-[#122F26] bg-[rgba(0,0,0,0.27)] p-6 flex flex-col text-left group transition-all duration-300 ease-out cursor-pointer hover:border-[#122F26] hover:bg-greenhover hover:backdrop-blur-[18px] pb-8">
+            <div className="h-full border-[0.799px] border-[#122F26] bg-[rgba(0,0,0,0.27)] p-6 flex flex-col items-start text-left group transition-all duration-300 ease-out cursor-pointer hover:border-[#122F26] hover:bg-greenhover hover:backdrop-blur-[18px] pb-8">
               <Image
                 src={service.logo}
                 alt={`${service.title} Logo`}
-                className="h-16 w-16 object-scale-down mb-4 text-left invert"
+                className=" h-20 object-scale-down object-left mb-5 text-left"
               />
-              <h2 className="text-lg font-semibold text-white mb-4 text-left group-hover:text-black">
+              <h2 className="text-lg font-medium text-white mb-4 text-left group-hover:text-black">
                 {service.title}
               </h2>
-              <p className="text-base font-bold text-gray-300 text-left group-hover:text-black">
+              <p className="text-base text-gray-300 text-left group-hover:text-black">
                 {service.description}
               </p>
             </div>

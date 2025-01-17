@@ -9,28 +9,39 @@ import ProjectBg from "../../assets/images/ProjectsBg.png"
 const Projects = () => {
   const projects = [
     {
+      title: "Resource Commercial Real Estate",
+      description:
+        "Our web development projects combine cutting-edge technology with creative design to deliver seamless user experiences and impactful digital solutions.",
+      imageSrc: projectImage1,
+      link: "/case-study/raasta",
+    },
+    {
       title: "Raasta Web Application",
       description:
         "Our web development projects combine cutting-edge technology with creative design to deliver seamless user experiences and impactful digital solutions.",
       imageSrc: projectImage1,
+      link: "/case-study/raasta",
     },
     {
       title: "Welsh Token Solution",
       description:
         "Our web development projects combine cutting-edge technology with creative design to deliver seamless user experiences and impactful digital solutions.",
       imageSrc: projectImage2,
+      link: "/case-study/welsh",
     },
     {
       title: "Coupon Cove",
       description:
         "Our web development projects combine cutting-edge technology with creative design to deliver seamless user experiences and impactful digital solutions.",
       imageSrc: projectImage3,
+      link: "/case-study/coupon-cove",
     },
     {
       title: "BRT Centers",
       description:
         "Transforming health clinic procedures with a custom CRM, optimizing checkups, subscriptions, and invoicing.",
       imageSrc: projectImage4,
+      link: "/case-study/brt-centers",
     },
   ]
 
@@ -68,7 +79,7 @@ const Projects = () => {
                 {project.description}
               </p>
               <Link
-                href="/case-study/brt-centers"
+                href={project.link}
                 className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-all duration-1000 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
                   hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
                   hover:text-custom-text "

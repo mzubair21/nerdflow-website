@@ -69,9 +69,12 @@ function CaseStudySwiper({
         // centeredSlidesBounds={true}
         centerInsufficientSlides={true}
         className="casestudySlider CenterZoomSlider w-full transition-all duration-300 ease-in-out !overflow-visible"
-        onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
+        onSlideChange={(swiper) => {
+          if (currentSlideIndex == swiper.realIndex) return
+          setCurrentSlideIndex(swiper.realIndex)
+        }}
       >
-        {(slides.length > 0
+        {(slides.length > 0 && slides.length <= 3
           ? [
               ...slides,
 
@@ -84,9 +87,19 @@ function CaseStudySwiper({
           : slides
         ).map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="text-center">
-              <div className="">
-                <Image src={slide.image} alt={`Slide ${index}`} className="" />
+            <div
+              className={`${
+                currentSlideIndex == index
+                  ? "animate-fade-in scale-[1.2] hover:scale-[1.5] hover:animate-fade-in"
+                  : "  "
+              } transition-all duration-[150] ease-in-out`}
+            >
+              <div className="h-[200px] md:h-[300px]">
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${index}`}
+                  className=" object-scale-down object-center max-h-[150px] md:max-h-[280px] w-full"
+                />
               </div>
             </div>
           </SwiperSlide>
@@ -97,11 +110,11 @@ function CaseStudySwiper({
           ? [
               ...slides,
 
-              {
-                image: slides[slides.length - 1].image,
-                heading: "",
-                description: "",
-              },
+              // {
+              //   image: slides[slides.length - 1].image,
+              //   heading: "",
+              //   description: "",
+              // },
             ]
           : slides
         ).map(

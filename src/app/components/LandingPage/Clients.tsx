@@ -9,9 +9,40 @@ import Logo from "../../assets/images/image 243.png"
 import KP from "../../assets/images/KP-Securities Logo.png"
 import VTKLogo from "../../assets/images/VTK Logo.png"
 import WizzLogo from "../../assets/images/wizz-logistics.png"
+import Resource from "../../assets/images/Resource.png"
 import HeroSectionbg from "../../assets/images/heroleft.png"
 
 const Clients = () => {
+  const clients = [
+    {
+      image: VTKLogo,
+      alt: "VTK Logo",
+    },
+    {
+      image: KP,
+      alt: "KP Logo",
+    },
+    {
+      image: BRT,
+      alt: "BRT Logo",
+    },
+    {
+      image: ClearEats,
+      alt: "ClearEats Logo",
+    },
+    {
+      image: Logo,
+      alt: "Logo",
+    },
+    {
+      image: WizzLogo,
+      alt: "Wizz Logo",
+    },
+    {
+      image: Resource,
+      alt: "Resource Logo",
+    },
+  ]
   return (
     <div
       data-aos="fade-up"
@@ -39,10 +70,8 @@ const Clients = () => {
           slidesPerView={5}
           modules={[Autoplay]}
           loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
+          speed={900} // Added speed for smooth autoplay
           breakpoints={{
             0: {
               slidesPerView: 2,
@@ -58,47 +87,17 @@ const Clients = () => {
             },
           }}
         >
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <div className="w-[7rem] h-auto sm:w-[9.8rem] mx-auto">
-              <Image src={VTKLogo} alt="VTK Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className="w-[7rem] h-auto sm:w-[11.8rem] mx-auto">
-              <Image src={KP} alt="KP Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className="w-[4rem] h-auto sm:w-[8.1rem] mx-auto">
-              <Image src={BRT} alt="BRT Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 4 */}
-          <SwiperSlide>
-            <div className="w-[10rem] h-auto sm:w-[16rem] mx-auto mt-4">
-              <Image src={ClearEats} alt="ClearEats Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 5 */}
-          <SwiperSlide>
-            <div className="w-[6.5rem] h-auto sm:w-[8.1rem] mx-auto">
-              <Image src={Logo} alt="Logo" />
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 6 */}
-          <SwiperSlide>
-            <div className="w-[6.5rem] h-auto sm:w-[8.1rem] mx-auto mt-6">
-              <Image src={WizzLogo} alt="Wizz Logo" />
-            </div>
-          </SwiperSlide>
+          {clients.map((client, index) => (
+            <SwiperSlide key={index}>
+              <div className="h-24">
+                <Image
+                  className="object-center object-scale-down w-full h-full"
+                  src={client.image}
+                  alt={client.alt}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

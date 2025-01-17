@@ -6,55 +6,161 @@ import VTK from "../../assets/images/VTK.png"
 import Wizz from "../../assets/images/Wizz.png"
 import WizzLeft from "../../assets/images/WizzLeft.png"
 import WizzRight from "../../assets/images/WizzRight.png"
+import PorfolioSlider from "./PorfolioSlider"
+import HumanResourceManagement from "../CaseStudy/human-resource-management/assets/Intro.png"
+import LitigationManagementSystem from "../CaseStudy/litigation-management-system/assets/Intro.png"
+import ResoourceManagementSystem from "../CaseStudy/resource/assets/Intro.png"
+import ClinicManagementSystem from "../CaseStudy/brt-centers/assets/brt1.png"
+import FundingManagementSystem from "../CaseStudy/funding-management-system/assets/Intro.png"
+import RecordManagementSystem from "../CaseStudy/record-management-system/assets/Intro.png"
+import ShippingERP from "../CaseStudy/shipping-erp/assets/Intro.png"
+import WarehousingERP from "../CaseStudy/warehousing-erp/assets/Intro.png"
 
 const Portfolio = () => {
+  const slides1 = [
+    {
+      image: HumanResourceManagement,
+      heading: "Human Resource Management",
+      description:
+        "An intuitive system to simplify employee lifecycle management, payroll, and performance tracking.",
+      link: "/case-study/human-resource-management",
+    },
+    {
+      image: ClinicManagementSystem,
+      heading: "Clinic Management System",
+      description:
+        "A streamlined solution for managing patient records, appointments, and clinic operations",
+      link: "/case-study/brt-centers",
+    },
+    {
+      image: VTK,
+      heading: "Litigation Management System",
+      description:
+        "A comprehensive platform for law firms to manage cases, clients, and court schedules efficiently.",
+      link: "/case-study/litigation-management-system",
+    },
+    {
+      image: Wizz,
+      heading: "Wizz Logistics",
+      description:
+        "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
+      link: "/case-study/wizz",
+    },
+    {
+      image: ResoourceManagementSystem,
+      heading: "Real Estate Management System",
+      description:
+        "A centralized tool for tracking properties, managing clients, and streamlining real estate transactions.",
+      link: "/case-study/resource",
+    },
+  ]
+  const slides2 = [
+    {
+      image: Wizz,
+      heading: "Logistics ERP",
+      description:
+        "A robust solution for optimizing fleet management, shipment tracking, and logistics operations",
+      link: "/case-study/logistics-erp",
+    },
+    {
+      image: ShippingERP,
+      heading: "Shipping ERP",
+      description:
+        "An integrated system for managing shipping schedules, fleet operations, and compliance tracking.",
+      link: "/case-study/shipping-erp",
+    },
+    {
+      image: WarehousingERP,
+      heading: "Warehousing ERP",
+      description:
+        "An all-in-one platform for inventory control, warehouse operations, and supply chain management.",
+      link: "/case-study/warehousing-erp",
+    },
+  ]
+  const slides3 = [
+    {
+      image: DailyBazar,
+      heading: "ECommerce Store + Admin",
+      description:
+        "A feature-rich platform to handle product listings, order processing, and customer engagement for online stores.",
+      link: "/case-study/daily-bazar",
+    },
+    {
+      image: FundingManagementSystem,
+      heading: "Funding Management System",
+      description:
+        "A tailored platform to oversee funding applications, approvals, and financial tracking seamlessly.",
+      link: "/case-study/funding-management-system",
+    },
+    {
+      image: RecordManagementSystem,
+      heading: "Record Management System",
+      description:
+        "A secure solution for digitizing, organizing, and retrieving organizational records efficiently.",
+      link: "/case-study/record-management-system",
+    },
+  ]
   return (
     <div className="font-poppins mx-auto container mt-16" id="portfolio">
       <div data-aos="fade-up" className="mb-8">
         <h1 className="text-white text-3xl font-semibold mb-4">
           Our <span className="text-teal">Portfolio</span>
         </h1>
-        <p className="text-base font-inter font-bold sm:text-base w-full sm:w-3/5 text-white">
+      </div>
+      <div data-aos="fade">
+        <h2 className="text-white text-3xl font-semibold my-4 pt-8">
+          Customer Relationship Management
+        </h2>
+        <p className="text-base font-normal font-inter sm:text-base w-full sm:w-3/5 text-gray-400">
           Dive into a collection of our finest projects, exemplifying our
           prowess in delivering exceptional websites, applications, and digital
           solutions.
         </p>
+
+        {/*  */}
+        <PorfolioSlider slides={slides1} />
       </div>
 
-      {/* Daily Bazar */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-4  mx-auto relative">
-        {/* Text Section with Background */}
-        <div className="w-full lg:w-[34rem] mb-6 lg:mb-0">
-          <h1 className="text-2xl font-semibold text-white mb-4">
-            Daily Bazaar Web Application
-          </h1>
-          <p className="text-sm sm:text-base mb-8 font-bold text-white">
-            An extensive eCommerce application with a vast array of products and
-            a seamless, user-friendly interface.
-          </p>
-          <Link
-            href="/case-study/brt-centers"
-            className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
+      <div data-aos="fade">
+        <h2 className="text-white text-3xl font-semibold my-4">
+          Enterprise Resource Planning
+        </h2>
+        <p className="text-base font-normal font-inter sm:text-base w-full sm:w-3/5 text-gray-400">
+          Dive into a collection of our finest projects, exemplifying our
+          prowess in delivering exceptional websites, applications, and digital
+          solutions.
+        </p>
+
+        <PorfolioSlider slides={slides2} />
+      </div>
+
+      <div data-aos="fade">
+        <h2 className="text-white text-3xl font-semibold my-4">
+          Custom Tailored Solution
+        </h2>
+        <p className="text-base font-normal font-inter sm:text-base w-full sm:w-3/5 text-gray-400">
+          Dive into a collection of our finest projects, exemplifying our
+          prowess in delivering exceptional websites, applications, and digital
+          solutions.
+        </p>
+
+        <PorfolioSlider slides={slides3} />
+      </div>
+
+      <div className="w-full flex justify-center mb-8 py-8">
+        <Link
+          href="/services"
+          className="bg-tealgradient border-[0.04rem] shadow-custom-shadow-small border-black text-white py-[0.75rem] lg:py-3 px-[1.5rem] lg:px-6 rounded-lg transition-colors duration-300 ease-in text-[0.875rem] lg:text-[1rem] font-bold relative z-10 
     hover:bg-[linear-gradient(76deg,#CECECE_0%,#FFF_100%)] hover:shadow-custom-shadow 
     hover:text-custom-text
   "
-          >
-            See Case Study
-          </Link>
-        </div>
-
-        {/* Image Section */}
-        <div data-aos="fade-left" className="w-full lg:w-[35.8rem] h-auto">
-          <Image
-            src={DailyBazar}
-            alt="Daily Bazar Image"
-            className="w-full h-auto"
-          />
-        </div>
-      </section>
+        >
+          See All Projects
+        </Link>
+      </div>
 
       {/* Wizz */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4 mx-auto  relative">
+      <section className="hidden font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4 mx-auto  relative">
         {/* Image Section */}
         <div
           data-aos="fade-right"
@@ -103,7 +209,7 @@ const Portfolio = () => {
       </section>
 
       {/* VTK */}
-      <section className="font-poppins flex flex-col lg:flex-row items-center justify-between py-4  mx-auto  relative">
+      <section className="hidden font-poppins flex flex-col lg:flex-row items-center justify-between py-4  mx-auto  relative">
         <Image
           src={WizzRight}
           alt="Hero Section Background"
@@ -141,7 +247,7 @@ const Portfolio = () => {
       </section>
 
       {/* Clear Eats */}
-      <section className="font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4  mx-auto  relative">
+      <section className="hidden font-poppins flex flex-col-reverse lg:flex-row items-center justify-between py-4  mx-auto  relative">
         {/* Image Section */}
         <div
           data-aos="fade-right"
