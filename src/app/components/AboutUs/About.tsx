@@ -12,6 +12,8 @@ import Wajeeha from "../../assets/images/Wajeeha.jpg"
 import Arisha from "../../assets/images/Arisha.jpg"
 import Qasim from "../../assets/images/Qasim.png"
 import Zubair from "../../assets/images/Zubair.png"
+import Nimrah from "../../assets/images/Nimrah.png"
+import Omar from "../../assets/images/Omar.png"
 import illustrator from "../../assets/logos/logos_adobe-illustrator.png"
 import incopy from "../../assets/logos/logos_adobe-incopy.png"
 import indesign from "../../assets/logos/logos_adobe-indesign.png"
@@ -85,14 +87,14 @@ const About = () => {
     {
       name: "Nimrah Kamran",
       role: "Frontend Developer",
-      image: Muqeet,
+      image: Nimrah,
       description:
         "Innovative designer creating intuitive and visually appealing user experiences for global audiences.",
     },
     {
       name: "Omar Waheed",
       role: "Frontend Developer",
-      image: Muqeet,
+      image: Omar,
       description:
         "Dedicated to identifying growth opportunities and fostering meaningful client partnerships.",
     },
