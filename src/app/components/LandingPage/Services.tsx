@@ -91,7 +91,11 @@ const Services = () => {
       {/* Cards Section */}
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 ">
         {services.map((service, index) => (
-          <Link href="/contact" key={index} passHref>
+          <Link
+            href={`/services?category=${service.title}`}
+            key={index}
+            passHref
+          >
             <div className="h-full rounded-lg border-[0.799px] border-[#2D2D2D] bg-[rgba(0,0,0,0.27)] p-6 flex flex-col items-start text-left group transition-all duration-300 ease-out cursor-pointer hover:border-[#122F26] hover:border-white hover:backdrop-blur-[18px] pb-8">
               <Image
                 src={service.logo}

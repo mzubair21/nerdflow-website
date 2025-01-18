@@ -1,17 +1,11 @@
 "use client"
-import Image, { StaticImageData } from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { StaticImageData } from "next/image"
+import { useState, useEffect } from "react"
+import { usePathname, useSearchParams } from "next/navigation"
 import "swiper/css"
 import "swiper/css/free-mode"
 import { Swiper, SwiperSlide } from "swiper/react"
-import ClearEats from "../../assets/images/ClearEats.png"
-import DailyLeft from "../../assets/images/DailyBazar Left.png"
-import DailyBazar from "../../assets/images/DailyBazar.png"
 import serviceBg from "../../assets/images/serviceBg.png"
-import VTK from "../../assets/images/VTK.png"
-import Wizz from "../../assets/images/Wizz.png"
-import WizzRight from "../../assets/images/WizzRight.png"
 import Projects from "./Projects"
 import HumanResourceManagement from "../CaseStudy/human-resource-management/assets/cover.png"
 import LitigationManagementSystem from "../CaseStudy/litigation-management-system/assets/cover.png"
@@ -26,7 +20,16 @@ import LogisticsERP from "../CaseStudy/logistics-erp/assets/cover.png"
 import DailyBazarManagementSystem from "../CaseStudy/daily-bazar/assets/cover.png"
 
 const Service = () => {
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const category = searchParams.get("category")
   const [activeFilter, setActiveFilter] = useState("All")
+
+  useEffect(() => {
+    if (category && typeof category === "string") {
+      setActiveFilter(category)
+    }
+  }, [category])
 
   const projects: {
     heading: string
@@ -34,13 +37,15 @@ const Service = () => {
     link: string
     image: StaticImageData
     category?:
-      | "All"
-      | "Web Development"
-      | "CRM&ERP Development"
-      | "Mobile Development"
-      | "SEO Optimization"
+      | "CRM & ERP Development"
+      | "AI Development"
+      | "App Development"
+      | "UI/UX Design"
+      | "Website Development"
+      | "SaaS Development"
+      | "Search Engine Optimization"
       | "Social Media Marketing"
-      | "UI/UX Designing"
+      | "Data Engineering"
   }[] = [
     {
       image: HumanResourceManagement,
@@ -48,7 +53,7 @@ const Service = () => {
       description:
         "An intuitive system to simplify employee lifecycle management, payroll, and performance tracking.",
       link: "/case-study/human-resource-management",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: ClinicManagementSystem,
@@ -56,7 +61,7 @@ const Service = () => {
       description:
         "A streamlined solution for managing patient records, appointments, and clinic operations",
       link: "/case-study/brt-centers",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: LitigationManagementSystem,
@@ -64,7 +69,7 @@ const Service = () => {
       description:
         "A comprehensive platform for law firms to manage cases, clients, and court schedules efficiently.",
       link: "/case-study/litigation-management-system",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: WizzManagementSystem,
@@ -72,7 +77,7 @@ const Service = () => {
       description:
         "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
       link: "/case-study/wizz",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: ResourceManagementSystem,
@@ -80,16 +85,15 @@ const Service = () => {
       description:
         "A centralized tool for tracking properties, managing clients, and streamlining real estate transactions.",
       link: "/case-study/resource",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
-
     {
       image: LogisticsERP,
       heading: "Logistics ERP",
       description:
         "A robust solution for optimizing fleet management, shipment tracking, and logistics operations",
       link: "/case-study/logistics-erp",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: ShippingERP,
@@ -97,7 +101,7 @@ const Service = () => {
       description:
         "An integrated system for managing shipping schedules, fleet operations, and compliance tracking.",
       link: "/case-study/shipping-erp",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: WarehousingERP,
@@ -105,16 +109,15 @@ const Service = () => {
       description:
         "An all-in-one platform for inventory control, warehouse operations, and supply chain management.",
       link: "/case-study/warehousing-erp",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
-
     {
       image: DailyBazarManagementSystem,
       heading: "ECommerce Store + Admin",
       description:
         "A feature-rich platform to handle product listings, order processing, and customer engagement for online stores.",
       link: "/case-study/daily-bazar",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: FundingManagementSystem,
@@ -122,7 +125,7 @@ const Service = () => {
       description:
         "A tailored platform to oversee funding applications, approvals, and financial tracking seamlessly.",
       link: "/case-study/funding-management-system",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
     {
       image: RecordManagementSystem,
@@ -130,56 +133,9 @@ const Service = () => {
       description:
         "A secure solution for digitizing, organizing, and retrieving organizational records efficiently.",
       link: "/case-study/record-management-system",
-      category: "CRM&ERP Development",
+      category: "CRM & ERP Development",
     },
   ]
-
-  // const items = [
-  //   {
-  //     id: 1,
-  //     title: "Daily Bazaar Web Application",
-  //     category: "Web",
-  //     image: DailyBazar,
-  //     leftImage: DailyLeft,
-  //     alt: "Daily Bazar Image",
-  //     description:
-  //       "An extensive eCommerce application with a vast array of products and a seamless, user-friendly interface.",
-  //     reverse: false,
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Wizz Logistics",
-  //     category: "CRM",
-  //     image: Wizz,
-  //     rightImage: WizzRight,
-  //     alt: "Wizz Image",
-  //     description:
-  //       "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
-  //     reverse: true,
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "VTK Legal Solution",
-  //     category: "CRM",
-  //     image: VTK,
-  //     leftImage: null,
-  //     alt: "VTK Image",
-  //     description:
-  //       "Streamlining legal processes with advanced solutions for case management, compliance, and documentation.",
-  //     reverse: false,
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Clear Eats Web Application",
-  //     category: "Web",
-  //     image: ClearEats,
-  //     leftImage: null,
-  //     alt: "Clear Eats Image",
-  //     description:
-  //       "Experience the sleek, user-friendly design of Clear Eats through our app screenshots.",
-  //     reverse: true,
-  //   },
-  // ]
 
   const filteredItems =
     activeFilter === "All"
@@ -220,15 +176,22 @@ const Service = () => {
         {/* Filter Buttons Section */}
         <div className="py-8 bg-black">
           <div className="container flex justify-center">
-            <Swiper slidesPerView="auto" className="flex justify-center">
+            <Swiper
+              slidesPerView="auto"
+              freeMode={true}
+              className="flex justify-center"
+            >
               {[
                 "All",
-                "Web Development",
-                "CRM&ERP Development",
-                "Mobile Development",
-                "SEO Optimization",
+                "CRM & ERP Development",
+                "AI Development",
+                "App Development",
+                "UI/UX Design",
+                "Website Development",
+                "SaaS Development",
+                "Search Engine Optimization",
                 "Social Media Marketing",
-                "UI/UX Designing",
+                "Data Engineering",
               ].map((filter) => (
                 <SwiperSlide key={filter} className="!w-auto">
                   <div className="px-1">

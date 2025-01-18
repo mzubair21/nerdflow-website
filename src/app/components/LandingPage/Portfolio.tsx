@@ -43,13 +43,6 @@ const Portfolio = () => {
       link: "/case-study/litigation-management-system",
     },
     {
-      image: WizzManagementSystem,
-      heading: "Wizz Logistics",
-      description:
-        "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
-      link: "/case-study/wizz",
-    },
-    {
       image: ResourceManagementSystem,
       heading: "Real Estate Management System",
       description:
