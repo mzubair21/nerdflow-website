@@ -130,9 +130,10 @@ const Clients = () => {
           spaceBetween={30}
           slidesPerView={"auto"}
           modules={[Autoplay]}
+          freeMode={true}
           loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          speed={1500} // Added speed for smooth autoplay
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          speed={900} // Added speed for smooth autoplay
           breakpoints={{
             0: {
               slidesPerView: 2,
