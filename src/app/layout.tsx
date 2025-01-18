@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Unlock business potential with Nerd Flow's software application solutions. Expert CRM development for streamlined success. Discover more today!",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.ico",
   },
 }
 
@@ -16,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
-      <body className="font-poppins">
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        {children}
-      </body>
+      <body className="font-poppins">{children}</body>
     </html>
   )
 }
