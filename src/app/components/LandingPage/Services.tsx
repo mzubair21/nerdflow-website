@@ -8,11 +8,13 @@ import Seo from "../../assets/images/Seo.png"
 import SocialMediaMarketing from "../../assets/images/SocialMediaMarketing.png"
 import WebDesigning from "../../assets/images/WebDesigning.png"
 import DataEngineering from "../../assets/images/DataEngineering.png"
+import Sass from "../../assets/images/Sass.png"
+import CRM from "../../assets/images/CRM.png"
 
 const Services = () => {
   const services = [
     {
-      logo: DataEngineering,
+      logo: CRM,
       title: "CRM & ERP Development",
       description:
         "Automating and streamlining your business processes with custom CRM and ERP solutions.",
@@ -42,7 +44,7 @@ const Services = () => {
         "Creating responsive, fast-loading, and secure websites for your business.",
     },
     {
-      logo: DataEngineering,
+      logo: Sass,
       title: "SaaS Development",
       description:
         "Building scalable and secure SaaS applications that cater to your unique business needs.",
@@ -90,16 +92,16 @@ const Services = () => {
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 ">
         {services.map((service, index) => (
           <Link href="/contact" key={index} passHref>
-            <div className="h-full border-[0.799px] border-[#122F26] bg-[rgba(0,0,0,0.27)] p-6 flex flex-col items-start text-left group transition-all duration-300 ease-out cursor-pointer hover:border-[#122F26] hover:bg-greenhover hover:backdrop-blur-[18px] pb-8">
+            <div className="h-full rounded-lg border-[0.799px] border-[#2D2D2D] bg-[rgba(0,0,0,0.27)] p-6 flex flex-col items-start text-left group transition-all duration-300 ease-out cursor-pointer hover:border-[#122F26] hover:border-white hover:backdrop-blur-[18px] pb-8">
               <Image
                 src={service.logo}
                 alt={`${service.title} Logo`}
                 className=" h-20 object-scale-down object-left mb-5 text-left"
               />
-              <h2 className="text-lg font-medium text-white mb-4 text-left group-hover:text-black">
+              <h2 className="text-lg font-medium text-white mb-4 text-left ">
                 {service.title}
               </h2>
-              <p className="text-base text-gray-300 text-left group-hover:text-black">
+              <p className="text-base text-gray-300 text-left ">
                 {service.description}
               </p>
             </div>

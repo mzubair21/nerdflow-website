@@ -11,36 +11,97 @@ import VTKLogo from "../../assets/images/VTK Logo.png"
 import WizzLogo from "../../assets/images/wizz-logistics.png"
 import Resource from "../../assets/images/resource.png"
 import HeroSectionbg from "../../assets/images/heroleft.png"
+import RaastaLogo from "../../assets/images/raasta.png"
+import NICLogo from "../../assets/images/nic.png"
+import SiberKozaLogo from "../../assets/images/siberkoza.png"
+import RegionalPlan9Logo from "../../assets/images/regional-plan9.png"
+import VTKDigitalLogo from "../../assets/images/vtk-digital.png"
+import CCSLogo from "../../assets/images/ccs.png"
+import SkyPortLogo from "../../assets/images/skyport.png"
+import BizaurasLogo from "../../assets/images/bizauras.png"
+import BrySons from "../../assets/images/brysons.png"
+import EcoLogicBlue from "../../assets/images/ecologic-blue.png"
+import Ri from "../../assets/images/ri-group.png"
+import threesixty from "../../assets/images/360s.png"
+import SmartResource from "../../assets/images/smart-resource.png"
 
 const Clients = () => {
   const clients = [
     {
-      image: VTKLogo,
-      alt: "VTK Logo",
+      image: RaastaLogo,
+      alt: "Raasta Logo",
     },
     {
-      image: KP,
-      alt: "KP Logo",
+      image: NICLogo,
+      alt: "NIC Logo",
+    },
+    {
+      image: SiberKozaLogo,
+      alt: "Siber Koza Logo",
+    },
+    {
+      image: RegionalPlan9Logo,
+      alt: "Regional Plan9 Logo",
+    },
+    {
+      image: VTKLogo,
+      alt: "VTK Logo",
     },
     {
       image: BRT,
       alt: "BRT Logo",
     },
     {
-      image: ClearEats,
-      alt: "ClearEats Logo",
-    },
-    {
-      image: Logo,
-      alt: "Logo",
+      image: Resource,
+      alt: "Resource Logo",
     },
     {
       image: WizzLogo,
       alt: "Wizz Logo",
     },
     {
-      image: Resource,
-      alt: "Resource Logo",
+      image: VTKDigitalLogo,
+      alt: "VTK Digital Logo",
+    },
+    {
+      image: CCSLogo,
+      alt: "Creative Capital Solutions Logo",
+    },
+    {
+      image: ClearEats,
+      alt: "ClearEats Logo",
+    },
+    {
+      image: SkyPortLogo,
+      alt: "SkyPort Logo",
+    },
+    {
+      image: BizaurasLogo,
+      alt: "Bizauras Logo",
+    },
+    {
+      image: BrySons,
+      alt: "BrySons Logo",
+    },
+    {
+      image: threesixty,
+      alt: "360 Logo",
+    },
+    {
+      image: EcoLogicBlue,
+      alt: "EcoLogic Blue Logo",
+    },
+    {
+      image: Ri,
+      alt: "Ri Group Logo",
+    },
+    {
+      image: KP,
+      alt: "KP Securities Logo",
+    },
+    {
+      image: SmartResource,
+      alt: "Smart Resource Logo",
     },
   ]
   return (
@@ -67,11 +128,11 @@ const Clients = () => {
       <div className="pt-[3rem] md:px-8 cursor-pointer">
         <Swiper
           spaceBetween={30}
-          slidesPerView={5}
+          slidesPerView={"auto"}
           modules={[Autoplay]}
           loop={true}
-          autoplay={{ delay: 0, disableOnInteraction: false }}
-          speed={900} // Added speed for smooth autoplay
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          speed={1500} // Added speed for smooth autoplay
           breakpoints={{
             0: {
               slidesPerView: 2,
@@ -91,7 +152,7 @@ const Clients = () => {
             <SwiperSlide key={index}>
               <div className="h-24">
                 <Image
-                  className="object-center object-scale-down w-full h-full"
+                  className=" w-full h-full object-scale-down object-center"
                   src={client.image}
                   alt={client.alt}
                 />
