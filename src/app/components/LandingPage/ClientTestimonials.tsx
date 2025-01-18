@@ -6,44 +6,58 @@ const ClientTestimonials = ({ bg = true }) => {
   const testimonials = [
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Ariel Walcott",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "I really appreciate your sense of detail and how there is little to no errors very consistently. Great experiences with Hadi always! Thank you for consistency no matter what the order size. Always follows through and has a great energy with it as well! Well done!",
       rating: 5,
     },
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Sander Lubbers",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "I thought it wasn’t possible and they made it happen! So nice!",
       rating: 5,
     },
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Omer Misbah Shami",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "Got a task done from Hadi on a short notice. Delivery was very quick and spot on. He handled everything professionally and covered all the requirements at a low cost. Would definitely recommend and come back here myself if needed.",
       rating: 5,
     },
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Clarence",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "Was awesome working with Hadi, quick responses, code works perfectly, a good understanding of the tasks given. We are excited to work on future projects with Hadi!",
       rating: 5,
     },
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Andre Auls",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "This was my first time using this platform and this was an amazing experience. He was available & very patient. Thanks a lot! This guy is the absolute best. I am very impressed with his work. I will continue to do business with him. Thanks a lot!",
       rating: 5,
     },
     {
       image: clientImage,
-      name: "Mr Smith",
+      name: "Mohad",
       feedback:
-        "RR Technologies is the key to the success of our brands. A solid team of strategic planners and brilliant creations enables them to provide world-class service.",
+        "Very easy to work with Hadi. He met our needs and delivered very quickly. I can't wait to do more projects in the future.",
+      rating: 5,
+    },
+    {
+      image: clientImage,
+      name: "Yanik Senhouse",
+      feedback:
+        "Every deliverable has been on time. If I have any questions or changes to be made, I get very clear explanations and feedback on the changes being made. All in all, the experience has been good thus far. So far working with Hadi has been a pleasant experience. We met via Teams several times before getting the project started. Hadi and the team are working quickly on their deliverables which is a plus. If everything continues as is, I'd definitely hire them for other projects.",
+      rating: 5,
+    },
+    {
+      image: clientImage,
+      name: "Kane Butler",
+      feedback:
+        "Helpful and efficient process. Work carried out to a high standard. Instructions carried out with good communication.",
       rating: 5,
     },
   ]
@@ -72,15 +86,15 @@ const ClientTestimonials = ({ bg = true }) => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex p-6 items-start w-[100%] gap-4 border border-green bg-[rgba(0,0,0,0.27)] h-auto flex-col justify-between"
+              className="flex p-6 items-start w-[100%] gap-4 border border-green bg-[rgba(0,0,0,0.27)] h-full flex-col justify-start"
             >
               {/* Image and Name Inline */}
               <div className="flex items-center">
-                <Image
+                {/* <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="h-12 w-12 rounded-full mr-4"
-                />
+                /> */}
                 <h2 className="text-lg font-semibold text-white">
                   {testimonial.name}
                 </h2>
@@ -92,7 +106,7 @@ const ClientTestimonials = ({ bg = true }) => {
               </p>
 
               {/* Ratings */}
-              <div className="flex">
+              <div className="flex mt-auto">
                 {Array(testimonial.rating)
                   .fill(0)
                   .map((_, i) => (

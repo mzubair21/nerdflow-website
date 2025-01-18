@@ -20,7 +20,6 @@ const page = () => {
       <Loading initFakeLoading={true} />
       <Header />
       <Services />
-      <Projects />
       <FAQ />
       <ClientTestimonials bg={false} />
       <Pricing />

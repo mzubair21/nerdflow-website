@@ -73,9 +73,10 @@ function PortfolioSlider({
           delay: 5000,
           disableOnInteraction: false,
         }}
+        speed={500}
         // centeredSlidesBounds={true}
         centerInsufficientSlides={true}
-        className="casestudySlider CenterZoomSlider w-full transition-all duration-300 ease-in-out !overflow-visible"
+        className="casestudySlider CenterZoomSlider w-full transition-all duration-500 ease-in-out !overflow-visible"
         onSlideChange={(swiper) => {
           if (currentSlideIndex == swiper.realIndex) return
           setCurrentSlideIndex(swiper.realIndex)
