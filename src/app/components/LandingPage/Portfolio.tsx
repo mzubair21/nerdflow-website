@@ -1,20 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
 import ClearEats from "../../assets/images/ClearEats.png"
-import DailyBazar from "../../assets/images/DailyBazar.png"
+// import DailyBazar from "../../assets/images/DailyBazar.png"
 import VTK from "../../assets/images/VTK.png"
-import Wizz from "../../assets/images/Wizz.png"
 import WizzLeft from "../../assets/images/WizzLeft.png"
 import WizzRight from "../../assets/images/WizzRight.png"
 import PorfolioSlider from "./PorfolioSlider"
-import HumanResourceManagement from "../CaseStudy/human-resource-management/assets/Intro.png"
-import LitigationManagementSystem from "../CaseStudy/litigation-management-system/assets/Intro.png"
-import ResoourceManagementSystem from "../CaseStudy/resource/assets/Intro.png"
+import HumanResourceManagement from "../CaseStudy/human-resource-management/assets/cover.png"
+import LitigationManagementSystem from "../CaseStudy/litigation-management-system/assets/cover.png"
+import ResourceManagementSystem from "../CaseStudy/resource/assets/cover.png"
 import ClinicManagementSystem from "../CaseStudy/brt-centers/assets/brt1.png"
-import FundingManagementSystem from "../CaseStudy/funding-management-system/assets/Intro.png"
-import RecordManagementSystem from "../CaseStudy/record-management-system/assets/Intro.png"
-import ShippingERP from "../CaseStudy/shipping-erp/assets/Intro.png"
-import WarehousingERP from "../CaseStudy/warehousing-erp/assets/Intro.png"
+import FundingManagementSystem from "../CaseStudy/funding-management-system/assets/cover.png"
+import RecordManagementSystem from "../CaseStudy/record-management-system/assets/cover.png"
+import ShippingERP from "../CaseStudy/shipping-erp/assets/cover.png"
+import WarehousingERP from "../CaseStudy/warehousing-erp/assets/cover.png"
+import WizzManagementSystem from "../CaseStudy/wizz/assets/cover.png"
+import LogisticsERP from "../CaseStudy/logistics-erp/assets/cover.png"
+import DailyBazarManagementSystem from "../CaseStudy/daily-bazar/assets/cover.png"
+import Wizz from "../../assets/images/Wizz.png"
 
 const Portfolio = () => {
   const slides1 = [
@@ -33,21 +36,21 @@ const Portfolio = () => {
       link: "/case-study/brt-centers",
     },
     {
-      image: VTK,
+      image: LitigationManagementSystem,
       heading: "Litigation Management System",
       description:
         "A comprehensive platform for law firms to manage cases, clients, and court schedules efficiently.",
       link: "/case-study/litigation-management-system",
     },
     {
-      image: Wizz,
+      image: WizzManagementSystem,
       heading: "Wizz Logistics",
       description:
         "Automating logistics operations with a custom ERP, optimizing inventory management and order processing.",
       link: "/case-study/wizz",
     },
     {
-      image: ResoourceManagementSystem,
+      image: ResourceManagementSystem,
       heading: "Real Estate Management System",
       description:
         "A centralized tool for tracking properties, managing clients, and streamlining real estate transactions.",
@@ -56,7 +59,7 @@ const Portfolio = () => {
   ]
   const slides2 = [
     {
-      image: Wizz,
+      image: LogisticsERP,
       heading: "Logistics ERP",
       description:
         "A robust solution for optimizing fleet management, shipment tracking, and logistics operations",
@@ -79,7 +82,7 @@ const Portfolio = () => {
   ]
   const slides3 = [
     {
-      image: DailyBazar,
+      image: DailyBazarManagementSystem,
       heading: "ECommerce Store + Admin",
       description:
         "A feature-rich platform to handle product listings, order processing, and customer engagement for online stores.",

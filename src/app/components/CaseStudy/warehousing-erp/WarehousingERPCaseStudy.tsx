@@ -7,6 +7,9 @@ import slide1bg from "./assets/slide1.png"
 import slide2bg from "./assets/slide2.png"
 import slide3bg from "./assets/slide3.png"
 import slide4bg from "./assets/slide4.png"
+import slide5bg from "./assets/slide5.png"
+import slide6bg from "./assets/slide6.png"
+import slide7bg from "./assets/slide7.png"
 
 import CaseStudySwiper from "../CaseStudySwiper"
 
@@ -34,6 +37,24 @@ const slides = [
     heading: "Subscription Management",
     description:
       "Within the Subscription Management feature, administrators wield the power to create, oversee, and fine-tune subscription plans, enriching Wizz Logistics' service offerings. These meticulously crafted subscriptions are seamlessly assigned to customers, ensuring a personalized logistics experience.",
+  },
+  {
+    image: slide5bg,
+    heading: "Order Processing",
+    description:
+      "The Order Processing module is a pivotal component of Wizz Logistics' ERP system, enabling the seamless creation, modification, and tracking of orders. This feature streamlines the order fulfillment process, ensuring timely delivery and enhancing customer satisfaction.",
+  },
+  {
+    image: slide6bg,
+    heading: "Inventory Management",
+    description:
+      "The Inventory Management module offers a comprehensive suite of tools for Wizz Logistics to manage inventory, track stock levels, and optimize warehouse operations. This feature ensures that inventory is accurately monitored, minimizing stockouts and enhancing operational efficiency.",
+  },
+  {
+    image: slide7bg,
+    heading: "Shipment Tracking",
+    description:
+      "The Shipment Tracking feature provides real-time visibility into shipment status, allowing Wizz Logistics to monitor shipments, track delivery progress, and communicate with clients. This feature enhances operational transparency and customer satisfaction, ensuring a seamless logistics experience.",
   },
 ]
 
