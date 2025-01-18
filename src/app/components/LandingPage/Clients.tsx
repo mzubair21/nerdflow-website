@@ -9,7 +9,7 @@ import Logo from "../../assets/images/image 243.png"
 import KP from "../../assets/images/KP-Securities Logo.png"
 import VTKLogo from "../../assets/images/VTK Logo.png"
 import WizzLogo from "../../assets/images/wizz-logistics.png"
-import Resource from "../../assets/images/Resource.png"
+import Resource from "../../assets/images/resource.png"
 import HeroSectionbg from "../../assets/images/heroleft.png"
 
 const Clients = () => {
