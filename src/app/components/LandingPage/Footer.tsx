@@ -3,6 +3,7 @@ import logo from "../../assets/images/NerdFlowLogo.png"
 import line from "../../assets/svgs/line.svg"
 import gmail from "../../assets/svgs/mailIcon.svg"
 import phone from "../../assets/svgs/phoneIcon.svg"
+import locationPin from "../../assets/svgs/locationPin.svg"
 
 const Footer = () => {
   return (
@@ -35,11 +36,18 @@ const Footer = () => {
               <div>
                 <p className="mb-4 flex items-center">
                   <Image src={phone} alt="phone Icon" />
-                  <span className="font-bold ml-2">+1 (123) 456-7890</span>
+                  <span className="font-bold ml-2">+92 335 5709332</span>
                 </p>
-                <p className="flex items-center">
+                <p className="mb-4 flex items-center">
                   <Image src={gmail} alt="Gmail Icon" />
                   <span className="font-bold ml-2">info@nerdflow.tech</span>
+                </p>
+                <p className="flex items-center">
+                  <Image src={locationPin} alt="Address Icon" />
+                  <span className="font-bold ml-2">
+                    NICAT, NASTP, Old Airport Road, Chaklala,
+                    Rawalpindi, Pakistan
+                  </span>
                 </p>
               </div>
             </div>
@@ -60,7 +68,7 @@ const Footer = () => {
           <div className="flex mb-6 gap-1">
             <input
               type="email"
-              placeholder="Enter your email......"
+              placeholder="Enter your email"
               className="text-sm w-full px-4 py-4 text-white bg-[#212121] rounded-l font-bold placeholder-white"
             />
             <button className="text-sm bg-tealgradient text-white px-4 py-4 rounded-r font-bold">
